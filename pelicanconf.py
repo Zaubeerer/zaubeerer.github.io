@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = "Robin Beer"
 SITENAME = "Robin Beer"
 SITEURL = ""
+SITELOGO = SITEURL + '/images/BEER_2018_2896_zoom.jpg'
 
 PATH = "content"
 
@@ -36,6 +37,7 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 
 THEME = "/Users/robinbeer/Desktop/Pybites/pelican-themes/Flex"
+STATIC_PATHS = ['images', 'pdfs']
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
