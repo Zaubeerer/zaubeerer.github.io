@@ -9,4 +9,4 @@ and I would probably have been burned at the stake.
 
 😆
 
-[my_sweet_photo]: {static}/images/BEER_2018_2896_zoom.jpg
+[my_sweet_photo]: ![my_sweet_photo]({static}/images/BEER_2018_2896_zoom.jpg)
