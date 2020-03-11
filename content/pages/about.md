@@ -1,12 +1,24 @@
 title: About
 date: 10th March 2020
 
-![So Schmexy][my_sweet_photo]
+<p style = "font-family:georgia,garamond,serif;font-size:24px;line-height:1.4">
+<q>
+I am an energy data scientist leveraging Python to accelerate the transition to a sustainable energy system.
+</q>
+</p>
 
-Hi, I am Robin Beer and I wrote this epic collection of Interweb
-wisdom. In days of yore, much of this would have been deemed sorcery
-and I would probably have been burned at the stake.
+To better understand the world and the energy system fundamentally, I studied physics at RWTH Aachen University. During my master's, I researched electrochemistry in France, manufacturing and analyzing batteries in the [Collège de France](www.college-de-france.fr), Paris.
 
-😆
+Back in Germany, I wrote my master thesis on the influence of weather patterns on energy system analysis and worked as a student employee in the team data science at [Digital Energy Solutions](https://www.digital-energysolutions.de/en/).
 
-[my_sweet_photo]: {static}/images/BEER_2018_2896_zoom.jpg
+Currently, I am a Ph.D. candidate at the Forschungszentrum Jülich, analyzing the influence of spatial aggregation on the computational complexity of energy system analysis.
+
+Along these studies, Python has proven to be my language of choice and I am constantly developing my skills, recently as member of the Python Developer Mindset coaching program of pybites.
+
+You can [contact me via email](mailto:robin.beer@rwth-aachen.de) or on one of the following social platforms.
+
+Cheers!
+
+Robin
+
+<!-- Twitter, linkedin, Github -->

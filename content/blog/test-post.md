@@ -1,6 +1,7 @@
-title: First Post on My Sweet New Blog
+title: Test Post on My Sweet New Blog
 date: 10th March 2020
 author: Robin Beer
+summary: test post for testing test blog
 
 # I am On My Way To Internet Fame and Fortune!
 
