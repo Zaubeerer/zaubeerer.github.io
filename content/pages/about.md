@@ -2,8 +2,7 @@ title: About
 date: 10th March 2020
 <p style = "font-family:georgia,garamond,serif;font-size:24px;line-height:1.4">
 <q>
-I am an energy data scientist leveraging Python 
-to accelerate the transition to a sustainable energy system.
+I am an energy data scientist leveraging Python to accelerate the transition to a sustainable energy system.
 </q>
 </p>
 
@@ -13,7 +12,7 @@ Back in Germany, I wrote my master thesis on the influence of weather patterns o
 
 Currently, I am a Ph.D. candidate at the Forschungszentrum Jülich, analyzing the influence of spatial aggregation on the computational complexity of energy system analysis.
 
-Along these studies, Python has proven to be my language of choice and I am constantly developing my skills, recently as member of the Python Developer Mindset coaching program of pybites.
+Along these studies, Python has proven to be my language of choice and I am constantly developing my skills, recently as a member of the Python Developer Mindset Program of PyBites.
 
 You can [contact me via email](mailto:robin.beer@rwth-aachen.de) or on [twitter](https://twitter.com/R_E_Beer), [LinkedIn](https://www.linkedin.com/in/robin-beer-7595b680/) or [GitHub](https://github.com/Zaubeerer).
 
