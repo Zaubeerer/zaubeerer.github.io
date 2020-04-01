@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = "Robin Beer"
 SITENAME = "Robin Beer"
-SITEURL = "https://www.robin.beer.de"
+SITEURL = "https://www.robin-beer.de"
 SITELOGO = "/images/BEER_2018_2896_zoom.jpg"
 FAVICON = "/images/favicon_squared.ico"
 # EXTENDED_FAVICON_DIR = SITEURL + "/images/favicon_io/"
