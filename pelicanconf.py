@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = "Robin Beer"
 SITENAME = "Robin Beer"
 SITEURL = "https://www.robin-beer.de"
-SITELOGO = "/images/BEER_2018_2896_zoom.jpg"
+SITELOGO = "/images/BEER_2018_2896_zoom_500_655.jpg"
 FAVICON = "/images/favicon_squared.ico"
 # EXTENDED_FAVICON_DIR = SITEURL + "/images/favicon_io/"
 PATH = "content"
@@ -26,6 +26,7 @@ LINKS = (
     # ("Search", "/pages/search.html"),
     # ("Schedule a call", "/pages/search.html"), # TODO: write a "Schedule a call" page and create the respective link here
     ("Home", SITEURL),  # TODO: exchange this with a relative URL ?
+    # ("PyBites", "https://www.pybit.es"),
 )
 
 # Social widget
@@ -70,7 +71,7 @@ MENUITEMS = (
 )
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
 # embed jupyter notebooks and post stats
 MARKUP = ("md", "ipynb")
