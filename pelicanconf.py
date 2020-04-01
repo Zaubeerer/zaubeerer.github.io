@@ -4,9 +4,9 @@ from __future__ import unicode_literals
 
 AUTHOR = "Robin Beer"
 SITENAME = "Robin Beer"
-SITEURL = ""
-SITELOGO = SITEURL + "/images/BEER_2018_2896_zoom.jpg"
-FAVICON = SITEURL + "/images/favicon_squared.ico"
+SITEURL = "https://www.robin.beer.de"
+SITELOGO = "/images/BEER_2018_2896_zoom.jpg"
+FAVICON = "/images/favicon_squared.ico"
 # EXTENDED_FAVICON_DIR = SITEURL + "/images/favicon_io/"
 PATH = "content"
 
@@ -24,7 +24,8 @@ AUTHOR_FEED_RSS = None
 # Blogroll
 LINKS = (
     # ("Search", "/pages/search.html"),
-    ("Home", "https://www.robin-beer.de"),  # TODO: exchange this with a relative URL ?
+    # ("Schedule a call", "/pages/search.html"), # TODO: write a "Schedule a call" page and create the respective link here
+    ("Home", SITEURL),  # TODO: exchange this with a relative URL ?
 )
 
 # Social widget
@@ -69,7 +70,7 @@ MENUITEMS = (
 )
 
 # Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 # embed jupyter notebooks and post stats
 MARKUP = ("md", "ipynb")
@@ -77,4 +78,5 @@ PLUGIN_PATHS = ["../pelican-plugins/"]
 
 PLUGINS = ["readtime", "pelican-ipynb.markup", "post_stats"]
 # IPYNB_USE_META_SUMMARY = True
-# IGNORE_FILES = [".ipynb_checkpoints"]
+IPYNB_USE_METACELL = True
+IGNORE_FILES = [".ipynb_checkpoints"]
