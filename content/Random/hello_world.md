@@ -3,7 +3,7 @@ date: 2nd April 2020
 author: Robin Beer
 summary: My blog is online and will be filled with articles on 5 categories: Python, Energy, Collaboration, Tools and Random thoughts :)
 
-Finally, this is my first post on my new blog. I have been wanting to start my own blog for quite a while, and now the time has come (thanks to PyBites Python Developer Mindset Program, which helped me to jump in the cold water). I will try to focus on quality over quantity, hence publish in varying frequency.
+Finally, this is my first post on my new blog. I have been wanting to start my own blog for quite a while, and now the time has come (thanks to the PyBites Developer Mindset Program, which helped me to jump in at the deep end). I will try to focus on quality over quantity, hence publish in varying frequency.
 
 For now, I have come up with 5 categories that I want to share my thoughts on and raise discussions:
 
