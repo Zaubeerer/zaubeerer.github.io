@@ -60,7 +60,7 @@ Finally, there might be ideas and thoughts that are related to all the above top
 
 So if you are interested in a random topic, check out the category <a href="/category/miscellanea.html" target="_blank">Miscellanea</a>.
 
-<div style="text-align:center"><img src="https://space.mit.edu/home/tegmark/book2img/book_icon.jpg" alt="Live 3.0" width="200"/></div>
+<div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Cover_of_the_book_Life_3.0.png" alt="Live 3.0" width="200"/></div>
 
 
 ## Conclusion

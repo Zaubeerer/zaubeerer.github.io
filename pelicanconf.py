@@ -26,11 +26,11 @@ LINKS = (
     # ("Search", "/pages/search.html"),
     # ("Schedule a call", "/pages/search.html"), # TODO: write a "Schedule a call" page and create the respective link here
     ("Home", SITEURL),  # TODO: exchange this with a relative URL ?
-    ("Python", "/category/python.html"),
-    ("Energy", "/category/energy.html"),
-    ("Collaboration", "/category/collaboration.html"),
-    ("Tools", "/category/tools.html"),
-    ("Miscellanea", "/category/miscellanea.html"),
+    # ("Python", "/category/python.html"),
+    # ("Energy", "/category/energy.html"),
+    # ("Collaboration", "/category/collaboration.html"),
+    # ("Tools", "/category/tools.html"),
+    # ("Miscellanea", "/category/miscellanea.html"),
     # ("PyBites", "https://www.pybit.es"),
 )
 
