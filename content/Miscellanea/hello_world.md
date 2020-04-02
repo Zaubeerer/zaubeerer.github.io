@@ -34,7 +34,7 @@ In my opinion, climate change is the biggest challenge of this century. Therefor
 
 So, if you want to focus on Energy content, check out the category <a href="/category/energy.html" target="_blank">Energy</a>.
 
-![tesla energy](https://i1.wp.com/electrek.co/wp-content/uploads/sites/3/2018/11/Tesla-house-model-s-powerwall-solar-roof-e1541152190196.jpg?w=2500&quality=82&strip=all&ssl=1)
+![photovoltaic](https://images.unsplash.com/photo-1502637098811-fa9526d2b659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2978&q=80)
 
 ## 3. Collaboration
 
@@ -52,7 +52,7 @@ In this category, I want to describe tools that I use on a more tool- and task-f
 
 So, if you want to improve your Tools, check out the category <a href="/category/tools.html" target="_blank">Tools</a>.
 
-![VS Code gif](https://entwickler.de/wp-content/uploads/2019/06/Python-VS-Code-Plot-Viewer.gif)
+![VS Code gif]("/content/images/vs_code_screenshot.png)
 
 ## 5. Miscellanea
 
