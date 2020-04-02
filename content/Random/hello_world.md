@@ -24,7 +24,7 @@ So why did I choose these categories and what am I going to write about?
 I love `Python`. Writing Pythonic code is somewhat like art to me, as are some beautiful physical equations.
 Therefore, in this category, I will write about how to use different packages, write more Pythonic code, and in general, on how to solve problems using `Python`.
 
-So, if you want to focus on Python content, check out www.robin-beer.de/category/python.html.
+So, if you want to focus on Python content, check out the category <a href="www.robin-beer.de/category/python.html" target="_blank">Python</a>.
 
 ![python logo](https://upload.wikimedia.org/wikipedia/commons/f/f8/Python_logo_and_wordmark.svg)
 
@@ -32,7 +32,7 @@ So, if you want to focus on Python content, check out www.robin-beer.de/category
 
 In my opinion, climate change is the biggest challenge of this century. Therefore, I want to contribute to accelerating the energy transition by writing articles that describe how to make use of `Python` and Data Science to extract knowledge from energy data.
 
-So, if you want to focus on Energy content, check out www.robin-beer.de/category/energy.html.
+So, if you want to focus on Energy content, check out the category <a href="www.robin-beer.de/category/energy.html" target="_blank">Energy</a>.
 
 ![tesla energy](https://i1.wp.com/electrek.co/wp-content/uploads/sites/3/2018/11/Tesla-house-model-s-powerwall-solar-roof-e1541152190196.jpg?w=2500&quality=82&strip=all&ssl=1)
 
@@ -42,7 +42,7 @@ We are in this together, so let's collaborate!
 
 In this category, I am going to write about my experiences on working collaboratively, including articles on `GitLab`, `GitHub`, `VS Code Liveshare`, `Slack`, `hackathons`, and more. Because the most efficient code is not sufficient if human communication is suboptimal.
 
-So, if you want to focus on Python content, check out www.robin-beer.de/category/collaboration.html.
+So, if you want to focus on Python content, check out the category <a href="www.robin-beer.de/category/collaboration.html" target="_blank">Collaboration</a>.
 
 ![gitlab values](https://about.gitlab.com/handbook/values/images/values.png)
 
@@ -50,7 +50,7 @@ So, if you want to focus on Python content, check out www.robin-beer.de/category
 
 In this category, I want to describe tools that I use on a more tool- and task-focused level. This might range from tools like `docker`, `VS Code`, and `zsh` to platforms like `fiverr`, `namecheap`, or others. I hope that there will be both readers who learn from the way I use tools as well as users who teach me even better tools for the task at hand. After all, tools can be improved continuously, and I am looking forward to iteratively improve them together!
 
-So, if you want to focus on Python content, check out www.robin-beer.de/category/tools.html.
+So, if you want to improve your Tools, check out the category <a href="www.robin-beer.de/category/tools.html" target="_blank">Tools</a>.
 
 ![VS Code gif](https://entwickler.de/wp-content/uploads/2019/06/Python-VS-Code-Plot-Viewer.gif)
 
@@ -58,7 +58,7 @@ So, if you want to focus on Python content, check out www.robin-beer.de/category
 
 Finally, there might be (random) ideas and thoughts that are related to all the above topics or none. This could range from philosophical questions inspired by books such as Live 3.0, over inspirations from physics to the beauty of languages (French, German, ...). I might also blog on how sports and nutrition influence my performance as an energy data scientist, being a human after all...
 
-So if you are interested in a random topic, check out www.robin-beer.de/category/random.html.
+So if you are interested in a random topic, check out the category <a href="www.robin-beer.de/category/random.html" target="_blank">Random</a>.
 
 <div style="text-align:center"><img src="https://space.mit.edu/home/tegmark/book2img/book_icon.jpg" alt="Live 3.0" width="200"/></div>
 
