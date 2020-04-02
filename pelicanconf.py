@@ -7,7 +7,7 @@ SITENAME = "Robin Beer"
 SITEURL = "https://www.robin-beer.de"
 SITELOGO = "/images/BEER_2018_2896_small.jpg"
 FAVICON = "/images/favicon_squared.ico"
-# EXTENDED_FAVICON_DIR = SITEURL + "/images/favicon_io/"
+EXTENDED_FAVICON_DIR = SITEURL + "/content/images/favicon_io/"
 PATH = "content"
 
 TIMEZONE = "Europe/Paris"
@@ -34,6 +34,7 @@ SOCIAL = (
     ("twitter", "https://twitter.com/R_E_Beer"),
     ("linkedin", "https://www.linkedin.com/in/robin-beer-7595b680/"),
     ("github", "https://github.com/Zaubeerer"),
+    # ("email", "mailto:dev@robin-beer.de"),
 )
 
 # TWITTER_USERNAME = "RE_E_Beer"

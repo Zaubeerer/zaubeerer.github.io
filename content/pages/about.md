@@ -14,7 +14,7 @@ Currently, I am a Ph.D. candidate at the Forschungszentrum Jülich, analyzing th
 
 Along these studies, Python has proven to be my language of choice and I am constantly developing my skills, recently as a member of the Python Developer Mindset Program of PyBites.
 
-You can [contact me via email](mailto:robin.beer@rwth-aachen.de) or on [twitter](https://twitter.com/R_E_Beer), [LinkedIn](https://www.linkedin.com/in/robin-beer-7595b680/) or [GitHub](https://github.com/Zaubeerer).
+You can [contact me via email](mailto:dev@robin-beer.de) or on [twitter](https://twitter.com/R_E_Beer), [LinkedIn](https://www.linkedin.com/in/robin-beer-7595b680/) or [GitHub](https://github.com/Zaubeerer).
 
 Cheers!
 
