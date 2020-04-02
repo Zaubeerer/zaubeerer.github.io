@@ -2,10 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Robin Beer</title><link href="https://www.robin-beer.de/" rel="alternate"></link><link href="https://www.robin-beer.de/feeds/all.atom.xml" rel="self"></link><id>https://www.robin-beer.de/</id><updated>2020-03-10T00:00:00+01:00</updated><subtitle>Energy Data Scientist</subtitle><entry><title>Second Test Post on My Sweet New Blog</title><link href="https://www.robin-beer.de/second-test-post-on-my-sweet-new-blog.html" rel="alternate"></link><published>2020-03-10T00:00:00+01:00</published><updated>2020-03-10T00:00:00+01:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-03-10:/second-test-post-on-my-sweet-new-blog.html</id><summary type="html">&lt;p&gt;test post for testing test blog&lt;/p&gt;</summary><content type="html">&lt;h1&gt;I am On My Way To Internet Fame and Fortune!&lt;/h1&gt;
 &lt;p&gt;This is my first post on my new blog. While not super informative it
 should convey my sense of excitement and eagerness to engage with you,
-the reader!&lt;/p&gt;</content><category term="blog"></category></entry><entry><title>Test Post on My Sweet New Blog</title><link href="https://www.robin-beer.de/test-post-on-my-sweet-new-blog.html" rel="alternate"></link><published>2020-03-10T00:00:00+01:00</published><updated>2020-03-10T00:00:00+01:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-03-10:/test-post-on-my-sweet-new-blog.html</id><summary type="html">&lt;p&gt;test post for testing test blog&lt;/p&gt;</summary><content type="html">&lt;h1&gt;I am On My Way To Internet Fame and Fortune!&lt;/h1&gt;
-&lt;p&gt;This is my first post on my new blog. While not super informative it
-should convey my sense of excitement and eagerness to engage with you,
-the reader!&lt;/p&gt;</content><category term="blog"></category></entry><entry><title>This is the Best Tool so far</title><link href="https://www.robin-beer.de/best-tool.html" rel="alternate"></link><published>2019-06-21T12:00:00+02:00</published><updated>2019-06-21T12:00:00+02:00</updated><author><name>Jon Doe</name></author><id>tag:www.robin-beer.de,2019-06-21:/best-tool.html</id><summary type="html">&lt;p&gt;This is the most important tool out there&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+the reader!&lt;/p&gt;</content><category term="Random"></category></entry><entry><title>How to better start the Python category if not by importing this?</title><link href="https://www.robin-beer.de/import%20this.html" rel="alternate"></link><published>2019-04-02T00:00:00+02:00</published><updated>2019-04-02T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2019-04-02:/import this.html</id><summary type="html">&lt;p&gt;Testing jupyter notebook support of the blog by importing this&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1167,19 +1164,6 @@ Namespaces are one honking great idea -- let&amp;#39;s do more of those!
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[&amp;nbsp;]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-python"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
  
 
 
@@ -1211,4 +1195,4 @@ Namespaces are one honking great idea -- let&amp;#39;s do more of those!
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="tools"></category><category term="tool"></category><category term="software"></category><category term="best"></category></entry></feed>
+</content><category term="Python"></category><category term="Jupyter"></category><category term="Python"></category></entry></feed>
