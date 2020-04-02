@@ -1113,8 +1113,8 @@ h6:hover .anchor-link {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;I really like how PEP20 combines both good coding principles as well as humor.
-What do you think should be the 20th guideline?&lt;/p&gt;
+&lt;p&gt;I really like how PEP20 combines both good coding principles as well as humor.&lt;/p&gt;
+&lt;p&gt;What do you think should be the 20th guideline?&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
