@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Robin Beer</title><link href="https://www.robin-beer.de/" rel="alternate"></link><link href="https://www.robin-beer.de/feeds/all.atom.xml" rel="self"></link><id>https://www.robin-beer.de/</id><updated>2020-04-02T00:00:00+02:00</updated><subtitle>Energy Data Scientist</subtitle><entry><title>Hello World :)</title><link href="https://www.robin-beer.de/hello-world.html" rel="alternate"></link><published>2020-04-02T00:00:00+02:00</published><updated>2020-04-02T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-02:/hello-world.html</id><summary type="html">&lt;p&gt;My blog is online and will be filled with articles on 5 categories: Python, Energy, Collaboration, Tools and Random thoughts :)&lt;/p&gt;</summary><content type="html">&lt;p&gt;Finally, this is my first post on my new blog. I have been wanting to start my own blog for quite a while, and now the time has come (thanks to the PyBites Developer Mindset Program, which helped me to jump in at the deep end). I will try to focus on quality over quantity, hence publish in varying frequency.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Robin Beer</title><link href="https://www.robin-beer.de/" rel="alternate"></link><link href="https://www.robin-beer.de/feeds/all.atom.xml" rel="self"></link><id>https://www.robin-beer.de/</id><updated>2020-04-02T00:00:00+02:00</updated><subtitle>Energy Data Scientist</subtitle><entry><title>Hello World!</title><link href="https://www.robin-beer.de/hello-world.html" rel="alternate"></link><published>2020-04-02T00:00:00+02:00</published><updated>2020-04-02T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-02:/hello-world.html</id><summary type="html">&lt;p&gt;My blog is online and will be filled with articles on 5 categories: Python, Energy, Collaboration, Tools and Miscellanea.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Finally, this is my first post on my new blog. I have been wanting to start my own blog for quite a while, and now the time has come (thanks to the PyBites Developer Mindset Program, which helped me to jump in at the deep end). I will try to focus on quality over quantity, hence publish in varying frequency.&lt;/p&gt;
 &lt;p&gt;For now, I have come up with 5 categories that I want to share my thoughts on and raise discussions:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Python&lt;/li&gt;
 &lt;li&gt;Energy&lt;/li&gt;
 &lt;li&gt;Collaboration&lt;/li&gt;
 &lt;li&gt;Tools&lt;/li&gt;
-&lt;li&gt;Random&lt;/li&gt;
+&lt;li&gt;Miscellanea&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;"People should only teach what they have learned organically, through experience and curiosity... or get another job." - Nassim Nicholas Taleb&lt;/p&gt;
@@ -31,17 +31,17 @@ Therefore, in this category, I will write about how to use different packages, w
 &lt;p&gt;In this category, I want to describe tools that I use on a more tool- and task-focused level. This might range from tools like &lt;code&gt;docker&lt;/code&gt;, &lt;code&gt;VS Code&lt;/code&gt;, and &lt;code&gt;zsh&lt;/code&gt; to platforms like &lt;code&gt;fiverr&lt;/code&gt;, &lt;code&gt;namecheap&lt;/code&gt;, or others. I hope that there will be both readers who learn from the way I use tools as well as users who teach me even better tools for the task at hand. After all, tools can be improved continuously, and I am looking forward to iteratively improve them together!&lt;/p&gt;
 &lt;p&gt;So, if you want to improve your Tools, check out the category &lt;a href="/category/tools.html" target="_blank"&gt;Tools&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="VS Code gif" src="https://entwickler.de/wp-content/uploads/2019/06/Python-VS-Code-Plot-Viewer.gif"&gt;&lt;/p&gt;
-&lt;h2&gt;5. Random&lt;/h2&gt;
-&lt;p&gt;Finally, there might be (random) ideas and thoughts that are related to all the above topics or none. This could range from philosophical questions inspired by books such as Live 3.0, over inspirations from physics to the beauty of languages (French, German, ...). I might also blog on how sports and nutrition influence my performance as an energy data scientist, being a human after all...&lt;/p&gt;
-&lt;p&gt;So if you are interested in a random topic, check out the category &lt;a href="/category/random.html" target="_blank"&gt;Random&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;5. Miscellanea&lt;/h2&gt;
+&lt;p&gt;Finally, there might be ideas and thoughts that are related to all the above topics or none. This could range from philosophical questions inspired by books such as Live 3.0, over inspirations from physics to the beauty of languages (French, German, ...). I might also blog on how sports and nutrition influence my performance as an energy data scientist, being a human after all...&lt;/p&gt;
+&lt;p&gt;So if you are interested in a random topic, check out the category &lt;a href="/category/miscellanea.html" target="_blank"&gt;Miscellanea&lt;/a&gt;.&lt;/p&gt;
 &lt;div style="text-align:center"&gt;&lt;img src="https://space.mit.edu/home/tegmark/book2img/book_icon.jpg" alt="Live 3.0" width="200"/&gt;&lt;/div&gt;
 
 &lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;I brought my blog online, and it feels good!&lt;/p&gt;
+&lt;p&gt;I brought my blog to live!&lt;/p&gt;
 &lt;p&gt;On the one hand, we are facing global challenges, both temporary (such as Coronavirus) as well as persistent challenges (climate change). On the other hand, these challenges are met by men that are better connected than ever before (technology-wise) to tackle these challenges.&lt;/p&gt;
-&lt;p&gt;With this blog, I want to contribute to solving these problems by sharing my knowledge and experience of Python, Energy Data Science, Collaboration, Tools, and Random thoughts.&lt;/p&gt;
-&lt;p&gt;Looking forward to shaping this world (together)!&lt;/p&gt;
-&lt;p&gt;Robin&lt;/p&gt;</content><category term="Random"></category></entry><entry><title>How to better start the Python category if not by importing this?</title><link href="https://www.robin-beer.de/import%20this.html" rel="alternate"></link><published>2019-04-02T00:00:00+02:00</published><updated>2019-04-02T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2019-04-02:/import this.html</id><summary type="html">&lt;p&gt;Testing jupyter notebook support of the blog by importing this&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+&lt;p&gt;With this blog, I want to contribute to solving these problems by sharing my knowledge and experience of Python, Energy Data Science, Collaboration, Tools, and Miscellanea.&lt;/p&gt;
+&lt;p&gt;Looking forward to shaping this world together!&lt;/p&gt;
+&lt;p&gt;Robin&lt;/p&gt;</content><category term="Miscellanea"></category></entry><entry><title>How to better start the Python category if not by importing this?</title><link href="https://www.robin-beer.de/import%20this.html" rel="alternate"></link><published>2019-04-02T00:00:00+02:00</published><updated>2019-04-02T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2019-04-02:/import this.html</id><summary type="html">&lt;p&gt;Testing jupyter notebook support of the blog by importing this&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
