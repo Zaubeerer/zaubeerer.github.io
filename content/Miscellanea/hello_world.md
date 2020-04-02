@@ -1,7 +1,7 @@
-title: Hello World :)
+title: Hello World!
 date: 2nd April 2020
 author: Robin Beer
-summary: My blog is online and will be filled with articles on 5 categories: Python, Energy, Collaboration, Tools and Random thoughts :)
+summary: My blog is online and will be filled with articles on 5 categories: Python, Energy, Collaboration, Tools and Miscellanea.
 
 Finally, this is my first post on my new blog. I have been wanting to start my own blog for quite a while, and now the time has come (thanks to the PyBites Developer Mindset Program, which helped me to jump in at the deep end). I will try to focus on quality over quantity, hence publish in varying frequency.
 
@@ -11,7 +11,7 @@ For now, I have come up with 5 categories that I want to share my thoughts on an
 2. Energy
 3. Collaboration
 4. Tools
-5. Random
+5. Miscellanea
 
 > "People should only teach what they have learned organically, through experience and curiosity... or get another job." - Nassim Nicholas Taleb
 
@@ -54,23 +54,23 @@ So, if you want to improve your Tools, check out the category <a href="/category
 
 ![VS Code gif](https://entwickler.de/wp-content/uploads/2019/06/Python-VS-Code-Plot-Viewer.gif)
 
-## 5. Random
+## 5. Miscellanea
 
-Finally, there might be (random) ideas and thoughts that are related to all the above topics or none. This could range from philosophical questions inspired by books such as Live 3.0, over inspirations from physics to the beauty of languages (French, German, ...). I might also blog on how sports and nutrition influence my performance as an energy data scientist, being a human after all...
+Finally, there might be ideas and thoughts that are related to all the above topics or none. This could range from philosophical questions inspired by books such as Live 3.0, over inspirations from physics to the beauty of languages (French, German, ...). I might also blog on how sports and nutrition influence my performance as an energy data scientist, being a human after all...
 
-So if you are interested in a random topic, check out the category <a href="/category/random.html" target="_blank">Random</a>.
+So if you are interested in a random topic, check out the category <a href="/category/miscellanea.html" target="_blank">Miscellanea</a>.
 
 <div style="text-align:center"><img src="https://space.mit.edu/home/tegmark/book2img/book_icon.jpg" alt="Live 3.0" width="200"/></div>
 
 
 ## Conclusion
 
-I brought my blog online, and it feels good!
+I brought my blog to live!
 
 On the one hand, we are facing global challenges, both temporary (such as Coronavirus) as well as persistent challenges (climate change). On the other hand, these challenges are met by men that are better connected than ever before (technology-wise) to tackle these challenges.
 
-With this blog, I want to contribute to solving these problems by sharing my knowledge and experience of Python, Energy Data Science, Collaboration, Tools, and Random thoughts.
+With this blog, I want to contribute to solving these problems by sharing my knowledge and experience of Python, Energy Data Science, Collaboration, Tools, and Miscellanea.
 
-Looking forward to shaping this world (together)!
+Looking forward to shaping this world together!
 
 Robin
