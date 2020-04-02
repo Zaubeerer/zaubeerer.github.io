@@ -52,7 +52,8 @@ In this category, I want to describe tools that I use on a more tool- and task-f
 
 Finally, there might be (random) ideas and thoughts that are related to all the above topics or none. This could range from philosophical questions inspired by books such as Live 3.0, over inspirations from physics to the beauty of languages (French, German, ...). I might also blog on how sports and nutrition influence my performance as an energy data scientist, being a human after all...
 
-<div style="text-align:center"><img src="https://space.mit.edu/home/tegmark/book2img/book_icon.jpg" alt="Live 3.0" width="200"/>
+<div style="text-align:center"><img src="https://space.mit.edu/home/tegmark/book2img/book_icon.jpg" alt="Live 3.0" width="200"/></div>
+
 
 ## Conclusion
 
