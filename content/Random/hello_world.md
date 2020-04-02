@@ -44,13 +44,15 @@ In this category, I am going to write about my experiences on working collaborat
 
 In this section, I want to describe tools that I use on a more tool- and task-focused level. This might range from tools like `docker`, `VS Code`, and `zsh` to platforms like `fiverr`, `namecheap`, or others. I hope that there will be both readers who learn from the way I use tools as well as users who teach me even better tools for the task at hand. After all, tools can be improved continuously, and I am looking forward to iteratively improve them together!
 
-![VS Code](vs_code_screenshot.png)
+<!-- ![VS Code](vs_code_screenshot.png) -->
+
+![VS Code gif](https://entwickler.de/wp-content/uploads/2019/06/Python-VS-Code-Plot-Viewer.gif)
 
 ## 5. Random
 
 Finally, there might be (random) ideas and thoughts that are related to all the above topics or none. This could range from philosophical questions inspired by books such as Live 3.0, over inspirations from physics to the beauty of languages (French, German, ...). I might also blog on how sports and nutrition influence my performance as an energy data scientist, being a human after all...
 
-![Live 3.0](https://space.mit.edu/home/tegmark/book2img/book_icon.jpg)
+<img src="https://space.mit.edu/home/tegmark/book2img/book_icon.jpg" alt="Live 3.0" width="200"/>
 
 ## Conclusion
 
