@@ -6,7 +6,7 @@ I am an energy data scientist leveraging Python to accelerate the transition to 
 </q>
 </p>
 
-To better understand the world and the energy supply system fundamentally, I studied physics at RWTH Aachen University. During my master's, I researched electrochemistry in France, manufacturing and analyzing batteries in the [Collège de France](www.college-de-france.fr), Paris.
+To better understand the world and the energy supply system fundamentally, I studied physics at RWTH Aachen University. During my master's, I researched electrochemistry in France, manufacturing and analyzing batteries in the [Collège de France](https://www.college-de-france.fr), Paris.
 
 Back in Germany, I wrote my master thesis on the influence of weather patterns on energy system analysis and worked as a student employee in the team data science at [Digital Energy Solutions](https://www.digital-energysolutions.de/en/).
 
