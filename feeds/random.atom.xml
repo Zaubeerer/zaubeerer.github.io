@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Robin Beer - Random</title><link href="https://www.robin-beer.de/" rel="alternate"></link><link href="https://www.robin-beer.de/feeds/random.atom.xml" rel="self"></link><id>https://www.robin-beer.de/</id><updated>2020-03-10T00:00:00+01:00</updated><subtitle>Energy Data Scientist</subtitle><entry><title>Second Test Post on My Sweet New Blog</title><link href="https://www.robin-beer.de/second-test-post-on-my-sweet-new-blog.html" rel="alternate"></link><published>2020-03-10T00:00:00+01:00</published><updated>2020-03-10T00:00:00+01:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-03-10:/second-test-post-on-my-sweet-new-blog.html</id><summary type="html">&lt;p&gt;test post for testing test blog&lt;/p&gt;</summary><content type="html">&lt;h1&gt;I am On My Way To Internet Fame and Fortune!&lt;/h1&gt;
-&lt;p&gt;This is my first post on my new blog. While not super informative it
-should convey my sense of excitement and eagerness to engage with you,
-the reader!&lt;/p&gt;</content><category term="Random"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Robin Beer - Random</title><link href="https://www.robin-beer.de/" rel="alternate"></link><link href="https://www.robin-beer.de/feeds/random.atom.xml" rel="self"></link><id>https://www.robin-beer.de/</id><updated>2020-04-02T00:00:00+02:00</updated><subtitle>Energy Data Scientist</subtitle><entry><title>Hello World :)</title><link href="https://www.robin-beer.de/hello-world.html" rel="alternate"></link><published>2020-04-02T00:00:00+02:00</published><updated>2020-04-02T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-02:/hello-world.html</id><summary type="html">&lt;p&gt;My blog is online and will be filled with articles on 5 categories: Python, Energy, Collaboration, Tools and Random thoughts :)&lt;/p&gt;</summary><content type="html">&lt;p&gt;Finally, this is my first post on my new blog. I have been wanting to start my own blog for quite a while, and now the time has come (thanks to PyBites Python Developer Mindset Program, which helped me to jump in the cold water). I will try to focus on quality over quantity, hence publish in varying frequency. For now, I have come up with 5 categories that I want to share my thoughts on and raise discussions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Energy&lt;/li&gt;
+&lt;li&gt;Collaboration&lt;/li&gt;
+&lt;li&gt;Tools&lt;/li&gt;
+&lt;li&gt;Random&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These categories might change over time as I grow with new challenges.&lt;/p&gt;
+&lt;p&gt;"quotation concerning neuroplasticity, iteration speed, ..."&lt;/p&gt;
+&lt;p&gt;Let me briefly describe these categories below.&lt;/p&gt;
+&lt;h2&gt;1. Python&lt;/h2&gt;
+&lt;p&gt;I love Python. Writing Pythonic code is somewhat like art to me, as are beautiful physical equations.
+Therefore, in this category, I will write about how to use different packages, write more Pythonic code, and in general, on how to solve problems using Python.&lt;/p&gt;
+&lt;h2&gt;2. Energy&lt;/h2&gt;
+&lt;p&gt;In my opinion, climate change is the biggest challenge of this century. Therefore, I want to contribute to accelerating the energy transition by writing articles that describe how to make use of Python and Data Science to extract knowledge from energy data.&lt;/p&gt;
+&lt;h2&gt;3. Collaboration&lt;/h2&gt;
+&lt;p&gt;We are in this together, so let's collaborate!
+In this category, I am going to write about my experiences on working collaboratively, including articles on GitLab, GitHub, VS Code Liveshare, Slack, hackathons, and more. Because the most efficient code is not sufficient if human communication is suboptimal.&lt;/p&gt;
+&lt;h2&gt;4. Tools&lt;/h2&gt;
+&lt;p&gt;In this section, I want to describe tools that I use on a more tool- and task-focused level. This might range from tools like docker, VS Code, and zsh to platforms like fiverr, namecheap, or others. I hope that there will be both readers who learn from the way I use tools as well as users who teach me even better tools for the task at hand. After all, tools can be improved continuously, and I am looking forward to iteratively improve them together!&lt;/p&gt;
+&lt;h2&gt;5. Random&lt;/h2&gt;
+&lt;p&gt;Finally, there might be (random) ideas and thoughts that are related to all the above topics or none. This could range from philosophical questions inspired by books such as Live 3.0, over inspirations from physics to the beauty of languages (French, German, ...). I might also blog on how sports and nutrition influence my performance as an energy data scientist, being a human after all...&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I brought my blog online, and it feels good!
+On the one hand, we are facing global challenges, both temporary (such as Coronavirus) as well as persistent challenges (climate change). On the other hand, these challenges are met by men that are better connected than ever before (technology-wise) to tackle these challenges. With this blog, I want to contribute to solving these problems by sharing my knowledge and experience of Python, Energy Data Science, Collaboration, Tools, and Random thoughts.&lt;/p&gt;
+&lt;p&gt;Looking forward to shaping this world (together)!&lt;/p&gt;
+&lt;p&gt;Robin&lt;/p&gt;</content><category term="Random"></category></entry></feed>
