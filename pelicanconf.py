@@ -39,7 +39,9 @@ SOCIAL = (
     ("twitter", "https://twitter.com/R_E_Beer"),
     ("linkedin", "https://www.linkedin.com/in/robin-beer-7595b680/"),
     ("github", "https://github.com/Zaubeerer"),
-    # ("email", "mailto:dev@robin-beer.de"),
+    ("envelope-o", "mailto:dev@robin-beer.de"),
+    # ("gitlab", ""), # TODO: add (?)
+    # ("stack-overflow")  #TODO: add (?)
 )
 
 # TWITTER_USERNAME = "RE_E_Beer"
@@ -57,7 +59,7 @@ SITESUBTITLE = "Energy Data Scientist"
 SITEDESCRIPTION = "Pythonic Energy Data Science Blog"
 # BROWSER_COLOR = ""
 # PAGES_SORT_ATTRIBUTE = Date?
-# PYGMENTS_STYLE = 'vs'
+PYGMENTS_STYLE = "vs"  # TODO: maybe change highlighting style: https://github.com/alexandrevicenzi/Flex/wiki/Code-Highlight
 LINKS_IN_NEW_TAB = "external"  # TODO: fix this (especially when clicking on "Home" link should open in same window)
 # GOOGLE_ANALYTICS
 
