@@ -48,7 +48,7 @@ So, if you want to focus on Python content, check out the category <a href="/cat
 
 ## 4. Tools
 
-In this category, I want to describe tools that I use on a more tool- and task-focused level. This might range from tools like `docker`, `VS Code`, and `zsh` to platforms like `fiverr`, `namecheap`, or others. I hope that there will be both readers who learn from the way I use tools as well as users who teach me even better tools for the task at hand. After all, tools can be improved continuously, and I am looking forward to iteratively improve them together!
+In this category, I want to describe tools that I use on a more tool- and task-focused level. This might range from tools like `docker`, `VS Code`, and `zsh` over platforms like `fiverr`, `namecheap` to equipment like laptop, backpack and more. I hope that there will be both readers who learn from the way I use tools as well as users who teach me even better tools for the task at hand. After all, tools can be improved continuously, and I am looking forward to iteratively improve them together!
 
 So, if you want to improve your Tools, check out the category <a href="/category/tools.html" target="_blank">Tools</a>.
 
