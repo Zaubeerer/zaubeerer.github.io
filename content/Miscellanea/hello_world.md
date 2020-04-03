@@ -52,7 +52,7 @@ In this category, I want to describe tools that I use on a more tool- and task-f
 
 So, if you want to improve your Tools, check out the category <a href="/category/tools.html" target="_blank">Tools</a>.
 
-![VS Code gif]("/content/images/vs_code_screenshot.png)
+![Digital Nomade Tools](https://images.unsplash.com/photo-1536584754829-12214d404f32?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
 
 ## 5. Miscellanea
 
