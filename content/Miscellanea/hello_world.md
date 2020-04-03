@@ -67,7 +67,7 @@ So if you are interested in a random topic, check out the category <a href="/cat
 
 I brought my blog to live!
 
-On the one hand, we are facing global challenges, both temporary (such as Coronavirus) as well as persistent challenges (climate change). On the other hand, these challenges are met by men that are better connected than ever before (technology-wise) to tackle these challenges.
+On the one hand, we are facing global challenges, both temporary (such as Coronavirus) as well as persistent challenges (climate change). On the other hand, these challenges are met by humanity that is better connected than ever before (technology-wise) to tackle these challenges.
 
 With this blog, I want to contribute to solving these problems by sharing my knowledge and experience of Python, Energy Data Science, Collaboration, Tools, and Miscellanea.
 
