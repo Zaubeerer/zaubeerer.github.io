@@ -280,6 +280,12 @@ div.related-posts ul {
 div.related-posts ul li {
   padding: 4px 0 4px 0;
 }
+
+div.blog_max_width {
+  max-width: 500px;
+  margin: auto;
+}
+
 ul.list,
 ul.social,
 ul.related-posts {
