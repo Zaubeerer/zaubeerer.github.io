@@ -1,7 +1,7 @@
 title: 
 date: 2nd April 2020
 author: Robin Beer
-summary: Short decription of the content
+summary: Short description of the content
 tags: opinion
 
 "Thesis. 
