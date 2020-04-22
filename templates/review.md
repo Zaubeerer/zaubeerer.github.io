@@ -2,7 +2,7 @@ title:
 date: 2nd April 2020
 author: Robin Beer
 summary: Short description of the content
-tags: review, 
+tags: Review, 
 
 "I read, saw, played or used something.
 This is what it is.

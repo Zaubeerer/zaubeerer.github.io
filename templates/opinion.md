@@ -2,7 +2,7 @@ title:
 date: 2nd April 2020
 author: Robin Beer
 summary: Short description of the content
-tags: opinion
+tags: Opinion
 
 "Thesis. 
 Points of evidence. 
