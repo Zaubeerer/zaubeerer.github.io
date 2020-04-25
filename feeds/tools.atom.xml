@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Robin Beer - Tools</title><link href="https://www.robin-beer.de/" rel="alternate"></link><link href="https://www.robin-beer.de/feeds/tools.atom.xml" rel="self"></link><id>https://www.robin-beer.de/</id><updated>2020-04-25T00:00:00+02:00</updated><subtitle>Energy Data Scientist</subtitle><entry><title>How fast can you set up your blog with Pelican, GitHub pages and namecheap?</title><link href="https://www.robin-beer.de/how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap.html" rel="alternate"></link><published>2020-04-25T00:00:00+02:00</published><updated>2020-04-25T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-25:/how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap.html</id><summary type="html">&lt;p&gt;Setting up my blog took me much less time than expected. Here, I show you how to do it even faster.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to &lt;a href="pybit.es"&gt;PyBites&lt;/a&gt;, I finally got my blog online much faster than expected and started writing.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Words are a lens to focus one's mind. - Ayn Rand&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I was able to set up a draft version of my blog quickly (much less than 42 minutes) based on &lt;a href="https://opensource.com/article/19/5/run-your-blog-github-pages-python"&gt;this Pelican blog article&lt;/a&gt; by Erik O'Shaughnessy. However, I spent quite some time on creating my own domain and connecting it with GitHub pages as Erik didn't cover that part. Therefore, I streamlined the tutorial and added my additional learnings.&lt;/p&gt;
+&lt;p&gt;So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until you blog is online. :)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Creative writing" src="https://www.robin-beer.de/Tools/images/pelican_github_pages_blog/writing_image.jpg"&gt;&lt;/p&gt;
+&lt;h2&gt;Create a git repository supporting GitHub Pages&lt;/h2&gt;
+&lt;p&gt;In order to use &lt;a href="https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages"&gt;GitHub Pages&lt;/a&gt; you first have to &lt;a href="https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site"&gt;create a new GitHub repository&lt;/a&gt; using your username, such that the following repository results:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;https://github.com/username/username.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Just leave it empty for now and clone it using:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/username/username.github.io blog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Subsequently, create a content branch that will be used to track the markdown source files:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git checkout -b content
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Therewith, the source files (markdown, Pelican config, ...) in the &lt;code&gt;content branch&lt;/code&gt; can be separated from the web content, that needs to be pushed to the &lt;code&gt;master branch&lt;/code&gt; for GitHub Pages to automatically publish them. :ok_hand:&lt;/p&gt;
+&lt;p&gt;So let's set up Pelican!&lt;/p&gt;
+&lt;h2&gt;Install and Configure Pelican&lt;/h2&gt;
+&lt;p&gt;First of all, I suggest to create a virtual environment of your choice, for example using &lt;a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands"&gt;conda env&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;conda create -n blog &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and activate it using &lt;code&gt;conda activate blog&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now, install the following Python packages:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pelican ghp-import Markdown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can generate the Pelican files using &lt;code&gt;pelican-quickstart&lt;/code&gt;. You can take the default values, but probably want to set the &lt;code&gt;website title&lt;/code&gt;, your &lt;code&gt;author name&lt;/code&gt; and the &lt;code&gt;time zone&lt;/code&gt; appropriately. You definitely have to choose:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Afterwards, your folder should contain the following files (use &lt;code&gt;dir&lt;/code&gt; on Windows instead of &lt;code&gt;ls -l&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ ls -l
+.
+..
+Makefile
+content
+output
+pelicanconf.py
+publishconf.py
+tasks.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Subsequently, initialize the &lt;code&gt;content branch&lt;/code&gt; to be able to revert to this state, just in case:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add .
+git commit -m &lt;span class="s1"&gt;&amp;#39;initial Pelican commit to content&amp;#39;&lt;/span&gt;
+git push origin content
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Great, you are all set up to ...&lt;/p&gt;
+&lt;h2&gt;Edit your blog&lt;/h2&gt;
+&lt;p&gt;Add your first content by creating some dummy pages:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; content
+touch first-post.md
+touch pages/about.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Edit the markdown files, for example as follows:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;first-post.md&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;title: Hello World!
+date: &amp;lt;today&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;s date&amp;gt;
+author: Your Name Here
+
+This is my first post on my new blog. While not super informative it
+should convey my sense of excitement and eagerness to engage with you,
+the reader!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;pages/about.md&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;title: About
+date: &amp;lt;today&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;s date&amp;gt;
+&amp;lt;p &lt;span class="nv"&gt;style&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;font-family:georgia,garamond,serif;font-size:24px;line-height:1.4&amp;quot;&lt;/span&gt;&amp;gt;
+&amp;lt;q&amp;gt;
+This is a quote describing my mission statement...
+&amp;lt;/q&amp;gt;
+&amp;lt;/p&amp;gt;
+
+You can &lt;span class="o"&gt;[&lt;/span&gt;contact me via email&lt;span class="o"&gt;](&lt;/span&gt;mailto:&lt;span class="o"&gt;)&lt;/span&gt; or on &lt;span class="o"&gt;[&lt;/span&gt;twitter&lt;span class="o"&gt;](&lt;/span&gt;https://twitter.com/&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="o"&gt;[&lt;/span&gt;LinkedIn&lt;span class="o"&gt;](&lt;/span&gt;https://www.linkedin.com/in/&lt;span class="o"&gt;)&lt;/span&gt; or &lt;span class="o"&gt;[&lt;/span&gt;GitHub&lt;span class="o"&gt;](&lt;/span&gt;https://github.com/&lt;span class="o"&gt;)&lt;/span&gt;.
+
+Cheers!
+
+&amp;lt;username&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Basically, you can create your blog posts by simply adding markdown files in the content folder. If you want to cluster your articles in different categories, you can create the articles in the folders &lt;code&gt;content/category_1&lt;/code&gt;, &lt;code&gt;content/category_1&lt;/code&gt;, etc. and Pelican will automatically create these categories.&lt;/p&gt;
+&lt;p&gt;You normally want to add static pages such as &lt;code&gt;about.md&lt;/code&gt; in the pages directory.&lt;/p&gt;
+&lt;p&gt;Now, let's get this content online!&lt;/p&gt;
+&lt;h2&gt;Commit and Publish your Changes&lt;/h2&gt;
+&lt;p&gt;As described above, the content will be published using the &lt;code&gt;master branch&lt;/code&gt; and the source files will be version controlled using the &lt;code&gt;content branch&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Publish&lt;/h3&gt;
+&lt;p&gt;First, generate the web content using Pelican:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican content -o output -s publishconf.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, add the web content files that are generated in the &lt;code&gt;output&lt;/code&gt; directory to the &lt;code&gt;master branch&lt;/code&gt; using &lt;code&gt;ghp-import&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ghp-import -m &lt;span class="s2"&gt;&amp;quot;Generate Pelican site&amp;quot;&lt;/span&gt; --no-jekyll -b master output
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Finally, push the changes to the &lt;code&gt;master branch&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Congratulations, you have just published your changes to https://github.com/username/username.github.io. Check it out! :rocket:&lt;/p&gt;
+&lt;h3&gt;Version Control&lt;/h3&gt;
+&lt;p&gt;Although your changes are published, the source markdown files are not yet version-controlled! :(&lt;/p&gt;
+&lt;p&gt;Therefore, version-control them using:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add content
+git commit -m &lt;span class="s1"&gt;&amp;#39;added a first post and an about page&amp;#39;&lt;/span&gt;
+git push origin content
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, for each new blog article you want to write, you can create a new &lt;code&gt;article branch&lt;/code&gt; based on the &lt;code&gt;content branch&lt;/code&gt;, write the article and merge it into &lt;code&gt;content branch&lt;/code&gt;. :pray:&lt;/p&gt;
+&lt;h2&gt;&lt;a href="https://www.namecheap.com"&gt;www.your-domain.com&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In order to bring your blog to a custom URL such as www.robin-beer.de instead of https://github.com/Zaubeerer/zaubeerer.github.io you first need to buy a domain. :moneybag:&lt;/p&gt;
+&lt;p&gt;Therefore, I used &lt;a href="https://www.namecheap.com"&gt;namecheap&lt;/a&gt; as it enables you to search for a domain:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="search for domain name" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/namecheap_domain_search.png"&gt;&lt;/p&gt;
+&lt;p&gt;And informs you about the availability and costs of the possible domains:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="domain search results" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/namecheap_domain_search_results.png"&gt;&lt;/p&gt;
+&lt;p&gt;Once purchased, you need to inform GitHub pages about the custom URL and vice-versa.&lt;/p&gt;
+&lt;p&gt;Therefore, go to the settings of your GitHub pages repository, i.e. https://github.com/Zaubeerer/zaubeerer.github.io/settings for my blog:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="repository settings" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/2020-04-23-22-36-34.png"&gt;&lt;/p&gt;
+&lt;p&gt;Then, scroll down to the &lt;code&gt;GitHub pages&lt;/code&gt; section and fill in your domain etc.:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="GitHub pages settings" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/2020-04-23-22-39-37.png"&gt;&lt;/p&gt;
+&lt;p&gt;Additionally, &lt;a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain"&gt;you must create a CNAME file in your site's repository and configure a CNAME record with your DNS provider&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;CNAME&lt;/code&gt; file was automatically generated when you filled in the custom domain in the &lt;code&gt;GitHub pages&lt;/code&gt; settings. Additionally, you need to go to your DNS provider's site and create a &lt;code&gt;CNAME&lt;/code&gt; record. For &lt;code&gt;namecheap&lt;/code&gt;, you can find it as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;When logged in, click on &lt;code&gt;Domain List&lt;/code&gt; in the left sidebar and then on &lt;code&gt;MANAGE&lt;/code&gt; on the right of the respective domain.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="namecheap domain list" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/2020-04-23-22-53-43.png"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &lt;code&gt;Advanced DNS&lt;/code&gt; and then &lt;code&gt;ADD NEW RECORD&lt;/code&gt; on the bottom left.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Advanced DNS settings in namecheap" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/2020-04-23-22-53-11.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the opening mask, select &lt;code&gt;CNAME Record&lt;/code&gt; and fill in the data analogously to what is shown for my site's CNAME Record in the image above.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Maybe you have to wait a bit, but then your blog should be reachable via your custom domain! :)&lt;/p&gt;
+&lt;h2&gt;(Semi-) Automatic Deployment&lt;/h2&gt;
+&lt;p&gt;Great! Now you just have to write articles on &lt;code&gt;article branches&lt;/code&gt;, publish them using the &lt;code&gt;master branch&lt;/code&gt; and merge them into the &lt;code&gt;content branch&lt;/code&gt; right?&lt;/p&gt;
+&lt;p&gt;No, whenever you push to GitHub, it turns out that the custom domain gets reset so that you have to rewrite it manually in the &lt;code&gt;GitHub pages settings&lt;/code&gt;. Or, do you? :thinking:&lt;/p&gt;
+&lt;p&gt;The reason why the custom domain is reset, is because when filling it in manually as shown above, a commit is created on remote, but overriden whenever you push to remote. Therefore, you need to pull and merge remote master into your local master, such that the &lt;code&gt;CNAME&lt;/code&gt; file containing your custom branch persists. &lt;/p&gt;
+&lt;p&gt;Now, you can &lt;code&gt;edit locally&lt;/code&gt; and &lt;a href="#publish"&gt;publish as described above&lt;/a&gt; and usually don't have to go to your GitHub pages repository anymore. :thumbsup:&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in &lt;a href="https://www.robin-beer.de/drafts/improve-your-pelican-blog-from-style-over-commentary-function-to-your-domain-related-email-address.html"&gt;an upcoming article&lt;/a&gt;. However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?&lt;/p&gt;
+&lt;p&gt;So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ;-)) and share your blog address in the comment section below.&lt;/p&gt;
+&lt;p&gt;Looking forward to reading from you! :man_technologist:&lt;/p&gt;
+&lt;p&gt;Robin&lt;/p&gt;</content><category term="Tools"></category><category term="HowTo"></category><category term="Python"></category><category term="GitHub"></category></entry></feed>
