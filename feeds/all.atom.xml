@@ -19,7 +19,7 @@ Words are a lens to focus one's mind.
 &lt;p&gt;For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to &lt;a href="pybit.es"&gt;PyBites&lt;/a&gt;, I finally got my blog online much faster than expected and started writing.&lt;/p&gt;
 &lt;p&gt;I was able to set up a draft version of my blog quickly (much less than 42 minutes) based on &lt;a href="https://opensource.com/article/19/5/run-your-blog-github-pages-python"&gt;this Pelican blog article&lt;/a&gt; by Erik O'Shaughnessy. However, I spent quite some time on creating my own domain and connecting it with GitHub pages as Erik didn't cover that part. Therefore, I streamlined the tutorial and added my additional learnings.&lt;/p&gt;
 &lt;p&gt;So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until you blog is online. :)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="blog_images/writing_image.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Creative writing" src="{filename}/blog_images/writing_image.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Create a git repository supporting GitHub Pages&lt;/h2&gt;
 &lt;p&gt;In order to use &lt;a href="https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages"&gt;GitHub Pages&lt;/a&gt; you first have to &lt;a href="https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site"&gt;create a new GitHub repository&lt;/a&gt; using your username, such that the following repository results:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;https://github.com/username/username.github.io
