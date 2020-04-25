@@ -1,28 +1,32 @@
-title: How to set up a blog in 42 minutes using Pelican, GitHub pages and namecheap
+title: How fast can you set up your blog with Pelican, GitHub pages and namecheap?
 date: 22nd April 2020
 author: Robin Beer
-summary: How did I set up this blog? A full description of how to set up a blog using the Python package Pelican, GitHub pages and namecheap.
-tags: HowTo, Python, GitHub, 
+summary: Setting up my blog took me much less time than expected. Here, I show you how to do it even faster.
+tags: HowTo, Python, GitHub,
 
-What? If you knew it might only take 42 minutes you would also have created your own blog to share your thoughts with the world? Let's see whether it holds true. Read this post and then time how long it takes you. :)
+For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to [PyBites](pybit.es), I finally got my blog online much faster than expected and started writing.
+
+I was able to set up a draft version of my blog quickly (much less than 42 minutes) based on [this Pelican blog article](https://opensource.com/article/19/5/run-your-blog-github-pages-python) by Erik O'Shaughnessy. However, I spent quite some time on creating my own domain and connecting it with GitHub pages as Erik didn't cover that part. Therefore, I streamlined the tutorial and added my additional learnings.
+
+So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until you blog is online. :)
 
 ## Create a git repository supporting GitHub Pages
 
 In order to use [GitHub Pages](https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages) you first have to [create a new GitHub repository](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site) using your username, such that the following repository results:
 
-```
+```bash
 https://github.com/username/username.github.io
 ```
 
 Just leave it empty for now and clone it using:
 
-```
+```bash
 git clone https://github.com/username/username.github.io blog
 ```
 
 Subsequently, create a content branch that will be used to track the markdown source files:
 
-```
+```bash
 git checkout -b content
 ```
 
@@ -34,24 +38,25 @@ So let's set up Pelican!
 
 First of all, I suggest to create a virtual environment of your choice, for example using [conda env](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands):
 
-```
+```bash
 conda create -n blog python=3
 ```
+
 and activate it using `conda activate blog`.
 
-Subsequently, install the following Python packages:
+Now, install the following Python packages:
 
 ```bash
 pip install pelican ghp-import Markdown
 ```
 
-Now you can generate the Pelican files using `pelican-quickstart`. You can take the default values, but probably want to set the `website title`, your `author name` and the `time zone` appropriately. You definitely have to choose:
+You can generate the Pelican files using `pelican-quickstart`. You can take the default values, but probably want to set the `website title`, your `author name` and the `time zone` appropriately. You definitely have to choose:
 
 ```bash
 > Do you want to upload your website using GitHub Pages? (y/N) y
 ```
 
-Now, your folder should contain the following files (use `dir` on Windows instead of `ls -l`):
+Afterwards, your folder should contain the following files (use `dir` on Windows instead of `ls -l`):
 
 ```bash
 $ ls -l
@@ -67,7 +72,7 @@ tasks.py
 
 Subsequently, initialize the `content branch` to be able to revert to this state, just in case:
 
-```
+```bash
 git add .
 git commit -m 'initial Pelican commit to content'
 git push origin content
@@ -79,7 +84,7 @@ Great, you are all set up to ...
 
 Add your first content by creating some dummy pages:
 
-```
+```bash
 cd content
 touch first-post.md
 touch pages/about.md
@@ -89,7 +94,7 @@ Edit the markdown files, for example as follows:
 
 `first-post.md`:
 
-```
+```bash
 title: Hello World!
 date: <today's date>
 author: Your Name Here
@@ -100,7 +105,8 @@ the reader!
 ```
 
 `pages/about.md`:
-```
+
+```bash
 title: About
 date: <today's date>
 <p style = "font-family:georgia,garamond,serif;font-size:24px;line-height:1.4">
@@ -136,13 +142,13 @@ pelican content -o output -s publishconf.py
 
 Now, add the web content files that are generated in the `output` directory to the `master branch` using `ghp-import`:
 
-```
+```bash
 ghp-import -m "Generate Pelican site" --no-jekyll -b master output
 ```
 
 Finally, push the changes to the `master branch`:
 
-```
+```bash
 git push origin master
 ```
 
@@ -153,7 +159,8 @@ Congratulations, you have just published your changes to https://github.com/user
 Although your changes are published, the source markdown files are not yet version-controlled! :(
 
 Therefore, version-control them using:
-```
+
+```bash
 git add content
 git commit -m 'added a first post and an about page'
 git push origin content
@@ -210,14 +217,10 @@ Now, you can `edit locally` and [publish as described above](#publish) and usual
 
 ## Conclusion
 
-For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to [PyBites](pybit.es), I finally got my blog online much faster than expected and started writing.
-
-I was able to set up a draft version of my blog quickly based on [this Pelican blog article](https://opensource.com/article/19/5/run-your-blog-github-pages-python) by Erik O'Shaughnessy but spent quite some time on creating my own domain and connecting it with GitHub pages.
-
-Therefore, I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in [an upcoming article](). However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?
+I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in [an upcoming article](). However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?
 
 So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ;-)) and share your blog address in the comment section below.
 
 Looking forward to reading from you! :man_technologist:
 
-Robin 
+Robin
