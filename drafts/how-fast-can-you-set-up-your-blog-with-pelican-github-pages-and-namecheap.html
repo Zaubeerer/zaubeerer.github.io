@@ -102,16 +102,16 @@
 
 
   <div class="blog_max_width">
-    <p style = "font-family:georgia,garamond,serif;font-size:24px;line-height:1.4">
-<q>
-Words are a lens to focus one's mind.
-</q> - Ayn Rand
-</p>
-
-<p>For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to <a href="pybit.es">PyBites</a>, I finally got my blog online much faster than expected and started writing.</p>
+    <p>For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to <a href="pybit.es">PyBites</a>, I finally got my blog online much faster than expected and started writing.</p>
+<blockquote>
+<p>Words are a lens to focus one's mind. - Ayn Rand</p>
+</blockquote>
 <p>I was able to set up a draft version of my blog quickly (much less than 42 minutes) based on <a href="https://opensource.com/article/19/5/run-your-blog-github-pages-python">this Pelican blog article</a> by Erik O'Shaughnessy. However, I spent quite some time on creating my own domain and connecting it with GitHub pages as Erik didn't cover that part. Therefore, I streamlined the tutorial and added my additional learnings.</p>
 <p>So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until you blog is online. :)</p>
-<p><img alt="Creative writing" src="{filename}images/blog_images/writing_image.jpg"></p>
+<!-- ![Creative writing]({static}/../images/blog_images/writing_image.jpg) -->
+
+<!-- ![]({filename}/images/blog_images/2020-04-23-22-36-34.png) -->
+
 <h2>Create a git repository supporting GitHub Pages</h2>
 <p>In order to use <a href="https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages">GitHub Pages</a> you first have to <a href="https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site">create a new GitHub repository</a> using your username, such that the following repository results:</p>
 <div class="highlight"><pre><span></span><code>https://github.com/username/username.github.io
@@ -240,24 +240,30 @@ git push origin content
 <h2><a href="https://www.namecheap.com">www.your-domain.com</a></h2>
 <p>In order to bring your blog to a custom URL such as www.robin-beer.de instead of https://github.com/Zaubeerer/zaubeerer.github.io you first need to buy a domain. :moneybag:</p>
 <p>Therefore, I used <a href="https://www.namecheap.com">namecheap</a> as it enables you to search for a domain:</p>
-<p><img alt="search for domain name" src="{filename}images/blog_images/namecheap_domain_search.png"></p>
+<!-- ![search for domain name]({filename}images/blog_images/namecheap_domain_search.png) -->
+
 <p>And informs you about the availability and costs of the possible domains:</p>
-<p><img alt="domain search results" src="{filename}images/blog_images/namecheap_domain_search_results.png"></p>
+<!-- ![domain search results]({filename}images/blog_images/namecheap_domain_search_results.png) -->
+
 <p>Once purchased, you need to inform GitHub pages about the custom URL and vice-versa.</p>
 <p>Therefore, go to the settings of your GitHub pages repository, i.e. https://github.com/Zaubeerer/zaubeerer.github.io/settings for my blog:</p>
-<p><img alt="repository settings" src="{filename}images/blog_images/2020-04-23-22-36-34.png"></p>
+<!-- ![repository settings]({filename}images/blog_images/2020-04-23-22-36-34.png) -->
+
 <p>Then, scroll down to the <code>GitHub pages</code> section and fill in your domain etc.:</p>
-<p><img alt="GitHub pages settings" src="{filename}images/blog_images/2020-04-23-22-39-37.png"></p>
+<!-- ![GitHub pages settings]({filename}images/blog_images/2020-04-23-22-39-37.png) -->
+
 <p>Additionally, <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain">you must create a CNAME file in your site's repository and configure a CNAME record with your DNS provider</a>.</p>
 <p>The <code>CNAME</code> file was automatically generated when you filled in the custom domain in the <code>GitHub pages</code> settings. Additionally, you need to go to your DNS provider's site and create a <code>CNAME</code> record. For <code>namecheap</code>, you can find it as follows:</p>
 <ol>
-<li>
-<p>When logged in, click on <code>Domain List</code> in the left sidebar and then on <code>MANAGE</code> on the right of the respective domain.
-   <img alt="namecheap domain list" src="{filename}images/blog_images/2020-04-23-22-53-43.png"></p>
-</li>
+<li>When logged in, click on <code>Domain List</code> in the left sidebar and then on <code>MANAGE</code> on the right of the respective domain.</li>
+</ol>
+<!-- <img alt="namecheap domain list" src="{filename}images/blog_images/2020-04-23-22-53-43.png"> -->
+
+<ol>
 <li>
 <p>Click on <code>Advanced DNS</code> and then <code>ADD NEW RECORD</code> on the bottom left.</p>
-<p><img alt="Advanced DNS settings in namecheap" src="{filename}images/blog_images/2020-04-23-22-53-11.png"></p>
+<!-- <img alt="Advanced DNS settings in namecheap" src="{filename}images/blog_images/2020-04-23-22-53-11.png"> -->
+
 </li>
 <li>
 <p>In the opening mask, select <code>CNAME Record</code> and fill in the data analogously to what is shown for my site's CNAME Record in the image above.</p>
@@ -270,7 +276,7 @@ git push origin content
 <p>The reason why the custom domain is reset, is because when filling it in manually as shown above, a commit is created on remote, but overriden whenever you push to remote. Therefore, you need to pull and merge remote master into your local master, such that the <code>CNAME</code> file containing your custom branch persists. </p>
 <p>Now, you can <code>edit locally</code> and <a href="#publish">publish as described above</a> and usually don't have to go to your GitHub pages repository anymore. :thumbsup:</p>
 <h2>Conclusion</h2>
-<p>I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in <a href="">an upcoming article</a>. However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?</p>
+<p>I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in <a href="https://www.robin-beer.de/drafts/improve-your-pelican-blog-from-style-over-commentary-function-to-your-domain-related-email-address.html">an upcoming article</a>. However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?</p>
 <p>So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ;-)) and share your blog address in the comment section below.</p>
 <p>Looking forward to reading from you! :man_technologist:</p>
 <p>Robin</p>
