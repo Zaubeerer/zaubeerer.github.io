@@ -1,5 +1,5 @@
 title: Improve your Pelican blog: From style over commentary function to your domain-related email address
-date: soon
+date:  2nd May 2020
 author: Robin Beer
 summary: Improve your blog's appearance and tailor it to your needs.
 tags: HowTo, Python, GitHub,
