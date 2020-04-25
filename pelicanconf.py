@@ -2,6 +2,10 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import sys
+
+from emojiextension import EmojiExtension
+
 AUTHOR = "Robin Beer"
 SITENAME = "Robin Beer"
 SITEURL = "https://www.robin-beer.de"
@@ -84,6 +88,18 @@ MENUITEMS = (
 # embed jupyter notebooks and post stats
 MARKUP = ("md", "ipynb")
 PLUGIN_PATHS = ["../pelican-plugins/"]
+
+# Markdown Configuration:
+MARKDOWN = {
+    "extensions": [EmojiExtension.create_from_json("./resources/emojis.json")],
+    "extension_configs": {
+        "markdown.extensions.codehilite": {"css_class": "highlight"},
+        "markdown.extensions.toc": {},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
+    },
+    "output_format": "html5",
+}
 
 PLUGINS = ["readtime", "pelican-ipynb.markup", "post_stats"]
 # IPYNB_USE_META_SUMMARY = True
