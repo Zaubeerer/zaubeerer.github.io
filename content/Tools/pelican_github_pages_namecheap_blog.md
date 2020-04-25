@@ -157,11 +157,11 @@ Finally, push the changes to the `master branch`:
 git push origin master
 ```
 
-Congratulations, you have just published your changes to https://github.com/username/username.github.io. Check it out! ::rocket::
+Congratulations, you have just published your changes to <https://github.com/username/username.github.io.> Check it out! ::rocket::
 
 ### Version Control
 
-Although your changes are published, the source markdown files are not yet version-controlled! :(
+Although your changes are published, the source markdown files are not yet version-controlled! ::confused::
 
 Therefore, version-control them using:
 
@@ -187,7 +187,7 @@ And informs you about the availability and costs of the possible domains:
 
 Once purchased, you need to inform GitHub pages about the custom URL and vice-versa.
 
-Therefore, go to the settings of your GitHub pages repository, i.e. https://github.com/Zaubeerer/zaubeerer.github.io/settings for my blog:
+Therefore, go to the settings of your GitHub pages repository, i.e. <https://github.com/Zaubeerer/zaubeerer.github.io/settings> for my blog:
 
 ![repository settings]({static}/Tools/images/pelican_github_pages_blog/2020-04-23-22-36-34.png)
 
@@ -209,7 +209,7 @@ The `CNAME` file was automatically generated when you filled in the custom domai
 
 3. In the opening mask, select `CNAME Record` and fill in the data analogously to what is shown for my site's CNAME Record in the image above.
 
-Maybe you have to wait a bit, but then your blog should be reachable via your custom domain! :)
+Maybe you have to wait a bit, but then your blog should be reachable via your custom domain! ::slightly_smiling_face::
 
 ## (Semi-) Automatic Deployment
 
@@ -225,8 +225,9 @@ Now, you can `edit locally` and [publish as described above](#publish) and usual
 
 I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in [an upcoming article]({filename}pelican_blog_improvements.md). However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?
 
-So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ;-)) and share your blog address in the comment section below.
+So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ) and share your blog address in the comment section below.
 
-Looking forward to reading from you! ::man_technologist::
+Looking forward to reading from you! ::personal_computer::
+
 
 Robin

@@ -9,6 +9,11 @@ I am busy writing this article, stay tuned :)
 
 > "Writing is perhaps the greatest of human inventions, binding together people, citizens of distant epochs, who never knew one another." - Carl Sagan
 
+<!-- Automation
+
+python -m http.server                      
+bash file (?) -->
+
 <!-- ## Style
 
  - "textwidth"
