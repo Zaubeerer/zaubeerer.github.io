@@ -11,9 +11,9 @@ For a long time, I wanted to create my own blog, but hesitated because I thought
 
 I was able to set up a draft version of my blog quickly (much less than 42 minutes) based on [this Pelican blog article](https://opensource.com/article/19/5/run-your-blog-github-pages-python) by Erik O'Shaughnessy. However, I spent quite some time on creating my own domain and connecting it with GitHub pages as Erik didn't cover that part. Therefore, I streamlined the tutorial and added my additional learnings.
 
-So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until you blog is online. :)
+So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until your blog is online. ::slightly_smiling_face::
 
-![Creative writing]({static}images/Tools/pelican_github_pages_blog/writing_image.jpg)
+![Creative writing]({static}/Tools/images/pelican_github_pages_blog/writing_image.jpg)
 
 ## Create a git repository supporting GitHub Pages
 
@@ -35,7 +35,7 @@ Subsequently, create a content branch that will be used to track the markdown so
 git checkout -b content
 ```
 
-Therewith, the source files (markdown, Pelican config, ...) in the `content branch` can be separated from the web content, that needs to be pushed to the `master branch` for GitHub Pages to automatically publish them. :ok_hand:
+Therewith, the source files (markdown, Pelican config, ...) in the `content branch` can be separated from the web content, that needs to be pushed to the `master branch` for GitHub Pages to automatically publish them. ::ok_hand::
 
 So let's set up Pelican!
 
@@ -157,7 +157,7 @@ Finally, push the changes to the `master branch`:
 git push origin master
 ```
 
-Congratulations, you have just published your changes to https://github.com/username/username.github.io. Check it out! :rocket:
+Congratulations, you have just published your changes to https://github.com/username/username.github.io. Check it out! ::rocket::
 
 ### Version Control
 
@@ -171,29 +171,29 @@ git commit -m 'added a first post and an about page'
 git push origin content
 ```
 
-Now, for each new blog article you want to write, you can create a new `article branch` based on the `content branch`, write the article and merge it into `content branch`. :pray:
+Now, for each new blog article you want to write, you can create a new `article branch` based on the `content branch`, write the article and merge it into `content branch`. ::pray::
 
-## [www.your-domain.com](https://www.namecheap.com)
+## Create your own domain
 
-In order to bring your blog to a custom URL such as www.robin-beer.de instead of https://github.com/Zaubeerer/zaubeerer.github.io you first need to buy a domain. :moneybag:
+In order to bring your blog to a custom URL such as <https://www.robin-beer.de> instead of <https://github.com/Zaubeerer/zaubeerer.github.io> you first need to buy a domain. ::moneybag::
 
 Therefore, I used [namecheap](https://www.namecheap.com) as it enables you to search for a domain:
 
-![search for domain name]({static}images/Tools/pelican_github_pages_blog/namecheap_domain_search.png)
+![search for domain name]({static}/Tools/images/pelican_github_pages_blog/namecheap_domain_search.png)
 
 And informs you about the availability and costs of the possible domains:
 
-![domain search results]({static}images/Tools/pelican_github_pages_blog/namecheap_domain_search_results.png)
+![domain search results]({static}/Tools/images/pelican_github_pages_blog/namecheap_domain_search_results.png)
 
 Once purchased, you need to inform GitHub pages about the custom URL and vice-versa.
 
 Therefore, go to the settings of your GitHub pages repository, i.e. https://github.com/Zaubeerer/zaubeerer.github.io/settings for my blog:
 
-![repository settings]({static}images/Tools/pelican_github_pages_blog/2020-04-23-22-36-34.png)
+![repository settings]({static}/Tools/images/pelican_github_pages_blog/2020-04-23-22-36-34.png)
 
 Then, scroll down to the `GitHub pages` section and fill in your domain etc.:
 
-![GitHub pages settings]({static}images/Tools/pelican_github_pages_blog/2020-04-23-22-39-37.png)
+![GitHub pages settings]({static}/Tools/images/pelican_github_pages_blog/2020-04-23-22-39-37.png)
 
 Additionally, [you must create a CNAME file in your site's repository and configure a CNAME record with your DNS provider](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain).
 
@@ -201,11 +201,11 @@ The `CNAME` file was automatically generated when you filled in the custom domai
 
 1. When logged in, click on `Domain List` in the left sidebar and then on `MANAGE` on the right of the respective domain.
 
-   ![namecheap domain list]({static}images/Tools/pelican_github_pages_blog/2020-04-23-22-53-43.png)
+   ![namecheap domain list]({static}/Tools/images/pelican_github_pages_blog/2020-04-23-22-53-43.png)
 
 2. Click on `Advanced DNS` and then `ADD NEW RECORD` on the bottom left.
 
-    ![Advanced DNS settings in namecheap]({static}images/Tools/pelican_github_pages_blog/2020-04-23-22-53-11.png)
+    ![Advanced DNS settings in namecheap]({static}/Tools/images/pelican_github_pages_blog/2020-04-23-22-53-11.png)
 
 3. In the opening mask, select `CNAME Record` and fill in the data analogously to what is shown for my site's CNAME Record in the image above.
 
@@ -215,11 +215,11 @@ Maybe you have to wait a bit, but then your blog should be reachable via your cu
 
 Great! Now you just have to write articles on `article branches`, publish them using the `master branch` and merge them into the `content branch` right?
 
-No, whenever you push to GitHub, it turns out that the custom domain gets reset so that you have to rewrite it manually in the `GitHub pages settings`. Or, do you? :thinking:
+No, whenever you push to GitHub, it turns out that the custom domain gets reset so that you have to rewrite it manually in the `GitHub pages settings`. Or, do you? ::thinking::
 
 The reason why the custom domain is reset, is because when filling it in manually as shown above, a commit is created on remote, but overriden whenever you push to remote. Therefore, you need to pull and merge remote master into your local master, such that the `CNAME` file containing your custom branch persists. 
 
-Now, you can `edit locally` and [publish as described above](#publish) and usually don't have to go to your GitHub pages repository anymore. :thumbsup:
+Now, you can `edit locally` and [publish as described above](#publish) and usually don't have to go to your GitHub pages repository anymore. ::thumbsup::
 
 ## Conclusion
 
@@ -227,6 +227,6 @@ I hope that I can cut your learning curve with this article to get you up and ru
 
 So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ;-)) and share your blog address in the comment section below.
 
-Looking forward to reading from you! :man_technologist:
+Looking forward to reading from you! ::man_technologist::
 
 Robin
