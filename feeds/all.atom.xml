@@ -5,7 +5,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;I was able to set up a draft version of my blog quickly (much less than 42 minutes) based on &lt;a href="https://opensource.com/article/19/5/run-your-blog-github-pages-python"&gt;this Pelican blog article&lt;/a&gt; by Erik O'Shaughnessy. However, I spent quite some time on creating my own domain and connecting it with GitHub pages as Erik didn't cover that part. Therefore, I streamlined the tutorial and added my additional learnings.&lt;/p&gt;
 &lt;p&gt;So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until you blog is online. :)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Creative writing" src="https://www.robin-beer.de/Tools/images/pelican_github_pages_blog/writing_image.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Creative writing" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/writing_image.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Create a git repository supporting GitHub Pages&lt;/h2&gt;
 &lt;p&gt;In order to use &lt;a href="https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages"&gt;GitHub Pages&lt;/a&gt; you first have to &lt;a href="https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site"&gt;create a new GitHub repository&lt;/a&gt; using your username, such that the following repository results:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;https://github.com/username/username.github.io
@@ -134,30 +134,24 @@ git push origin content
 &lt;h2&gt;&lt;a href="https://www.namecheap.com"&gt;www.your-domain.com&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;In order to bring your blog to a custom URL such as www.robin-beer.de instead of https://github.com/Zaubeerer/zaubeerer.github.io you first need to buy a domain. :moneybag:&lt;/p&gt;
 &lt;p&gt;Therefore, I used &lt;a href="https://www.namecheap.com"&gt;namecheap&lt;/a&gt; as it enables you to search for a domain:&lt;/p&gt;
-&lt;!-- ![search for domain name]({filename}images/blog_images/namecheap_domain_search.png) --&gt;
-
+&lt;p&gt;&lt;img alt="search for domain name" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/namecheap_domain_search.png"&gt;&lt;/p&gt;
 &lt;p&gt;And informs you about the availability and costs of the possible domains:&lt;/p&gt;
-&lt;!-- ![domain search results]({filename}images/blog_images/namecheap_domain_search_results.png) --&gt;
-
+&lt;p&gt;&lt;img alt="domain search results" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/namecheap_domain_search_results.png"&gt;&lt;/p&gt;
 &lt;p&gt;Once purchased, you need to inform GitHub pages about the custom URL and vice-versa.&lt;/p&gt;
 &lt;p&gt;Therefore, go to the settings of your GitHub pages repository, i.e. https://github.com/Zaubeerer/zaubeerer.github.io/settings for my blog:&lt;/p&gt;
-&lt;!-- ![repository settings]({filename}images/blog_images/2020-04-23-22-36-34.png) --&gt;
-
+&lt;p&gt;&lt;img alt="repository settings" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/2020-04-23-22-36-34.png"&gt;&lt;/p&gt;
 &lt;p&gt;Then, scroll down to the &lt;code&gt;GitHub pages&lt;/code&gt; section and fill in your domain etc.:&lt;/p&gt;
-&lt;!-- ![GitHub pages settings]({filename}images/blog_images/2020-04-23-22-39-37.png) --&gt;
-
+&lt;p&gt;&lt;img alt="GitHub pages settings" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/2020-04-23-22-39-37.png"&gt;&lt;/p&gt;
 &lt;p&gt;Additionally, &lt;a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain"&gt;you must create a CNAME file in your site's repository and configure a CNAME record with your DNS provider&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;CNAME&lt;/code&gt; file was automatically generated when you filled in the custom domain in the &lt;code&gt;GitHub pages&lt;/code&gt; settings. Additionally, you need to go to your DNS provider's site and create a &lt;code&gt;CNAME&lt;/code&gt; record. For &lt;code&gt;namecheap&lt;/code&gt;, you can find it as follows:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;When logged in, click on &lt;code&gt;Domain List&lt;/code&gt; in the left sidebar and then on &lt;code&gt;MANAGE&lt;/code&gt; on the right of the respective domain.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;!-- &lt;img alt="namecheap domain list" src="{filename}images/blog_images/2020-04-23-22-53-43.png"&gt; --&gt;
-
+&lt;p&gt;&lt;img alt="namecheap domain list" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/2020-04-23-22-53-43.png"&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Click on &lt;code&gt;Advanced DNS&lt;/code&gt; and then &lt;code&gt;ADD NEW RECORD&lt;/code&gt; on the bottom left.&lt;/p&gt;
-&lt;!-- &lt;img alt="Advanced DNS settings in namecheap" src="{filename}images/blog_images/2020-04-23-22-53-11.png"&gt; --&gt;
-
+&lt;p&gt;&lt;img alt="Advanced DNS settings in namecheap" src="https://www.robin-beer.de/Tools/images/Tools/pelican_github_pages_blog/2020-04-23-22-53-11.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the opening mask, select &lt;code&gt;CNAME Record&lt;/code&gt; and fill in the data analogously to what is shown for my site's CNAME Record in the image above.&lt;/p&gt;
