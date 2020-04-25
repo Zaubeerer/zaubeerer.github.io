@@ -5,11 +5,7 @@ summary: Setting up my blog took me much less time than expected. Here, I show y
 tags: HowTo, Python, GitHub,
 status: draft
 
-<p style = "font-family:georgia,garamond,serif;font-size:24px;line-height:1.4">
-<q>
-Words are a lens to focus one's mind.
-</q> - Ayn Rand
-</p>
+> Words are a lens to focus one's mind. - Ayn Rand
 
 For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to [PyBites](pybit.es), I finally got my blog online much faster than expected and started writing.
 

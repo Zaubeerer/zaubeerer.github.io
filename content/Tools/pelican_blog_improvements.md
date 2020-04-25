@@ -7,7 +7,7 @@ status: draft
 
 I am busy writing this article, stay tuned :)
 
-"Writing is perhaps the greatest of human inventions, binding together people, citizens of distant epochs, who never knew one another." - Carl Sagan
+> "Writing is perhaps the greatest of human inventions, binding together people, citizens of distant epochs, who never knew one another." - Carl Sagan
 
 <!-- ## Style
 
