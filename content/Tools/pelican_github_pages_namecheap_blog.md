@@ -3,7 +3,7 @@ date: 25th April 2020
 author: Robin Beer
 summary: Setting up my blog took me much less time than expected. Here, I show you how to do it even faster.
 tags: HowTo, Python, GitHub,
-
+status: draft
 
 <p style = "font-family:georgia,garamond,serif;font-size:24px;line-height:1.4">
 <q>
@@ -17,7 +17,7 @@ I was able to set up a draft version of my blog quickly (much less than 42 minut
 
 So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until you blog is online. :)
 
-![Creative writing]({static}images/blog_images/writing_image.jpg)
+![Creative writing]({filename}images/blog_images/writing_image.jpg)
 
 ## Create a git repository supporting GitHub Pages
 
@@ -183,32 +183,32 @@ In order to bring your blog to a custom URL such as www.robin-beer.de instead of
 
 Therefore, I used [namecheap](https://www.namecheap.com) as it enables you to search for a domain:
 
-![search for domain name](namecheap_domain_search.png)
+![search for domain name]({filename}images/blog_images/namecheap_domain_search.png)
 
 And informs you about the availability and costs of the possible domains:
 
-![domain search results](blog_images/namecheap_domain_search_results.png)
+![domain search results]({filename}images/blog_images/namecheap_domain_search_results.png)
 
 Once purchased, you need to inform GitHub pages about the custom URL and vice-versa.
 
 Therefore, go to the settings of your GitHub pages repository, i.e. https://github.com/Zaubeerer/zaubeerer.github.io/settings for my blog:
 
-![repository settings](blog_images/2020-04-23-22-36-34.png)
+![repository settings]({filename}images/blog_images/2020-04-23-22-36-34.png)
 
 Then, scroll down to the `GitHub pages` section and fill in your domain etc.:
 
-![GitHub pages settings](blog_images/2020-04-23-22-39-37.png)
+![GitHub pages settings]({filename}images/blog_images/2020-04-23-22-39-37.png)
 
 Additionally, [you must create a CNAME file in your site's repository and configure a CNAME record with your DNS provider](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain).
 
 The `CNAME` file was automatically generated when you filled in the custom domain in the `GitHub pages` settings. Additionally, you need to go to your DNS provider's site and create a `CNAME` record. For `namecheap`, you can find it as follows:
 
 1. When logged in, click on `Domain List` in the left sidebar and then on `MANAGE` on the right of the respective domain.
-   ![namecheap domain list](blog_images/2020-04-23-22-53-43.png)
+   ![namecheap domain list]({filename}images/blog_images/2020-04-23-22-53-43.png)
 
 2. Click on `Advanced DNS` and then `ADD NEW RECORD` on the bottom left.
 
-    ![Advanced DNS settings in namecheap](blog_images/2020-04-23-22-53-11.png)
+    ![Advanced DNS settings in namecheap]({filename}images/blog_images/2020-04-23-22-53-11.png)
 
 3. In the opening mask, select `CNAME Record` and fill in the data analogously to what is shown for my site's CNAME Record in the image above.
 

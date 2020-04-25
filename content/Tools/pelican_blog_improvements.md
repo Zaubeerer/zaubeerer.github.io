@@ -3,6 +3,7 @@ date:  2nd May 2020
 author: Robin Beer
 summary: Improve your blog's appearance and tailor it to your needs.
 tags: HowTo, Python, GitHub,
+status: draft
 
 I am busy writing this article, stay tuned :)
 
