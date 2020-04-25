@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://www.robin-beer.de/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://www.robin-beer.de/theme/pygments/vs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.robin-beer.de/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://www.robin-beer.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Robin Beer Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon_squared.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon_squared.ico" type="image/x-icon">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-160647513-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<meta name="author" content="Robin Beer" />
+<meta name="description" content="Setting up my blog took me much less time than expected. Here, I show you how to do it even faster." />
+<meta name="keywords" content="HowTo, Python, GitHub">
+
+<meta property="og:site_name" content="Robin Beer"/>
+<meta property="og:title" content="How fast can you set up your blog with Pelican, GitHub pages and namecheap?"/>
+<meta property="og:description" content="Setting up my blog took me much less time than expected. Here, I show you how to do it even faster."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://www.robin-beer.de/drafts/how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-04-25 00:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://www.robin-beer.de/author/robin-beer.html">
+<meta property="article:section" content="Tools"/>
+<meta property="article:tag" content="HowTo"/>
+<meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="GitHub"/>
+<meta property="og:image" content="/images/BEER_2018_2896_small.jpg">
+
+  <title>Robin Beer &ndash; How fast can you set up your blog with Pelican, GitHub pages and namecheap?</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://www.robin-beer.de">
+        <img src="/images/BEER_2018_2896_small.jpg" alt="Robin Beer" title="Robin Beer">
+      </a>
+      <h1><a href="https://www.robin-beer.de">Robin Beer</a></h1>
+
+<p>Energy Data Scientist</p>
+      <nav>
+        <ul class="list">
+          <li><a href="https://www.robin-beer.de/pages/about.html#about">About</a></li>
+
+          <li><a href="https://www.robin-beer.de">Home</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/R_E_Beer" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/robin-beer-7595b680/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/Zaubeerer" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-envelope-o" href="mailto:dev@robin-beer.de" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+    <div class="blog_max_width">
+        
+      <h1 id="how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap">How fast can you set up your blog with Pelican, GitHub pages and namecheap?</h1>
+      <p>
+            Posted on Sat 25 April 2020 in <a href="https://www.robin-beer.de/category/tools.html">Tools</a>
+
+
+          &#8226; 5 min read
+    </p>
+    </div>
+</header>
+
+
+  <div class="blog_max_width">
+    <p>For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to <a href="pybit.es">PyBites</a>, I finally got my blog online much faster than expected and started writing.</p>
+<blockquote>
+<p>Words are a lens to focus one's mind. - Ayn Rand</p>
+</blockquote>
+<p>I was able to set up a draft version of my blog quickly (much less than 42 minutes) based on <a href="https://opensource.com/article/19/5/run-your-blog-github-pages-python">this Pelican blog article</a> by Erik O'Shaughnessy. However, I spent quite some time on creating my own domain and connecting it with GitHub pages as Erik didn't cover that part. Therefore, I streamlined the tutorial and added my additional learnings.</p>
+<p>So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until you blog is online. :)</p>
+<p><img alt="Creative writing" src="https://www.robin-beer.de/images/pelican_github_pages_blog/writing_image.jpg"></p>
+<h2>Create a git repository supporting GitHub Pages</h2>
+<p>In order to use <a href="https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages">GitHub Pages</a> you first have to <a href="https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site">create a new GitHub repository</a> using your username, such that the following repository results:</p>
+<div class="highlight"><pre><span></span><code>https://github.com/username/username.github.io
+</code></pre></div>
+
+
+<p>Just leave it empty for now and clone it using:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/username/username.github.io blog
+</code></pre></div>
+
+
+<p>Subsequently, create a content branch that will be used to track the markdown source files:</p>
+<div class="highlight"><pre><span></span><code>git checkout -b content
+</code></pre></div>
+
+
+<p>Therewith, the source files (markdown, Pelican config, ...) in the <code>content branch</code> can be separated from the web content, that needs to be pushed to the <code>master branch</code> for GitHub Pages to automatically publish them. :ok_hand:</p>
+<p>So let's set up Pelican!</p>
+<h2>Install and Configure Pelican</h2>
+<p>First of all, I suggest to create a virtual environment of your choice, for example using <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">conda env</a>:</p>
+<div class="highlight"><pre><span></span><code>conda create -n blog <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+</code></pre></div>
+
+
+<p>and activate it using <code>conda activate blog</code>.</p>
+<p>Now, install the following Python packages:</p>
+<div class="highlight"><pre><span></span><code>pip install pelican ghp-import Markdown
+</code></pre></div>
+
+
+<p>You can generate the Pelican files using <code>pelican-quickstart</code>. You can take the default values, but probably want to set the <code>website title</code>, your <code>author name</code> and the <code>time zone</code> appropriately. You definitely have to choose:</p>
+<div class="highlight"><pre><span></span><code>&gt; Do you want to upload your website using GitHub Pages? <span class="o">(</span>y/N<span class="o">)</span> y
+</code></pre></div>
+
+
+<p>Afterwards, your folder should contain the following files (use <code>dir</code> on Windows instead of <code>ls -l</code>):</p>
+<div class="highlight"><pre><span></span><code>$ ls -l
+.
+..
+Makefile
+content
+output
+pelicanconf.py
+publishconf.py
+tasks.py
+</code></pre></div>
+
+
+<p>Subsequently, initialize the <code>content branch</code> to be able to revert to this state, just in case:</p>
+<div class="highlight"><pre><span></span><code>git add .
+git commit -m <span class="s1">&#39;initial Pelican commit to content&#39;</span>
+git push origin content
+</code></pre></div>
+
+
+<p>Great, you are all set up to ...</p>
+<h2>Edit your blog</h2>
+<p>Add your first content by creating some dummy pages:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> content
+touch first-post.md
+touch pages/about.md
+</code></pre></div>
+
+
+<p>Edit the markdown files, for example as follows:</p>
+<p><code>first-post.md</code>:</p>
+<div class="highlight"><pre><span></span><code>title: Hello World!
+date: &lt;today<span class="err">&#39;</span>s date&gt;
+author: Your Name Here
+
+This is my first post on my new blog. While not super informative it
+should convey my sense of excitement and eagerness to engage with you,
+the reader!
+</code></pre></div>
+
+
+<p><code>pages/about.md</code>:</p>
+<div class="highlight"><pre><span></span><code>title: About
+date: &lt;today<span class="err">&#39;</span>s date&gt;
+&lt;p <span class="nv">style</span> <span class="o">=</span> <span class="s2">&quot;font-family:georgia,garamond,serif;font-size:24px;line-height:1.4&quot;</span>&gt;
+&lt;q&gt;
+This is a quote describing my mission statement...
+&lt;/q&gt;
+&lt;/p&gt;
+
+You can <span class="o">[</span>contact me via email<span class="o">](</span>mailto:<span class="o">)</span> or on <span class="o">[</span>twitter<span class="o">](</span>https://twitter.com/<span class="o">)</span>, <span class="o">[</span>LinkedIn<span class="o">](</span>https://www.linkedin.com/in/<span class="o">)</span> or <span class="o">[</span>GitHub<span class="o">](</span>https://github.com/<span class="o">)</span>.
+
+Cheers!
+
+&lt;username&gt;
+</code></pre></div>
+
+
+<p>Basically, you can create your blog posts by simply adding markdown files in the content folder. If you want to cluster your articles in different categories, you can create the articles in the folders <code>content/category_1</code>, <code>content/category_1</code>, etc. and Pelican will automatically create these categories.</p>
+<p>You normally want to add static pages such as <code>about.md</code> in the pages directory.</p>
+<p>Now, let's get this content online!</p>
+<h2>Commit and Publish your Changes</h2>
+<p>As described above, the content will be published using the <code>master branch</code> and the source files will be version controlled using the <code>content branch</code>.</p>
+<h3>Publish</h3>
+<p>First, generate the web content using Pelican:</p>
+<div class="highlight"><pre><span></span><code>pelican content -o output -s publishconf.py
+</code></pre></div>
+
+
+<p>Now, add the web content files that are generated in the <code>output</code> directory to the <code>master branch</code> using <code>ghp-import</code>:</p>
+<div class="highlight"><pre><span></span><code>ghp-import -m <span class="s2">&quot;Generate Pelican site&quot;</span> --no-jekyll -b master output
+</code></pre></div>
+
+
+<p>Finally, push the changes to the <code>master branch</code>:</p>
+<div class="highlight"><pre><span></span><code>git push origin master
+</code></pre></div>
+
+
+<p>Congratulations, you have just published your changes to https://github.com/username/username.github.io. Check it out! :rocket:</p>
+<h3>Version Control</h3>
+<p>Although your changes are published, the source markdown files are not yet version-controlled! :(</p>
+<p>Therefore, version-control them using:</p>
+<div class="highlight"><pre><span></span><code>git add content
+git commit -m <span class="s1">&#39;added a first post and an about page&#39;</span>
+git push origin content
+</code></pre></div>
+
+
+<p>Now, for each new blog article you want to write, you can create a new <code>article branch</code> based on the <code>content branch</code>, write the article and merge it into <code>content branch</code>. :pray:</p>
+<h2><a href="https://www.namecheap.com">www.your-domain.com</a></h2>
+<p>In order to bring your blog to a custom URL such as www.robin-beer.de instead of https://github.com/Zaubeerer/zaubeerer.github.io you first need to buy a domain. :moneybag:</p>
+<p>Therefore, I used <a href="https://www.namecheap.com">namecheap</a> as it enables you to search for a domain:</p>
+<!-- ![search for domain name]({filename}images/blog_images/namecheap_domain_search.png) -->
+
+<p>And informs you about the availability and costs of the possible domains:</p>
+<!-- ![domain search results]({filename}images/blog_images/namecheap_domain_search_results.png) -->
+
+<p>Once purchased, you need to inform GitHub pages about the custom URL and vice-versa.</p>
+<p>Therefore, go to the settings of your GitHub pages repository, i.e. https://github.com/Zaubeerer/zaubeerer.github.io/settings for my blog:</p>
+<!-- ![repository settings]({filename}images/blog_images/2020-04-23-22-36-34.png) -->
+
+<p>Then, scroll down to the <code>GitHub pages</code> section and fill in your domain etc.:</p>
+<!-- ![GitHub pages settings]({filename}images/blog_images/2020-04-23-22-39-37.png) -->
+
+<p>Additionally, <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain">you must create a CNAME file in your site's repository and configure a CNAME record with your DNS provider</a>.</p>
+<p>The <code>CNAME</code> file was automatically generated when you filled in the custom domain in the <code>GitHub pages</code> settings. Additionally, you need to go to your DNS provider's site and create a <code>CNAME</code> record. For <code>namecheap</code>, you can find it as follows:</p>
+<ol>
+<li>When logged in, click on <code>Domain List</code> in the left sidebar and then on <code>MANAGE</code> on the right of the respective domain.</li>
+</ol>
+<!-- <img alt="namecheap domain list" src="{filename}images/blog_images/2020-04-23-22-53-43.png"> -->
+
+<ol>
+<li>
+<p>Click on <code>Advanced DNS</code> and then <code>ADD NEW RECORD</code> on the bottom left.</p>
+<!-- <img alt="Advanced DNS settings in namecheap" src="{filename}images/blog_images/2020-04-23-22-53-11.png"> -->
+
+</li>
+<li>
+<p>In the opening mask, select <code>CNAME Record</code> and fill in the data analogously to what is shown for my site's CNAME Record in the image above.</p>
+</li>
+</ol>
+<p>Maybe you have to wait a bit, but then your blog should be reachable via your custom domain! :)</p>
+<h2>(Semi-) Automatic Deployment</h2>
+<p>Great! Now you just have to write articles on <code>article branches</code>, publish them using the <code>master branch</code> and merge them into the <code>content branch</code> right?</p>
+<p>No, whenever you push to GitHub, it turns out that the custom domain gets reset so that you have to rewrite it manually in the <code>GitHub pages settings</code>. Or, do you? :thinking:</p>
+<p>The reason why the custom domain is reset, is because when filling it in manually as shown above, a commit is created on remote, but overriden whenever you push to remote. Therefore, you need to pull and merge remote master into your local master, such that the <code>CNAME</code> file containing your custom branch persists. </p>
+<p>Now, you can <code>edit locally</code> and <a href="#publish">publish as described above</a> and usually don't have to go to your GitHub pages repository anymore. :thumbsup:</p>
+<h2>Conclusion</h2>
+<p>I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in <a href="https://www.robin-beer.de/drafts/improve-your-pelican-blog-from-style-over-commentary-function-to-your-domain-related-email-address.html">an upcoming article</a>. However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?</p>
+<p>So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ;-)) and share your blog address in the comment section below.</p>
+<p>Looking forward to reading from you! :man_technologist:</p>
+<p>Robin</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://www.robin-beer.de/tag/howto.html">HowTo</a>
+      <a href="https://www.robin-beer.de/tag/python.html">Python</a>
+      <a href="https://www.robin-beer.de/tag/github.html">GitHub</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Robin Beer ",
+  "url" : "https://www.robin-beer.de",
+  "image": "/images/BEER_2018_2896_small.jpg",
+  "description": "Pythonic Energy Data Science Blog"
+}
+</script>
+
+<a href="https://github.com/Zaubeerer" target="_blank" class="github-corner" aria-label="View source on Github">
+    <svg width="80"
+         height="80"
+         viewBox="0 0 250 250"
+         style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
+         aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor"
+              style="transform-origin: 130px 106px;"
+              class="octo-arm">
+        </path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor"
+              class="octo-body">
+        </path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></body>
+</html>
