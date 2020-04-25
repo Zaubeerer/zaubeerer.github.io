@@ -6,11 +6,13 @@ tags: HowTo, Python, GitHub,
 
 I am busy writing this article, stay tuned :)
 
+"Writing is perhaps the greatest of human inventions, binding together people, citizens of distant epochs, who never knew one another." - Carl Sagan
+
 <!-- ## Style
 
  - "textwidth"
  - link colors
- - 
+ - pelican style
 
 ## Commentary Section powered by disqus
 
