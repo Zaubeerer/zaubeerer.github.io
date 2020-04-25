@@ -17,7 +17,7 @@ I was able to set up a draft version of my blog quickly (much less than 42 minut
 
 So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until you blog is online. :)
 
-![](blog_images/writing_image.jpg)
+![Creative writing]({filename}/blog_images/writing_image.jpg)
 
 ## Create a git repository supporting GitHub Pages
 
