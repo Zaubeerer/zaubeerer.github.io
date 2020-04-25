@@ -95,7 +95,7 @@
             Posted on Sat 25 April 2020 in <a href="https://www.robin-beer.de/category/tools.html">Tools</a>
 
 
-          &#8226; 5 min read
+          &#8226; 4 min read
     </p>
     </div>
 </header>
@@ -110,7 +110,7 @@
 <p>So let's see how fast we can get you up and running. Read this post and then measure the time it takes you until your blog is online. :)</p>
 <p><img alt="Creative writing" src="https://www.robin-beer.de/Tools/images/pelican_github_pages_blog/writing_image.jpg"></p>
 <h2 id="create-a-git-repository-supporting-github-pages">Create a git repository supporting GitHub Pages</h2>
-<p>In order to use <a href="https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages">GitHub Pages</a> you first have to <a href="https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site">create a new GitHub repository</a> using your username, such that the following repository results:</p>
+<p>In order to use klzzwxhklzzwxh</p>
 <div class="highlight"><pre><span></span><code>https://github.com/username/username.github.io
 </code></pre></div>
 
@@ -125,10 +125,10 @@
 </code></pre></div>
 
 
-<p>Therewith, the source files (markdown, Pelican config, ...) in the <code>content branch</code> can be separated from the web content, that needs to be pushed to the <code>master branch</code> for GitHub Pages to automatically publish them. :ok_hand:</p>
+<p>Therewith, the source files (markdown, Pelican config, ...) in the klzzwxhklzzwxhklzzwxh</p>
 <p>So let's set up Pelican!</p>
 <h2 id="install-and-configure-pelican">Install and Configure Pelican</h2>
-<p>First of all, I suggest to create a virtual environment of your choice, for example using <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">conda env</a>:</p>
+<p>First of all, I suggest to create a virtual environment of your choice, for example using klzzwxh</p>
 <div class="highlight"><pre><span></span><code>conda create -n blog <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
 </code></pre></div>
 
@@ -139,12 +139,12 @@
 </code></pre></div>
 
 
-<p>You can generate the Pelican files using <code>pelican-quickstart</code>. You can take the default values, but probably want to set the <code>website title</code>, your <code>author name</code> and the <code>time zone</code> appropriately. You definitely have to choose:</p>
+<p>You can generate the Pelican files using klzzwxhklzzwxhklzzwxhklzzwxh</p>
 <div class="highlight"><pre><span></span><code>&gt; Do you want to upload your website using GitHub Pages? <span class="o">(</span>y/N<span class="o">)</span> y
 </code></pre></div>
 
 
-<p>Afterwards, your folder should contain the following files (use <code>dir</code> on Windows instead of <code>ls -l</code>):</p>
+<p>Afterwards, your folder should contain the following files (use klzzwxhklzzwxh</p>
 <div class="highlight"><pre><span></span><code>$ ls -l
 .
 ..
@@ -157,7 +157,7 @@ tasks.py
 </code></pre></div>
 
 
-<p>Subsequently, initialize the <code>content branch</code> to be able to revert to this state, just in case:</p>
+<p>Subsequently, initialize the klzzwxh</p>
 <div class="highlight"><pre><span></span><code>git add .
 git commit -m <span class="s1">&#39;initial Pelican commit to content&#39;</span>
 git push origin content
@@ -174,7 +174,7 @@ touch pages/about.md
 
 
 <p>Edit the markdown files, for example as follows:</p>
-<p><code>first-post.md</code>:</p>
+<p>klzzwxh</p>
 <div class="highlight"><pre><span></span><code>title: Hello World!
 date: &lt;today<span class="err">&#39;</span>s date&gt;
 author: Your Name Here
@@ -185,7 +185,7 @@ the reader!
 </code></pre></div>
 
 
-<p><code>pages/about.md</code>:</p>
+<p>klzzwxh</p>
 <div class="highlight"><pre><span></span><code>title: About
 date: &lt;today<span class="err">&#39;</span>s date&gt;
 &lt;p <span class="nv">style</span> <span class="o">=</span> <span class="s2">&quot;font-family:georgia,garamond,serif;font-size:24px;line-height:1.4&quot;</span>&gt;
@@ -202,28 +202,28 @@ Cheers!
 </code></pre></div>
 
 
-<p>Basically, you can create your blog posts by simply adding markdown files in the content folder. If you want to cluster your articles in different categories, you can create the articles in the folders <code>content/category_1</code>, <code>content/category_1</code>, etc. and Pelican will automatically create these categories.</p>
+<p>Basically, you can create your blog posts by simply adding markdown files in the content folder. If you want to cluster your articles in different categories, you can create the articles in the folders klzzwxh0034, etc. and Pelican will automatically create these categories.</p>
 <p>You normally want to add static pages such as <code>about.md</code> in the pages directory.</p>
 <p>Now, let's get this content online!</p>
 <h2 id="commit-and-publish-your-changes">Commit and Publish your Changes</h2>
-<p>As described above, the content will be published using the <code>master branch</code> and the source files will be version controlled using the <code>content branch</code>.</p>
+<p>As described above, the content will be published using the klzzwxh0038.</p>
 <h3 id="publish">Publish</h3>
 <p>First, generate the web content using Pelican:</p>
 <div class="highlight"><pre><span></span><code>pelican content -o output -s publishconf.py
 </code></pre></div>
 
 
-<p>Now, add the web content files that are generated in the <code>output</code> directory to the <code>master branch</code> using <code>ghp-import</code>:</p>
+<p>Now, add the web content files that are generated in the klzzwxhklzzwxhklzzwxh</p>
 <div class="highlight"><pre><span></span><code>ghp-import -m <span class="s2">&quot;Generate Pelican site&quot;</span> --no-jekyll -b master output
 </code></pre></div>
 
 
-<p>Finally, push the changes to the <code>master branch</code>:</p>
+<p>Finally, push the changes to the klzzwxh</p>
 <div class="highlight"><pre><span></span><code>git push origin master
 </code></pre></div>
 
 
-<p>Congratulations, you have just published your changes to https://github.com/username/username.github.io. Check it out! :rocket:</p>
+<p>Congratulations, you have just published your changes to httpsklzzwxh</p>
 <h3 id="version-control">Version Control</h3>
 <p>Although your changes are published, the source markdown files are not yet version-controlled! :(</p>
 <p>Therefore, version-control them using:</p>
@@ -233,27 +233,27 @@ git push origin content
 </code></pre></div>
 
 
-<p>Now, for each new blog article you want to write, you can create a new <code>article branch</code> based on the <code>content branch</code>, write the article and merge it into <code>content branch</code>. :pray:</p>
+<p>Now, for each new blog article you want to write, you can create a new klzzwxhklzzwxhklzzwxhklzzwxh</p>
 <h2 id="create-your-own-domain">Create your own domain</h2>
-<p>In order to bring your blog to a custom URL such as <a href="https://www.robin-beer.de">https://www.robin-beer.de</a> instead of <a href="https://github.com/Zaubeerer/zaubeerer.github.io">https://github.com/Zaubeerer/zaubeerer.github.io</a> you first need to buy a domain. :moneybag:</p>
-<p>Therefore, I used <a href="https://www.namecheap.com">namecheap</a> as it enables you to search for a domain:</p>
+<p>In order to bring your blog to a custom URL such as klzzwxhklzzwxhklzzwxh</p>
+<p>Therefore, I used klzzwxh</p>
 <p><img alt="search for domain name" src="https://www.robin-beer.de/Tools/images/pelican_github_pages_blog/namecheap_domain_search.png"></p>
 <p>And informs you about the availability and costs of the possible domains:</p>
 <p><img alt="domain search results" src="https://www.robin-beer.de/Tools/images/pelican_github_pages_blog/namecheap_domain_search_results.png"></p>
 <p>Once purchased, you need to inform GitHub pages about the custom URL and vice-versa.</p>
-<p>Therefore, go to the settings of your GitHub pages repository, i.e. https://github.com/Zaubeerer/zaubeerer.github.io/settings for my blog:</p>
+<p>Therefore, go to the settings of your GitHub pages repository, i.e. https</p>
 <p><img alt="repository settings" src="https://www.robin-beer.de/Tools/images/pelican_github_pages_blog/2020-04-23-22-36-34.png"></p>
-<p>Then, scroll down to the <code>GitHub pages</code> section and fill in your domain etc.:</p>
+<p>Then, scroll down to the klzzwxh</p>
 <p><img alt="GitHub pages settings" src="https://www.robin-beer.de/Tools/images/pelican_github_pages_blog/2020-04-23-22-39-37.png"></p>
 <p>Additionally, <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain">you must create a CNAME file in your site's repository and configure a CNAME record with your DNS provider</a>.</p>
-<p>The <code>CNAME</code> file was automatically generated when you filled in the custom domain in the <code>GitHub pages</code> settings. Additionally, you need to go to your DNS provider's site and create a <code>CNAME</code> record. For <code>namecheap</code>, you can find it as follows:</p>
+<p>The klzzwxhklzzwxhklzzwxhklzzwxh</p>
 <ol>
-<li>When logged in, click on <code>Domain List</code> in the left sidebar and then on <code>MANAGE</code> on the right of the respective domain.</li>
+<li>When logged in, click on klzzwxh0103 on the right of the respective domain.</li>
 </ol>
 <p><img alt="namecheap domain list" src="https://www.robin-beer.de/Tools/images/pelican_github_pages_blog/2020-04-23-22-53-43.png"></p>
 <ol>
 <li>
-<p>Click on <code>Advanced DNS</code> and then <code>ADD NEW RECORD</code> on the bottom left.</p>
+<p>Click on klzzwxh0099 on the bottom left.</p>
 <p><img alt="Advanced DNS settings in namecheap" src="https://www.robin-beer.de/Tools/images/pelican_github_pages_blog/2020-04-23-22-53-11.png"></p>
 </li>
 <li>
@@ -262,14 +262,14 @@ git push origin content
 </ol>
 <p>Maybe you have to wait a bit, but then your blog should be reachable via your custom domain! :)</p>
 <h2 id="semi-automatic-deployment">(Semi-) Automatic Deployment</h2>
-<p>Great! Now you just have to write articles on <code>article branches</code>, publish them using the <code>master branch</code> and merge them into the <code>content branch</code> right?</p>
-<p>No, whenever you push to GitHub, it turns out that the custom domain gets reset so that you have to rewrite it manually in the <code>GitHub pages settings</code>. Or, do you? :thinking:</p>
+<p>Great! Now you just have to write articles on klzzwxhklzzwxh0083 right?</p>
+<p>No, whenever you push to GitHub, it turns out that the custom domain gets reset so that you have to rewrite it manually in the klzzwxhklzzwxh</p>
 <p>The reason why the custom domain is reset, is because when filling it in manually as shown above, a commit is created on remote, but overriden whenever you push to remote. Therefore, you need to pull and merge remote master into your local master, such that the <code>CNAME</code> file containing your custom branch persists. </p>
-<p>Now, you can <code>edit locally</code> and <a href="#publish">publish as described above</a> and usually don't have to go to your GitHub pages repository anymore. :thumbsup:</p>
+<p>Now, you can klzzwxhklzzwxhklzzwxh</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in <a href="https://www.robin-beer.de/drafts/improve-your-pelican-blog-from-style-over-commentary-function-to-your-domain-related-email-address.html">an upcoming article</a>. However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?</p>
 <p>So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ;-)) and share your blog address in the comment section below.</p>
-<p>Looking forward to reading from you! :man_technologist:</p>
+<p>Looking forward to reading from you! </p>
 <p>Robin</p>
   </div>
   <div class="tag-cloud">
