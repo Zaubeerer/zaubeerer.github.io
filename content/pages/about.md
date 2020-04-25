@@ -1,5 +1,7 @@
 title: About
 date: 10th March 2020
+comments: enabled
+
 <p style = "font-family:georgia,garamond,serif;font-size:24px;line-height:1.4">
 <q>
 I am an energy data scientist leveraging Python to accelerate the transition to a sustainable energy system.
