@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Robin Beer</title><link href="https://www.robin-beer.de/" rel="alternate"></link><link href="https://www.robin-beer.de/feeds/all.atom.xml" rel="self"></link><id>https://www.robin-beer.de/</id><updated>2020-04-22T00:00:00+02:00</updated><subtitle>Energy Data Scientist</subtitle><entry><title>How fast can you set up your blog with Pelican, GitHub pages and namecheap?</title><link href="https://www.robin-beer.de/how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap.html" rel="alternate"></link><published>2020-04-22T00:00:00+02:00</published><updated>2020-04-22T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-22:/how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap.html</id><summary type="html">&lt;p&gt;Setting up my blog took me much less time than expected. Here, I show you how to do it even faster.&lt;/p&gt;</summary><content type="html">&lt;p style = "font-family:georgia,garamond,serif;font-size:24px;line-height:1.4"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Robin Beer</title><link href="https://www.robin-beer.de/" rel="alternate"></link><link href="https://www.robin-beer.de/feeds/all.atom.xml" rel="self"></link><id>https://www.robin-beer.de/</id><updated>2020-05-02T00:00:00+02:00</updated><subtitle>Energy Data Scientist</subtitle><entry><title>Improve your Pelican blog: From style over commentary function to your domain-related email address</title><link href="https://www.robin-beer.de/improve-your-pelican-blog-from-style-over-commentary-function-to-your-domain-related-email-address.html" rel="alternate"></link><published>2020-05-02T00:00:00+02:00</published><updated>2020-05-02T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-05-02:/improve-your-pelican-blog-from-style-over-commentary-function-to-your-domain-related-email-address.html</id><summary type="html">&lt;p&gt;Improve your blog's appearance and tailor it to your needs.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am busy writing this article, stay tuned :)&lt;/p&gt;
+&lt;p&gt;"Writing is perhaps the greatest of human inventions, binding together people, citizens of distant epochs, who never knew one another." - Carl Sagan&lt;/p&gt;
+&lt;!-- ## Style
+
+ - "textwidth"
+ - link colors
+ - pelican style
+
+## Commentary Section powered by disqus
+
+## professional domain-related email address
+ --&gt;</content><category term="Tools"></category><category term="HowTo"></category><category term="Python"></category><category term="GitHub"></category></entry><entry><title>How fast can you set up your blog with Pelican, GitHub pages and namecheap?</title><link href="https://www.robin-beer.de/how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap.html" rel="alternate"></link><published>2020-04-25T00:00:00+02:00</published><updated>2020-04-25T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-25:/how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap.html</id><summary type="html">&lt;p&gt;Setting up my blog took me much less time than expected. Here, I show you how to do it even faster.&lt;/p&gt;</summary><content type="html">&lt;p style = "font-family:georgia,garamond,serif;font-size:24px;line-height:1.4"&gt;
 &lt;q&gt;
 Words are a lens to focus one's mind.
 &lt;/q&gt; - Ayn Rand
