@@ -201,7 +201,7 @@ The `CNAME` file was automatically generated when you filled in the custom domai
 
 1. When logged in, click on `Domain List` in the left sidebar and then on `MANAGE` on the right of the respective domain.
 
-   ![namecheap domain list]({static}/Tools/images/pelican_github_pages_blog/2020-04-23-22-53-43.png)
+    ![namecheap domain list]({static}/Tools/images/pelican_github_pages_blog/2020-04-23-22-53-43.png)
 
 2. Click on `Advanced DNS` and then `ADD NEW RECORD` on the bottom left.
 
