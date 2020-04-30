@@ -7,6 +7,25 @@ status:draft
 
 "Doing CICD is important under the given conditions.
 
+https://docs.gitlab.com/ee/ci/ssh_keys/
+
+locally:
+ssh key-gen
+ssh keychain
+
+this repo:
+variables:
+SSH private key
+SSH known hosts
+
+before_script:
+...
+
+other repo:
+Deploy Key:
+ssh public key
+
+
 private repositories
 
 I'm going to show you how to Foo.
