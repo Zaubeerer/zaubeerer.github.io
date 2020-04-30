@@ -2,6 +2,9 @@ title: Agile Project Management using GitLab or GitHub - A comparison
 date: 21th April 2020
 author: Robin Beer
 summary: In this article, I will discuss the advantages and disadvantages of using GitLab or GitHub for project management with agile methods.
+status: draft
+
+https://about.gitlab.com/blog/2020/04/14/github-free-for-teams/
 
 https://hackernoon.com/gitlab-vs-github-key-differences-and-which-one-is-better-2020-update-rhaw3y3z
 
