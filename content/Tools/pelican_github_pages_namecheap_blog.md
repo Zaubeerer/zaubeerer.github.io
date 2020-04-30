@@ -4,6 +4,7 @@ author: Robin Beer
 summary: Setting up my blog took me much less time than expected. Here, I show you how to do it even faster.
 tags: HowTo, Python, GitHub,
 status: published
+Illustration: {static}/Tools/images/pelican_github_pages_blog/writing_image.jpg
 
 For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to [PyBites](pybit.es), I finally got my blog online much faster than expected and started writing.
 
