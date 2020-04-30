@@ -2,6 +2,7 @@ title: Westworld Webscraping
 date: 2nd Mai 2020
 author: Robin Beer
 summary: Develop both your philosophy and Python skills by watching Westworld and webscraping Reddit
+status:draft
 
 ## Introduction to Westworld
 
