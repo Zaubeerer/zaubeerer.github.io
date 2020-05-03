@@ -19,29 +19,28 @@ So let's dive in.
 
 ## Initialization of a GitLab group with several subgroups and projects
 
-First, we need a complex GitLab structure consisting of a group with several subgroups and projects.
-If you already have one, you may skip this section.
+We need a complex GitLab structure consisting of a group with several subgroups and projects.
+If you already have one, you may skip the first two sections and directly go to [creation of boards](#creation-of-boards).
 
-First, create a new group on <gitlab.com/dashboard/groups>, analogously to the [demonstration group](https://gitlab.com/demonstration-group) that I created for this tutorial, by clicking on `New group`:
+First, create a new group on www.gitlab.com/dashboard/groups, analogously to the [demonstration group](https://gitlab.com/demonstration-group) that I created for this tutorial, by clicking on `New group`:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-17-28-16.png)
+![New group illustration]({static}/Tools/images/gitlab-boards/2020-05-03-17-28-16.png)
 
 Then, populate the group with subgroups and projects:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-09-41.png)
-
+![group structure]({static}/Tools/images/gitlab-boards/2020-05-03-18-09-41.png)
 
 Now, instead of manually filling the projects with issues, you might want to import them from previously exported GitLab projects.
 
 ## Create projects based on exported projects
 
-To export a project open it and go to `Settings > General > Advanced > Export project`. A link will be generated and send to you via E-Mail such that you can download the project export file containing all milestones, files and issues of the project. If you are not able to export projects from my `demonstration group`, you can download the export files that I uploaded to the project `Project Exports`.
+To export a project open it and go to `Settings > General > Advanced > Export project`. A link will be generated and send to you via email such that you can download the project export file containing all milestones, files and issues of the project. If you are not able to export projects from my [demonstration group](https://gitlab.com/demonstration-group), you can download the export files that I uploaded to the project [Project Exports](https://gitlab.com/demonstration-group/project-exports).
 
 To import the exported project, simply click on `New project` and then select `Import project > GitLab export`:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-17-42-02.png)
+![Import GitLab export]({static}/Tools/images/gitlab-boards/2020-05-03-17-42-02.png)
 
-Fill in a name and `Choose File` the previously downloaded project export.
+Fill in a name and `Choose File` the previously downloaded project export. That's it! You have created a project based on an export, so all issues from the export should be included.
 
 When creating issues manually, you might notice, that you can't create issues in groups, but only in projects. Therefore, the groups `Team 1` and `Team 2` need projects, too.
 
@@ -53,13 +52,13 @@ No need to create anything, GitLab has you covered!
 
 Open the project [fancy frontend](https://gitlab.com/demonstration-group/code/fancy-frontend) and in the left sidebar, go to `Issues > Boards` and voilà, the boards are already available:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-15-46.png)
+![How to open the issue board]({static}/Tools/images/gitlab-boards/2020-05-03-18-15-46.png)
 
 Alternatively, you can open the board by clicking on this [Fancy Frontend Board URL](https://gitlab.com/demonstration-group/code/fancy-frontend). This is possible, because each board has its own URL which you can save as a shortcut in your browser.
 
 The board should look like the following:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-18-45.png)
+![Issue board]({static}/Tools/images/gitlab-boards/2020-05-03-18-18-45.png)
 
 The `columns` are referred to as `lists` by GitLab. The lists `Open` and `Closed` have been automatically generated and `To Do` and `Doing` are suggested as `default lists`.
 
@@ -67,34 +66,34 @@ However, I suggest to create different lists than the default lists so just clic
 
 ## Creation of columns (lists)
 
-In GitLab, you can create lists based on labels. Therefore, you first have to create a label to than create a respective list on the GitLab boards. You can create these labels on project or group level.
-I suggest to create the labels `TO DO` and `DOING` on the highest group level, such that it is available in all groups and projects. 
+In GitLab, you can create lists based on labels. Therefore, you first have to create a label to then create a respective list on the GitLab boards. You can create these labels on project or group level.
+I suggest creating the labels `TO DO` and `DOING` on the highest group level, such that it is available in all groups and projects. 
 
 Therefore, open the highest group (i.e. demonstration group in my case) and go to `Issues > Labels`. Then, click on `New label` and create the following labels:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-27-53.png)
+![Group label creation]({static}/Tools/images/gitlab-boards/2020-05-03-18-27-53.png)
 
 Go back to the project board, you have previously visited and `Add list` the new labels:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-29-19.png)
+![Add list]({static}/Tools/images/gitlab-boards/2020-05-03-18-29-19.png)
 
 Now, you can drag and drop from the open issues (i.e. the backlog) to the `TODO` and `DOING` label:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-31-04.png)
+![Updated issue board view]({static}/Tools/images/gitlab-boards/2020-05-03-18-31-04.png)
 
-With this, you can already reproduce the respective functionality I described in the [GitHub project boards article]().
+With this, you can already reproduce the respective functionality I described in the [GitHub project boards article](https://www.robin-beer.de/github-projects.html#github-projects).
 
-However, there are some more useful functionalities.
+However, there are some more useful functionalities in GitLab's issue boards.
 
 ## Board scope
 
 The issues that have been created in the different projects are accessible via the issue boards of the groups. Therefore, just go to the highest group again and go to `Issues > Board`:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-35-42.png)
+![Group issue board]({static}/Tools/images/gitlab-boards/2020-05-03-18-35-42.png)
 
 Again, you have to create the lists based on your own labels. So click on `Nevermind, I'll use my own` and `Add list`:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-36-50.png)
+![Group issue board - cleaned]({static}/Tools/images/gitlab-boards/2020-05-03-18-36-50.png)
 
 As we used the highest group labels, the project issues are automatically moved in the respective lists. Awesome!
 
@@ -106,15 +105,15 @@ GitLab provides further useful functionalities, such as [quick actions using the
 
 ### Quick actions using the right sidebar
 
-From the issue board, you can open an issue by clicking on its title. However, when clicking on the issue card surface (not on the title), the right sidebar opens. That sidebar offers many quick actions such as assigning, milestone and more:
+From the issue board, you can `open an issue by clicking on its title`. Additionally, you can `open the right sidebar by clicking on the issue card surface` (not on the title). That sidebar offers many quick actions such as assigning, milestone and more:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-49-15.png)
+![quick action sidebar]({static}/Tools/images/gitlab-boards/2020-05-03-18-49-15.png)
 
 ### Filter issue boards
 
 By clicking in the `Search or filter results...` form, you can easily filter for assignees, milestones etc. thus reducing the amount of shown issues based on your criteria:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-51-05.png)
+![filtered issue board]({static}/Tools/images/gitlab-boards/2020-05-03-18-51-05.png)
 
 As opposed to GitHub, you don't have to type in exactly what you search, as GitLab will automatically suggest you different options. Neat!
 
@@ -126,7 +125,7 @@ Additionally, further issue labels can be created to visualize priority explicit
 
 Using the quick actions on the sidebar, you can add further labels to the issues, such that they now show the priority labels:
 
-![]({static}/Tools/images/gitlab-boards/2020-05-03-18-56-23.png)
+![priority labels on issue board]({static}/Tools/images/gitlab-boards/2020-05-03-18-56-23.png)
 
 ## Summary & Conclusion
 
@@ -138,7 +137,7 @@ Additionally, we can visualize the priority of the issues implicitly using the p
 
 We have seen, that issue board creation is as easy as it can be, because GitLab just provides them out-of-the-box for different levels (project, group, highest group). Additionally, one does not need to create automation rules, because GitLab manages lists as a function of labels.
 
-So, what are you waiting for? Get back control over all the open issues and manage them using `GitLab's boards`!
+So, what are you waiting for? Get back control over all the open issues and manage them using `GitLab's issue boards`!
 
 Whether you use the `project board` with [Scrum](https://www.scrum.org/resources/what-is-scrum) or [KanBan](https://www.atlassian.com/agile/kanban), it will simplify prioritization and visualization of progress.
 
@@ -148,7 +147,7 @@ This can also be a game-changer in communicating workload and available resource
 
 You like the idea of issue organization into boards, but are using GitHub?
 
-Check out [this article](https://www.robin-beer.de/github-projects.html#github-projects), with instructions for GitHub!
+Check out [the GitHub project boards article](https://www.robin-beer.de/github-projects.html#github-projects)!
 
 Cheers!
 
