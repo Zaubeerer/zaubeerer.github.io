@@ -167,18 +167,14 @@ git push origin content
 &lt;p&gt;I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in &lt;a href="https://www.robin-beer.de/drafts/improve-your-pelican-blog-from-style-over-commentary-function-to-your-domain-related-email-address.html"&gt;an upcoming article&lt;/a&gt;. However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?&lt;/p&gt;
 &lt;p&gt;So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ) and share your blog address in the comment section below.&lt;/p&gt;
 &lt;p&gt;Looking forward to reading from you! 💻&lt;/p&gt;
-&lt;p&gt;Robin&lt;/p&gt;</content><category term="Tools"></category><category term="HowTo"></category><category term="Python"></category><category term="GitHub"></category></entry><entry><title>Use Github to Manage Your Projects in an Agile Way</title><link href="https://www.robin-beer.de/github-projects.html" rel="alternate"></link><published>2020-04-19T20:50:00+02:00</published><updated>2020-04-19T20:50:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-19:/github-projects.html</id><summary type="html">&lt;p&gt;Illustration: github-board.png
-Summary: In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.&lt;/p&gt;
-&lt;p&gt;In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Illustration: github-board.png
-Summary: In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.&lt;/p&gt;
-&lt;p&gt;In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.&lt;/p&gt;
+&lt;p&gt;Robin&lt;/p&gt;</content><category term="Tools"></category><category term="HowTo"></category><category term="Python"></category><category term="GitHub"></category></entry><entry><title>Use Github to Manage Your Projects in an Agile Way</title><link href="https://www.robin-beer.de/github-projects.html" rel="alternate"></link><published>2020-04-19T20:50:00+02:00</published><updated>2020-04-19T20:50:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-19:/github-projects.html</id><summary type="html">&lt;p&gt;In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.&lt;/p&gt;
 &lt;p&gt;We all have been there, long lists of issues overwhelming our brain.&lt;/p&gt;
 &lt;p&gt;Wouldn't it be great to organize these issues in a way that simplifies prioritization and illustrates progress without having to copy the same issues to Trello?&lt;/p&gt;
 &lt;p&gt;There is! With &lt;code&gt;GitHub projects&lt;/code&gt; you can set up boards and use agile methods such as KanBan or Scrum. Let's dive into it!&lt;/p&gt;
 &lt;h2 id="initialization-of-a-github-project"&gt;Initialization of a GitHub project&lt;/h2&gt;
 &lt;p&gt;First, we create a new GitHub repository to show the process from scratch. If you already have a repository, you can jump to the next paragraph.&lt;/p&gt;
 &lt;p&gt;First, click on the "+" on the upper right next to your GitHub profile icon to create a new repository:&lt;/p&gt;
-&lt;p&gt;&lt;img src="images/gh-projects/2020-04-14-22-05-07.png" alt="new repo" style="width: 300px;"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-05-07.png" alt="new repo" style="width: 300px;"&gt;&lt;/p&gt;
 &lt;p&gt;Fill in the form, for example with the title and description that I used to create this article:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Empty GitHub repository" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-02-41.png"&gt;&lt;/p&gt;
 &lt;p&gt;Subsequently, create some dummy issues that describe different tasks that you have to work on.&lt;/p&gt;
@@ -231,16 +227,16 @@ Summary: In this article you will learn how to setup a project in GitHub and to 
 &lt;p&gt;GitHub allows you to &lt;strong&gt;automate&lt;/strong&gt; some of the steps described above, to &lt;strong&gt;create labels&lt;/strong&gt;, and to &lt;strong&gt;filter the issues&lt;/strong&gt; in the &lt;code&gt;project board&lt;/code&gt;. Let's check out these additional functionalities, that are really useful in everyday project management.&lt;/p&gt;
 &lt;h3 id="manage-automation-of-columns"&gt;Manage automation of columns&lt;/h3&gt;
 &lt;p&gt;First let's &lt;code&gt;manage automation&lt;/code&gt; of the &lt;code&gt;Backlog&lt;/code&gt; column:&lt;/p&gt;
-&lt;p&gt;&lt;img src="images/gh-projects/2020-04-14-22-44-25.png" alt="manage automation" style="width: 300px;"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-44-25.png" alt="manage automation" style="width: 300px;"&gt;&lt;/p&gt;
 &lt;p&gt;Choose &lt;code&gt;To Do&lt;/code&gt;, check the shown check boxes as visualized below, and &lt;code&gt;Update automation&lt;/code&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src="images/gh-projects/2020-04-14-22-45-46.png" alt="manage automation: backlog" style="width: 300px;"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-45-46.png" alt="manage automation: backlog" style="width: 300px;"&gt;&lt;/p&gt;
 &lt;p&gt;Now, if you go back to the issues view and assign the issue to the project, the issue will be automatically added to the &lt;code&gt;Backlog&lt;/code&gt; column.&lt;/p&gt;
 &lt;p&gt;Similarly, &lt;code&gt;Update automation&lt;/code&gt; for the &lt;code&gt;column "Done"&lt;/code&gt;, such that merged PRs and closed issues are automatically added to the &lt;code&gt;column "Done"&lt;/code&gt;. Additionally, you might want to add automation to the &lt;code&gt;column "In Progress"&lt;/code&gt;, if issues or PRs are reopened.&lt;/p&gt;
 &lt;h3 id="create-issue-labels"&gt;Create issue labels&lt;/h3&gt;
 &lt;p&gt;To visualize priority implicitly, the issues can be sorted according to their priority (high position = high priority) within their &lt;code&gt;columns&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Additionally, issue labels can be created to visualize priority explicitly. Therefore, click on one of the issue titles and in the sidebar that opens to the right, click on the settings icon in &lt;code&gt;Labels&lt;/code&gt; and type in &lt;code&gt;high priority&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Now, you should be able to &lt;code&gt;Create new label "high priority"&lt;/code&gt;. Alternatively, you can &lt;code&gt;Edit labels&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="images/gh-projects/2020-04-14-23-00-41.png" alt="create new label" style="width: 300px;"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-23-00-41.png" alt="create new label" style="width: 300px;"&gt;&lt;/p&gt;
 &lt;p&gt;Now, your project board might already look more colorful - and more neat. 👌🏻&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Project view with labels" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-23-05-55.png"&gt;&lt;/p&gt;
 &lt;h3 id="filter-project-board-view"&gt;Filter project board view&lt;/h3&gt;
@@ -257,6 +253,6 @@ Summary: In this article you will learn how to setup a project in GitHub and to 
 &lt;p&gt;This can also be a game-changer in communicating workload and available resources with your colleagues, your mentors or your boss.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;You like the idea of issue organization into boards, but are using GitLab?&lt;/p&gt;
-&lt;p&gt;Check out &lt;a href="https://www.robin-beer.de/"&gt;my blog&lt;/a&gt;, instructions for GitLab will follow soon!&lt;/p&gt;
-&lt;p&gt;Cheers! &lt;/p&gt;
-&lt;p&gt;-- &lt;a href="pages/guests.html#robinbeer"&gt;Robin&lt;/a&gt;&lt;/p&gt;</content><category term="Tools"></category><category term="Github"></category><category term="projects"></category><category term="agile"></category><category term="KanBan"></category><category term="productivity"></category><category term="automation"></category><category term="GitLab"></category></entry></feed>
+&lt;p&gt;Check out &lt;a href=""&gt;this article&lt;/a&gt;, with instructions for GitLab!&lt;/p&gt;
+&lt;p&gt;Cheers!&lt;/p&gt;
+&lt;p&gt;Robin&lt;/p&gt;</content><category term="Tools"></category><category term="Github"></category><category term="projects"></category><category term="agile"></category><category term="KanBan"></category><category term="productivity"></category><category term="automation"></category><category term="GitLab"></category></entry></feed>
