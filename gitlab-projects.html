@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://www.robin-beer.de/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://www.robin-beer.de/theme/pygments/vs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.robin-beer.de/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://www.robin-beer.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Robin Beer Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon_squared.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon_squared.ico" type="image/x-icon">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-160647513-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<meta name="author" content="Robin Beer" />
+<meta name="description" content="In this article you will learn how to use boards in GitLab to organize your issues using agile methods." />
+<meta name="keywords" content="GitLab, projects, agile, KanBan, productivity, automation, GitHub">
+
+<meta property="og:site_name" content="Robin Beer"/>
+<meta property="og:title" content="Use GitLab to manage your issues in an agile way"/>
+<meta property="og:description" content="In this article you will learn how to use boards in GitLab to organize your issues using agile methods."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://www.robin-beer.de/gitlab-projects.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-05-03 00:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://www.robin-beer.de/author/robin-beer.html">
+<meta property="article:section" content="Tools"/>
+<meta property="article:tag" content="GitLab"/>
+<meta property="article:tag" content="projects"/>
+<meta property="article:tag" content="agile"/>
+<meta property="article:tag" content="KanBan"/>
+<meta property="article:tag" content="productivity"/>
+<meta property="article:tag" content="automation"/>
+<meta property="article:tag" content="GitHub"/>
+<meta property="og:image" content="/images/BEER_2018_2896_small.jpg">
+
+  <title>Robin Beer &ndash; Use GitLab to manage your issues in an agile way</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://www.robin-beer.de">
+        <img src="/images/BEER_2018_2896_small.jpg" alt="Robin Beer" title="Robin Beer">
+      </a>
+      <h1><a href="https://www.robin-beer.de">Robin Beer</a></h1>
+
+<p>Energy Data Scientist</p>
+      <nav>
+        <ul class="list">
+          <li><a href="https://www.robin-beer.de/pages/about.html#about">About</a></li>
+
+          <li><a href="https://www.robin-beer.de">Home</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/R_E_Beer" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/robin-beer-7595b680/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/Zaubeerer" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-envelope-o" href="mailto:dev@robin-beer.de" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+    <div class="blog_max_width">
+        
+      <h1 id="gitlab-projects">Use GitLab to manage your issues in an agile way</h1>
+      <p>
+            Posted on Sun 03 May 2020 in <a href="https://www.robin-beer.de/category/tools.html">Tools</a>
+
+
+          &#8226; 5 min read
+    </p>
+    </div>
+</header>
+
+
+  <div class="blog_max_width">
+    <p>When you start working in bigger projects, you may know the problem:
+Many issues in different projects and groups can become quite confusing.</p>
+<p>It would be nice to organize issues in boards, as I described in the <a href="">GitHub project boards article</a>, right?</p>
+<p>It's possible in GitLab, too! And GitLab has a more automatized approach, which gets you up and running quicker.</p>
+<p>So let's dive in.</p>
+<h2 id="initialization-of-a-gitlab-group-with-several-subgroups-and-projects">Initialization of a GitLab group with several subgroups and projects</h2>
+<p>First, we need a complex GitLab structure consisting of a group with several subgroups and projects.
+If you already have one, you may skip this section.</p>
+<p>First, create a new group on <gitlab.com/dashboard/groups>, analogously to the <a href="https://gitlab.com/demonstration-group">demonstration group</a> that I created for this tutorial, by clicking on <code>New group</code>:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-17-28-16.png"></p>
+<p>Then, populate the group with subgroups and projects:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-09-41.png"></p>
+<p>Now, instead of manually filling the projects with issues, you might want to import them from previously exported GitLab projects.</p>
+<h2 id="create-projects-based-on-exported-projects">Create projects based on exported projects</h2>
+<p>To export a project open it and go to <code>Settings &gt; General &gt; Advanced &gt; Export project</code>. A link will be generated and send to you via E-Mail such that you can download the project export file containing all milestones, files and issues of the project. If you are not able to export projects from my <code>demonstration group</code>, you can download the export files that I uploaded to the project <code>Project Exports</code>.</p>
+<p>To import the exported project, simply click on <code>New project</code> and then select <code>Import project &gt; GitLab export</code>:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-17-42-02.png"></p>
+<p>Fill in a name and <code>Choose File</code> the previously downloaded project export.</p>
+<p>When creating issues manually, you might notice, that you can't create issues in groups, but only in projects. Therefore, the groups <code>Team 1</code> and <code>Team 2</code> need projects, too.</p>
+<p>If you have a simplified, complex subgroup and project structure, move on to the next section.</p>
+<h2 id="creation-of-boards">Creation of boards</h2>
+<p>No need to create anything, GitLab has you covered!</p>
+<p>Open the project <a href="https://gitlab.com/demonstration-group/code/fancy-frontend">fancy frontend</a> and in the left sidebar, go to <code>Issues &gt; Boards</code> and voilà, the boards are already available:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-15-46.png"></p>
+<p>Alternatively, you can open the board by clicking on this <a href="https://gitlab.com/demonstration-group/code/fancy-frontend">Fancy Frontend Board URL</a>. This is possible, because each board has its own URL which you can save as a shortcut in your browser.</p>
+<p>The board should look like the following:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-18-45.png"></p>
+<p>The <code>columns</code> are referred to as <code>lists</code> by GitLab. The lists <code>Open</code> and <code>Closed</code> have been automatically generated and <code>To Do</code> and <code>Doing</code> are suggested as <code>default lists</code>.</p>
+<p>However, I suggest to create different lists than the default lists so just click <code>Nevermind, I'll use my own</code>.</p>
+<h2 id="creation-of-columns-lists">Creation of columns (lists)</h2>
+<p>In GitLab, you can create lists based on labels. Therefore, you first have to create a label to than create a respective list on the GitLab boards. You can create these labels on project or group level.
+I suggest to create the labels <code>TO DO</code> and <code>DOING</code> on the highest group level, such that it is available in all groups and projects. </p>
+<p>Therefore, open the highest group (i.e. demonstration group in my case) and go to <code>Issues &gt; Labels</code>. Then, click on <code>New label</code> and create the following labels:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-27-53.png"></p>
+<p>Go back to the project board, you have previously visited and <code>Add list</code> the new labels:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-29-19.png"></p>
+<p>Now, you can drag and drop from the open issues (i.e. the backlog) to the <code>TODO</code> and <code>DOING</code> label:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-31-04.png"></p>
+<p>With this, you can already reproduce the respective functionality I described in the <a href="">GitHub project boards article</a>.</p>
+<p>However, there are some more useful functionalities.</p>
+<h2 id="board-scope">Board scope</h2>
+<p>The issues that have been created in the different projects are accessible via the issue boards of the groups. Therefore, just go to the highest group again and go to <code>Issues &gt; Board</code>:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-35-42.png"></p>
+<p>Again, you have to create the lists based on your own labels. So click on <code>Nevermind, I'll use my own</code> and <code>Add list</code>:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-36-50.png"></p>
+<p>As we used the highest group labels, the project issues are automatically moved in the respective lists. Awesome!</p>
+<p>From this high-level view, you can drag and drop the issues to the different lists. Additionally, the location of the projects in which the issues are defined is indicated on the issue cards. And you can create issues simply by clicking on the <code>+</code> of the respective lists, selecting the project where to create the issue in and naming it.</p>
+<h2 id="further-useful-functionalities">Further useful functionalities</h2>
+<p>GitLab provides further useful functionalities, such as <a href="#quick-actions-using-the-right-sidebar">quick actions using the right sidebar</a>, <a href="#filter-issue-boards">filtering issues</a> and <a href="#create-additional-labels-%22high-priority%22-and-%22low-priority%22">creation of further labels</a>.</p>
+<h3 id="quick-actions-using-the-right-sidebar">Quick actions using the right sidebar</h3>
+<p>From the issue board, you can open an issue by clicking on its title. However, when clicking on the issue card surface (not on the title), the right sidebar opens. That sidebar offers many quick actions such as assigning, milestone and more:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-49-15.png"></p>
+<h3 id="filter-issue-boards">Filter issue boards</h3>
+<p>By clicking in the <code>Search or filter results...</code> form, you can easily filter for assignees, milestones etc. thus reducing the amount of shown issues based on your criteria:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-51-05.png"></p>
+<p>As opposed to GitHub, you don't have to type in exactly what you search, as GitLab will automatically suggest you different options. Neat!</p>
+<h3 id="create-additional-labels-high-priority-and-low-priority">Create additional labels "high priority" and "low priority"</h3>
+<p>To visualize priority implicitly, the issues can be sorted according to their priority (high position = high priority) within their <code>lists</code>.</p>
+<p>Additionally, further issue labels can be created to visualize priority explicitly. Therefore, create the <code>labels</code> named <code>high priority</code> and <code>low priority</code> as described in <a href="#creation-of-columns-lists">this previous section</a> on the highest group level.</p>
+<p>Using the quick actions on the sidebar, you can add further labels to the issues, such that they now show the priority labels:</p>
+<p><img alt="" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-56-23.png"></p>
+<h2 id="summary-conclusion">Summary &amp; Conclusion</h2>
+<p>In this article, we have checked out how to use GitLabs <code>issue boards</code> to organize your issues into <code>lists</code> (columns).</p>
+<p>Therefore, we have used the built-in group and project boards. Using the columns <code>Open</code>, <code>To Do</code>, <code>Doing</code>, <code>Waiting for Feedback</code> and <code>Closed</code>, we can now intuitively visualize the progress of the issues.</p>
+<p>Additionally, we can visualize the priority of the issues implicitly using the position (highest = highest priority) as well as explicitly using labels <code>high priority</code> and <code>low priority</code>.</p>
+<p>We have seen, that issue board creation is as easy as it can be, because GitLab just provides them out-of-the-box for different levels (project, group, highest group). Additionally, one does not need to create automation rules, because GitLab manages lists as a function of labels.</p>
+<p>So, what are you waiting for? Get back control over all the open issues and manage them using <code>GitLab's boards</code>!</p>
+<p>Whether you use the <code>project board</code> with <a href="https://www.scrum.org/resources/what-is-scrum">Scrum</a> or <a href="https://www.atlassian.com/agile/kanban">KanBan</a>, it will simplify prioritization and visualization of progress.</p>
+<p>This can also be a game-changer in communicating workload and available resources with your colleagues, your mentors or your boss.</p>
+<hr>
+<p>You like the idea of issue organization into boards, but are using GitHub?</p>
+<p>Check out <a href="{filename}/../github-project-boards.md">this article</a>, with instructions for GitHub!</p>
+<p>Cheers!</p>
+<p>Robin</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://www.robin-beer.de/tag/gitlab.html">GitLab</a>
+      <a href="https://www.robin-beer.de/tag/projects.html">projects</a>
+      <a href="https://www.robin-beer.de/tag/agile.html">agile</a>
+      <a href="https://www.robin-beer.de/tag/kanban.html">KanBan</a>
+      <a href="https://www.robin-beer.de/tag/productivity.html">productivity</a>
+      <a href="https://www.robin-beer.de/tag/automation.html">automation</a>
+      <a href="https://www.robin-beer.de/tag/github.html">GitHub</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'robin-beer';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Robin Beer ",
+  "url" : "https://www.robin-beer.de",
+  "image": "/images/BEER_2018_2896_small.jpg",
+  "description": "Pythonic Energy Data Science Blog"
+}
+</script>
+
+<a href="https://github.com/Zaubeerer" target="_blank" class="github-corner" aria-label="View source on Github">
+    <svg width="80"
+         height="80"
+         viewBox="0 0 250 250"
+         style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
+         aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor"
+              style="transform-origin: 130px 106px;"
+              class="octo-arm">
+        </path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor"
+              class="octo-body">
+        </path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></body>
+</html>
