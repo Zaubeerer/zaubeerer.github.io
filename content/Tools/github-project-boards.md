@@ -1,11 +1,11 @@
 Title: Use Github to Manage Your Projects in an Agile Way
 Date: 2020-04-19 20:50
 Category: Tools
-Tags: Github, projects, agile, KanBan, productivity, automation, GitLab
+Tags: GitHub, projects, agile, KanBan, productivity, automation, GitLab
 Slug: github-projects
 Author: Robin Beer
-status: draft
-Illustration: github-board.png
+status: published
+Illustration: github-board.png 
 Summary: In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.
 
 In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.
@@ -22,19 +22,19 @@ First, we create a new GitHub repository to show the process from scratch. If yo
 
 First, click on the "+" on the upper right next to your GitHub profile icon to create a new repository:
 
-<img src="images/gh-projects/2020-04-14-22-05-07.png" alt="new repo" style="width: 300px;">
+<img src="{static}/Tools/images/gh-projects/2020-04-14-22-05-07.png" alt="new repo" style="width: 300px;">
 
 Fill in the form, for example with the title and description that I used to create this article:
 
-![Empty GitHub repository]({filename}/images/gh-projects/2020-04-14-22-02-41.png)
+![Empty GitHub repository]({static}/Tools/images/gh-projects/2020-04-14-22-02-41.png)
 
 Subsequently, create some dummy issues that describe different tasks that you have to work on.
 
-![Issue Creation on GitHub]({filename}/images/gh-projects/2020-04-14-22-07-58.png)
+![Issue Creation on GitHub]({static}/Tools/images/gh-projects/2020-04-14-22-07-58.png)
 
 Your issue list might look like the following:
 
-![GitHub issue list]({filename}/images/gh-projects/2020-04-14-22-16-40.png)
+![GitHub issue list]({static}/Tools/images/gh-projects/2020-04-14-22-16-40.png)
 
 GitHub even suggests to try out `project boards`. But how?
 
@@ -44,7 +44,7 @@ In GitHub, one needs to first create a `project` to subsequently create a `proje
 
 The following window should open:
 
-![GitHub New Project]({filename}/images/gh-projects/2020-04-14-22-21-59.png)
+![GitHub New Project]({static}/Tools/images/gh-projects/2020-04-14-22-21-59.png)
 
 Fill in some creative names, or stay with these great suggestions.
 
@@ -68,7 +68,7 @@ These `columns` intuitively visualize the progress of the issues. You can just c
 
 After having created the `columns`, your `project board` should look similar to the following image:
 
-![Empty Project Board]({filename}/images/gh-projects/2020-04-14-22-33-18.png)
+![Empty Project Board]({static}/Tools/images/gh-projects/2020-04-14-22-33-18.png)
 
 But there are still no issues... :(
 
@@ -80,11 +80,11 @@ To add issues to this `project`, you have two options:
 
 1. Click on `+ Add cards` and drag and drop the issues to the respective `columns`:
    
-   ![Issue allocation to project columns from project board]({filename}/images/gh-projects/2020-04-14-22-40-33.png)
+   ![Issue allocation to project columns from project board]({static}/Tools/images/gh-projects/2020-04-14-22-40-33.png)
    
 2. Open the issues view, open the issues that you want to add to the project in a new tab and click on the settings icon next to `Projects` to select the project you want this issue to be added to:
    
-   ![Issue allocation to projects from issues board]({filename}/images/gh-projects/2020-04-14-22-38-22.png)
+   ![Issue allocation to projects from issues board]({static}/Tools/images/gh-projects/2020-04-14-22-38-22.png)
 
 You might have noticed, that the second step did not add the issues to a `column` yet. You still have to drag and drop it as mentioned in step 1. Or, do you?
 
@@ -96,11 +96,11 @@ GitHub allows you to **automate** some of the steps described above, to **create
 
 First let's `manage automation` of the `Backlog` column:
 
-<img src="images/gh-projects/2020-04-14-22-44-25.png" alt="manage automation" style="width: 300px;">
+<img src="{static}/Tools/images/gh-projects/2020-04-14-22-44-25.png" alt="manage automation" style="width: 300px;">
 
 Choose `To Do`, check the shown check boxes as visualized below, and `Update automation`:
 
-<img src="images/gh-projects/2020-04-14-22-45-46.png" alt="manage automation: backlog" style="width: 300px;">
+<img src="{static}/Tools/images/gh-projects/2020-04-14-22-45-46.png" alt="manage automation: backlog" style="width: 300px;">
 
 Now, if you go back to the issues view and assign the issue to the project, the issue will be automatically added to the `Backlog` column.
 
@@ -114,11 +114,11 @@ Additionally, issue labels can be created to visualize priority explicitly. Ther
 
 Now, you should be able to `Create new label "high priority"`. Alternatively, you can `Edit labels`.
 
-<img src="images/gh-projects/2020-04-14-23-00-41.png" alt="create new label" style="width: 300px;">
+<img src="{static}/Tools/images/gh-projects/2020-04-14-23-00-41.png" alt="create new label" style="width: 300px;">
 
 Now, your project board might already look more colorful - and more neat. 👌🏻
 
-![Project view with labels]({filename}/images/gh-projects/2020-04-14-23-05-55.png)
+![Project view with labels]({static}/Tools/images/gh-projects/2020-04-14-23-05-55.png)
 
 ### Filter project board view
 
@@ -126,7 +126,7 @@ Another useful functionality, once the project board gets busy, is to filter the
 
 For example, you might want to see all issues assigned to you or to a specific milestone. Or all issues, that have high priority. Therefore, click on the search field `Filter cards` and type in exactly `label:"high priority"`, such that the project board should change as follows:
 
-![Filtered project view]({filename}/images/gh-projects/2020-04-14-23-08-26.png)
+![Filtered project view]({static}/Tools/images/gh-projects/2020-04-14-23-08-26.png)
 
 ## Summary & Conclusion
 
@@ -140,16 +140,16 @@ Furthermore, we have `managed automation` to automatically move issues to `Backl
 
 What are you waiting for? Get back control over all the open issues and manage them using `GitHub projects`!
 
-Whether you use the `project board` with [Scrum](https://www.scrum.org/resources/what-is-scrum) or [KanBan](https://www.atlassian.com/agile/kanban), it will simplify priorization and visualization of progress.
+Whether you use the `project board` with [Scrum](https://www.scrum.org/resources/what-is-scrum) or [KanBan](https://www.atlassian.com/agile/kanban), it will simplify prioritization and visualization of progress.
 
-This can also be a game changer in communicating workload and available ressources with your colleagues, your mentors or your boss.
+This can also be a game-changer in communicating workload and available resources with your colleagues, your mentors or your boss.
 
 ---
 
 You like the idea of issue organization into boards, but are using GitLab?
 
-Check out [my blog](https://www.robin-beer.de/), instructions for GitLab will follow soon!
+Check out [this article](), with instructions for GitLab!
 
-Cheers! 
+Cheers!
 
--- [Robin](pages/guests.html#robinbeer)
+Robin
