@@ -1,8 +1,16 @@
-title: Agile Project Management using GitLab or GitHub - A comparison
-date: 21th April 2020
+title: Agile project management using GitLab or GitHub - A comparison
+date: 10th May 2020
 author: Robin Beer
 summary: In this article, I will discuss the advantages and disadvantages of using GitLab or GitHub for project management with agile methods.
 status: draft
+
+You are wondering whether to use GitHub or GitLab? Or you are using already one of the two and wonder whether the other has the same functionality and how to realize it?
+
+Luckily, GitLab invited programmers to write about differences between GitLab and GitHub. Articles such as []() compare x, y, z. But when it comes to agile project management I haven't found any good comparison yet.
+
+Having written on how to use GitLab boards and GitHub project boards to organize issues in an agile way using KanBan or Scrum, I will use those articles as a base to compare GitLab and GitHub in view of project management.
+
+So let's dive into it.
 
 https://about.gitlab.com/blog/2020/04/14/github-free-for-teams/
 
@@ -17,7 +25,7 @@ https://hackernoon.com/gitlab-vs-github-key-differences-and-which-one-is-better-
   - GitLab
   - GitHub
 
-## Setup of Issues, Milestones and Scrum or KanBan boards: A Comparison between GitLab and GitHub
+## Setup of I ssues, Milestones and Scrum or KanBan boards: A Comparison between GitLab and GitHub
 
 Table with descriptions (glossary)
 
