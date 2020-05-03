@@ -5,18 +5,18 @@ Many issues in different projects and groups can become quite confusing.&lt;/p&g
 &lt;p&gt;It's possible in GitLab, too! And GitLab has a more automatized approach, which gets you up and running quicker.&lt;/p&gt;
 &lt;p&gt;So let's dive in.&lt;/p&gt;
 &lt;h2 id="initialization-of-a-gitlab-group-with-several-subgroups-and-projects"&gt;Initialization of a GitLab group with several subgroups and projects&lt;/h2&gt;
-&lt;p&gt;First, we need a complex GitLab structure consisting of a group with several subgroups and projects.
-If you already have one, you may skip this section.&lt;/p&gt;
-&lt;p&gt;Therefore, create a new group on &lt;www.gitlab.com/dashboard/groups&gt;, analogously to the &lt;a href="https://gitlab.com/demonstration-group"&gt;demonstration group&lt;/a&gt; that I created for this tutorial, by clicking on &lt;code&gt;New group&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;We need a complex GitLab structure consisting of a group with several subgroups and projects.
+If you already have one, you may skip the first two sections and directly go to &lt;a href="#creation-of-boards"&gt;creation of boards&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First, create a new group on &lt;www.gitlab.com/dashboard/groups&gt;, analogously to the &lt;a href="https://gitlab.com/demonstration-group"&gt;demonstration group&lt;/a&gt; that I created for this tutorial, by clicking on &lt;code&gt;New group&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="New group illustration" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-17-28-16.png"&gt;&lt;/p&gt;
 &lt;p&gt;Then, populate the group with subgroups and projects:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="group structure" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-09-41.png"&gt;&lt;/p&gt;
 &lt;p&gt;Now, instead of manually filling the projects with issues, you might want to import them from previously exported GitLab projects.&lt;/p&gt;
 &lt;h2 id="create-projects-based-on-exported-projects"&gt;Create projects based on exported projects&lt;/h2&gt;
-&lt;p&gt;To export a project open it and go to &lt;code&gt;Settings &amp;gt; General &amp;gt; Advanced &amp;gt; Export project&lt;/code&gt;. A link will be generated and send to you via E-Mail such that you can download the project export file containing all milestones, files and issues of the project. If you are not able to export projects from my &lt;code&gt;demonstration group&lt;/code&gt;, you can download the export files that I uploaded to the project &lt;code&gt;Project Exports&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To export a project open it and go to &lt;code&gt;Settings &amp;gt; General &amp;gt; Advanced &amp;gt; Export project&lt;/code&gt;. A link will be generated and send to you via email such that you can download the project export file containing all milestones, files and issues of the project. If you are not able to export projects from my &lt;a href="https://gitlab.com/demonstration-group"&gt;demonstration group&lt;/a&gt;, you can download the export files that I uploaded to the project &lt;a href="https://gitlab.com/demonstration-group/project-exports"&gt;Project Exports&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To import the exported project, simply click on &lt;code&gt;New project&lt;/code&gt; and then select &lt;code&gt;Import project &amp;gt; GitLab export&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Import GitLab export" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-17-42-02.png"&gt;&lt;/p&gt;
-&lt;p&gt;Fill in a name and &lt;code&gt;Choose File&lt;/code&gt; the previously downloaded project export.&lt;/p&gt;
+&lt;p&gt;Fill in a name and &lt;code&gt;Choose File&lt;/code&gt; the previously downloaded project export. That's it! You have created a project based on an export, so all issues from the export should be included.&lt;/p&gt;
 &lt;p&gt;When creating issues manually, you might notice, that you can't create issues in groups, but only in projects. Therefore, the groups &lt;code&gt;Team 1&lt;/code&gt; and &lt;code&gt;Team 2&lt;/code&gt; need projects, too.&lt;/p&gt;
 &lt;p&gt;If you have a simplified, complex subgroup and project structure, move on to the next section.&lt;/p&gt;
 &lt;h2 id="creation-of-boards"&gt;Creation of boards&lt;/h2&gt;
@@ -29,8 +29,8 @@ If you already have one, you may skip this section.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;columns&lt;/code&gt; are referred to as &lt;code&gt;lists&lt;/code&gt; by GitLab. The lists &lt;code&gt;Open&lt;/code&gt; and &lt;code&gt;Closed&lt;/code&gt; have been automatically generated and &lt;code&gt;To Do&lt;/code&gt; and &lt;code&gt;Doing&lt;/code&gt; are suggested as &lt;code&gt;default lists&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;However, I suggest to create different lists than the default lists so just click &lt;code&gt;Nevermind, I'll use my own&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="creation-of-columns-lists"&gt;Creation of columns (lists)&lt;/h2&gt;
-&lt;p&gt;In GitLab, you can create lists based on labels. Therefore, you first have to create a label to than create a respective list on the GitLab boards. You can create these labels on project or group level.
-I suggest to create the labels &lt;code&gt;TO DO&lt;/code&gt; and &lt;code&gt;DOING&lt;/code&gt; on the highest group level, such that it is available in all groups and projects. &lt;/p&gt;
+&lt;p&gt;In GitLab, you can create lists based on labels. Therefore, you first have to create a label to then create a respective list on the GitLab boards. You can create these labels on project or group level.
+I suggest creating the labels &lt;code&gt;TO DO&lt;/code&gt; and &lt;code&gt;DOING&lt;/code&gt; on the highest group level, such that it is available in all groups and projects. &lt;/p&gt;
 &lt;p&gt;Therefore, open the highest group (i.e. demonstration group in my case) and go to &lt;code&gt;Issues &amp;gt; Labels&lt;/code&gt;. Then, click on &lt;code&gt;New label&lt;/code&gt; and create the following labels:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Group label creation" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-27-53.png"&gt;&lt;/p&gt;
 &lt;p&gt;Go back to the project board, you have previously visited and &lt;code&gt;Add list&lt;/code&gt; the new labels:&lt;/p&gt;
@@ -49,7 +49,7 @@ I suggest to create the labels &lt;code&gt;TO DO&lt;/code&gt; and &lt;code&gt;DO
 &lt;h2 id="further-useful-functionalities"&gt;Further useful functionalities&lt;/h2&gt;
 &lt;p&gt;GitLab provides further useful functionalities, such as &lt;a href="#quick-actions-using-the-right-sidebar"&gt;quick actions using the right sidebar&lt;/a&gt;, &lt;a href="#filter-issue-boards"&gt;filtering issues&lt;/a&gt; and &lt;a href="#create-additional-labels-%22high-priority%22-and-%22low-priority%22"&gt;creation of further labels&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="quick-actions-using-the-right-sidebar"&gt;Quick actions using the right sidebar&lt;/h3&gt;
-&lt;p&gt;From the issue board, you can open an issue by clicking on its title. However, when clicking on the issue card surface (not on the title), the right sidebar opens. That sidebar offers many quick actions such as assigning, milestone and more:&lt;/p&gt;
+&lt;p&gt;From the issue board, you can &lt;code&gt;open an issue by clicking on its title&lt;/code&gt;. Additionally, you can &lt;code&gt;open the right sidebar by clicking on the issue card surface&lt;/code&gt; (not on the title). That sidebar offers many quick actions such as assigning, milestone and more:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="quick action sidebar" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-49-15.png"&gt;&lt;/p&gt;
 &lt;h3 id="filter-issue-boards"&gt;Filter issue boards&lt;/h3&gt;
 &lt;p&gt;By clicking in the &lt;code&gt;Search or filter results...&lt;/code&gt; form, you can easily filter for assignees, milestones etc. thus reducing the amount of shown issues based on your criteria:&lt;/p&gt;
@@ -65,12 +65,12 @@ I suggest to create the labels &lt;code&gt;TO DO&lt;/code&gt; and &lt;code&gt;DO
 &lt;p&gt;Therefore, we have used the built-in group and project boards. Using the columns &lt;code&gt;Open&lt;/code&gt;, &lt;code&gt;To Do&lt;/code&gt;, &lt;code&gt;Doing&lt;/code&gt;, &lt;code&gt;Waiting for Feedback&lt;/code&gt; and &lt;code&gt;Closed&lt;/code&gt;, we can now intuitively visualize the progress of the issues.&lt;/p&gt;
 &lt;p&gt;Additionally, we can visualize the priority of the issues implicitly using the position (highest = highest priority) as well as explicitly using labels &lt;code&gt;high priority&lt;/code&gt; and &lt;code&gt;low priority&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;We have seen, that issue board creation is as easy as it can be, because GitLab just provides them out-of-the-box for different levels (project, group, highest group). Additionally, one does not need to create automation rules, because GitLab manages lists as a function of labels.&lt;/p&gt;
-&lt;p&gt;So, what are you waiting for? Get back control over all the open issues and manage them using &lt;code&gt;GitLab's boards&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;So, what are you waiting for? Get back control over all the open issues and manage them using &lt;code&gt;GitLab's issue boards&lt;/code&gt;!&lt;/p&gt;
 &lt;p&gt;Whether you use the &lt;code&gt;project board&lt;/code&gt; with &lt;a href="https://www.scrum.org/resources/what-is-scrum"&gt;Scrum&lt;/a&gt; or &lt;a href="https://www.atlassian.com/agile/kanban"&gt;KanBan&lt;/a&gt;, it will simplify prioritization and visualization of progress.&lt;/p&gt;
 &lt;p&gt;This can also be a game-changer in communicating workload and available resources with your colleagues, your mentors or your boss.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;You like the idea of issue organization into boards, but are using GitHub?&lt;/p&gt;
-&lt;p&gt;Check out &lt;a href="https://www.robin-beer.de/github-projects.html#github-projects"&gt;this article&lt;/a&gt;, with instructions for GitHub!&lt;/p&gt;
+&lt;p&gt;Check out &lt;a href="https://www.robin-beer.de/github-projects.html#github-projects"&gt;the GitHub project boards article&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Cheers!&lt;/p&gt;
 &lt;p&gt;Robin&lt;/p&gt;</content><category term="Tools"></category><category term="GitLab"></category><category term="projects"></category><category term="agile"></category><category term="KanBan"></category><category term="productivity"></category><category term="automation"></category><category term="GitHub"></category></entry><entry><title>How fast can you set up your blog with Pelican, GitHub pages and namecheap?</title><link href="https://www.robin-beer.de/how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap.html" rel="alternate"></link><published>2020-04-25T00:00:00+02:00</published><updated>2020-04-25T00:00:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-25:/how-fast-can-you-set-up-your-blog-with-pelican-github-pages-and-namecheap.html</id><summary type="html">&lt;p&gt;Setting up my blog took me much less time than expected. Here, I show you how to do it even faster.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For a long time, I wanted to create my own blog, but hesitated because I thought that it would take both quite some time to set it up and to write articles. But thanks to &lt;a href="pybit.es"&gt;PyBites&lt;/a&gt;, I finally got my blog online much faster than expected and started writing.&lt;/p&gt;
 &lt;blockquote&gt;

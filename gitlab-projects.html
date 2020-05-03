@@ -112,18 +112,18 @@ Many issues in different projects and groups can become quite confusing.</p>
 <p>It's possible in GitLab, too! And GitLab has a more automatized approach, which gets you up and running quicker.</p>
 <p>So let's dive in.</p>
 <h2 id="initialization-of-a-gitlab-group-with-several-subgroups-and-projects">Initialization of a GitLab group with several subgroups and projects</h2>
-<p>First, we need a complex GitLab structure consisting of a group with several subgroups and projects.
-If you already have one, you may skip this section.</p>
-<p>Therefore, create a new group on <www.gitlab.com/dashboard/groups>, analogously to the <a href="https://gitlab.com/demonstration-group">demonstration group</a> that I created for this tutorial, by clicking on <code>New group</code>:</p>
+<p>We need a complex GitLab structure consisting of a group with several subgroups and projects.
+If you already have one, you may skip the first two sections and directly go to <a href="#creation-of-boards">creation of boards</a>.</p>
+<p>First, create a new group on <www.gitlab.com/dashboard/groups>, analogously to the <a href="https://gitlab.com/demonstration-group">demonstration group</a> that I created for this tutorial, by clicking on <code>New group</code>:</p>
 <p><img alt="New group illustration" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-17-28-16.png"></p>
 <p>Then, populate the group with subgroups and projects:</p>
 <p><img alt="group structure" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-09-41.png"></p>
 <p>Now, instead of manually filling the projects with issues, you might want to import them from previously exported GitLab projects.</p>
 <h2 id="create-projects-based-on-exported-projects">Create projects based on exported projects</h2>
-<p>To export a project open it and go to <code>Settings &gt; General &gt; Advanced &gt; Export project</code>. A link will be generated and send to you via E-Mail such that you can download the project export file containing all milestones, files and issues of the project. If you are not able to export projects from my <code>demonstration group</code>, you can download the export files that I uploaded to the project <code>Project Exports</code>.</p>
+<p>To export a project open it and go to <code>Settings &gt; General &gt; Advanced &gt; Export project</code>. A link will be generated and send to you via email such that you can download the project export file containing all milestones, files and issues of the project. If you are not able to export projects from my <a href="https://gitlab.com/demonstration-group">demonstration group</a>, you can download the export files that I uploaded to the project <a href="https://gitlab.com/demonstration-group/project-exports">Project Exports</a>.</p>
 <p>To import the exported project, simply click on <code>New project</code> and then select <code>Import project &gt; GitLab export</code>:</p>
 <p><img alt="Import GitLab export" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-17-42-02.png"></p>
-<p>Fill in a name and <code>Choose File</code> the previously downloaded project export.</p>
+<p>Fill in a name and <code>Choose File</code> the previously downloaded project export. That's it! You have created a project based on an export, so all issues from the export should be included.</p>
 <p>When creating issues manually, you might notice, that you can't create issues in groups, but only in projects. Therefore, the groups <code>Team 1</code> and <code>Team 2</code> need projects, too.</p>
 <p>If you have a simplified, complex subgroup and project structure, move on to the next section.</p>
 <h2 id="creation-of-boards">Creation of boards</h2>
@@ -136,8 +136,8 @@ If you already have one, you may skip this section.</p>
 <p>The <code>columns</code> are referred to as <code>lists</code> by GitLab. The lists <code>Open</code> and <code>Closed</code> have been automatically generated and <code>To Do</code> and <code>Doing</code> are suggested as <code>default lists</code>.</p>
 <p>However, I suggest to create different lists than the default lists so just click <code>Nevermind, I'll use my own</code>.</p>
 <h2 id="creation-of-columns-lists">Creation of columns (lists)</h2>
-<p>In GitLab, you can create lists based on labels. Therefore, you first have to create a label to than create a respective list on the GitLab boards. You can create these labels on project or group level.
-I suggest to create the labels <code>TO DO</code> and <code>DOING</code> on the highest group level, such that it is available in all groups and projects. </p>
+<p>In GitLab, you can create lists based on labels. Therefore, you first have to create a label to then create a respective list on the GitLab boards. You can create these labels on project or group level.
+I suggest creating the labels <code>TO DO</code> and <code>DOING</code> on the highest group level, such that it is available in all groups and projects. </p>
 <p>Therefore, open the highest group (i.e. demonstration group in my case) and go to <code>Issues &gt; Labels</code>. Then, click on <code>New label</code> and create the following labels:</p>
 <p><img alt="Group label creation" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-27-53.png"></p>
 <p>Go back to the project board, you have previously visited and <code>Add list</code> the new labels:</p>
@@ -156,7 +156,7 @@ I suggest to create the labels <code>TO DO</code> and <code>DOING</code> on the 
 <h2 id="further-useful-functionalities">Further useful functionalities</h2>
 <p>GitLab provides further useful functionalities, such as <a href="#quick-actions-using-the-right-sidebar">quick actions using the right sidebar</a>, <a href="#filter-issue-boards">filtering issues</a> and <a href="#create-additional-labels-%22high-priority%22-and-%22low-priority%22">creation of further labels</a>.</p>
 <h3 id="quick-actions-using-the-right-sidebar">Quick actions using the right sidebar</h3>
-<p>From the issue board, you can open an issue by clicking on its title. However, when clicking on the issue card surface (not on the title), the right sidebar opens. That sidebar offers many quick actions such as assigning, milestone and more:</p>
+<p>From the issue board, you can <code>open an issue by clicking on its title</code>. Additionally, you can <code>open the right sidebar by clicking on the issue card surface</code> (not on the title). That sidebar offers many quick actions such as assigning, milestone and more:</p>
 <p><img alt="quick action sidebar" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-49-15.png"></p>
 <h3 id="filter-issue-boards">Filter issue boards</h3>
 <p>By clicking in the <code>Search or filter results...</code> form, you can easily filter for assignees, milestones etc. thus reducing the amount of shown issues based on your criteria:</p>
@@ -172,12 +172,12 @@ I suggest to create the labels <code>TO DO</code> and <code>DOING</code> on the 
 <p>Therefore, we have used the built-in group and project boards. Using the columns <code>Open</code>, <code>To Do</code>, <code>Doing</code>, <code>Waiting for Feedback</code> and <code>Closed</code>, we can now intuitively visualize the progress of the issues.</p>
 <p>Additionally, we can visualize the priority of the issues implicitly using the position (highest = highest priority) as well as explicitly using labels <code>high priority</code> and <code>low priority</code>.</p>
 <p>We have seen, that issue board creation is as easy as it can be, because GitLab just provides them out-of-the-box for different levels (project, group, highest group). Additionally, one does not need to create automation rules, because GitLab manages lists as a function of labels.</p>
-<p>So, what are you waiting for? Get back control over all the open issues and manage them using <code>GitLab's boards</code>!</p>
+<p>So, what are you waiting for? Get back control over all the open issues and manage them using <code>GitLab's issue boards</code>!</p>
 <p>Whether you use the <code>project board</code> with <a href="https://www.scrum.org/resources/what-is-scrum">Scrum</a> or <a href="https://www.atlassian.com/agile/kanban">KanBan</a>, it will simplify prioritization and visualization of progress.</p>
 <p>This can also be a game-changer in communicating workload and available resources with your colleagues, your mentors or your boss.</p>
 <hr>
 <p>You like the idea of issue organization into boards, but are using GitHub?</p>
-<p>Check out <a href="https://www.robin-beer.de/github-projects.html#github-projects">this article</a>, with instructions for GitHub!</p>
+<p>Check out <a href="https://www.robin-beer.de/github-projects.html#github-projects">the GitHub project boards article</a>!</p>
 <p>Cheers!</p>
 <p>Robin</p>
   </div>
