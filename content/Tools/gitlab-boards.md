@@ -11,7 +11,7 @@ Summary: In this article you will learn how to use boards in GitLab to organize 
 When you start working in bigger projects, you may know the problem:
 Many issues in different projects and groups can become quite confusing.
 
-It would be nice to organize issues in boards, as I described in the [GitHub project boards article](), right?
+It would be nice to organize issues in boards, as I described in the [GitHub project boards article](https://www.robin-beer.de/github-projects.html#github-projects), right?
 
 It's possible in GitLab, too! And GitLab has a more automatized approach, which gets you up and running quicker.
 
@@ -148,7 +148,7 @@ This can also be a game-changer in communicating workload and available resource
 
 You like the idea of issue organization into boards, but are using GitHub?
 
-Check out [this article]({filename}/../github-project-boards.md), with instructions for GitHub!
+Check out [this article](https://www.robin-beer.de/github-projects.html#github-projects), with instructions for GitHub!
 
 Cheers!
 
