@@ -7,7 +7,7 @@ Many issues in different projects and groups can become quite confusing.&lt;/p&g
 &lt;h2 id="initialization-of-a-gitlab-group-with-several-subgroups-and-projects"&gt;Initialization of a GitLab group with several subgroups and projects&lt;/h2&gt;
 &lt;p&gt;We need a complex GitLab structure consisting of a group with several subgroups and projects.
 If you already have one, you may skip the first two sections and directly go to &lt;a href="#creation-of-boards"&gt;creation of boards&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;First, create a new group on &lt;www.gitlab.com/dashboard/groups&gt;, analogously to the &lt;a href="https://gitlab.com/demonstration-group"&gt;demonstration group&lt;/a&gt; that I created for this tutorial, by clicking on &lt;code&gt;New group&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;First, create a new group on www.gitlab.com/dashboard/groups, analogously to the &lt;a href="https://gitlab.com/demonstration-group"&gt;demonstration group&lt;/a&gt; that I created for this tutorial, by clicking on &lt;code&gt;New group&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="New group illustration" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-17-28-16.png"&gt;&lt;/p&gt;
 &lt;p&gt;Then, populate the group with subgroups and projects:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="group structure" src="https://www.robin-beer.de/Tools/images/gitlab-boards/2020-05-03-18-09-41.png"&gt;&lt;/p&gt;
