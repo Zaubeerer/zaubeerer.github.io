@@ -40,7 +40,7 @@ Therewith, the source files (markdown, Pelican config, ...) in the `content bran
 
 So let's set up Pelican!
 
-## Install and Configure Pelican
+## Install and configure Pelican
 
 First of all, I suggest to create a virtual environment of your choice, for example using [conda env](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands):
 
@@ -134,7 +134,7 @@ You normally want to add static pages such as `about.md` in the pages directory.
 
 Now, let's get this content online!
 
-## Commit and Publish your Changes
+## Commit and publish your changes
 
 As described above, the content will be published using the `master branch` and the source files will be version controlled using the `content branch`.
 
@@ -160,7 +160,7 @@ git push origin master
 
 Congratulations, you have just published your changes to <https://github.com/username/username.github.io.> Check it out! ::rocket::
 
-### Version Control
+### Version control
 
 Although your changes are published, the source markdown files are not yet version-controlled! ::confused::
 
@@ -212,7 +212,7 @@ The `CNAME` file was automatically generated when you filled in the custom domai
 
 Maybe you have to wait a bit, but then your blog should be reachable via your custom domain! ::slightly_smiling_face::
 
-## (Semi-) Automatic Deployment
+## (Semi-) Automatic deployment
 
 Great! Now you just have to write articles on `article branches`, publish them using the `master branch` and merge them into the `content branch` right?
 

@@ -1,4 +1,4 @@
-Title: Use Github to Manage Your Projects in an Agile Way
+Title: Use GitHub to manage your projects in an agile way
 Date: 2020-04-19 20:50
 Category: Tools
 Tags: GitHub, projects, agile, KanBan, productivity, automation, GitLab
