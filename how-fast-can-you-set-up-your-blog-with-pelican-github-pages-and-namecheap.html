@@ -127,7 +127,7 @@
 
 <p>Therewith, the source files (markdown, Pelican config, ...) in the <code>content branch</code> can be separated from the web content, that needs to be pushed to the <code>master branch</code> for GitHub Pages to automatically publish them. 👌</p>
 <p>So let's set up Pelican!</p>
-<h2 id="install-and-configure-pelican">Install and Configure Pelican</h2>
+<h2 id="install-and-configure-pelican">Install and configure Pelican</h2>
 <p>First of all, I suggest to create a virtual environment of your choice, for example using <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">conda env</a>:</p>
 <div class="highlight"><pre><span></span><code>conda create -n blog <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
 </code></pre></div>
@@ -205,7 +205,7 @@ Cheers!
 <p>Basically, you can create your blog posts by simply adding markdown files in the content folder. If you want to cluster your articles in different categories, you can create the articles in the folders <code>content/category_1</code>, <code>content/category_1</code>, etc. and Pelican will automatically create these categories.</p>
 <p>You normally want to add static pages such as <code>about.md</code> in the pages directory.</p>
 <p>Now, let's get this content online!</p>
-<h2 id="commit-and-publish-your-changes">Commit and Publish your Changes</h2>
+<h2 id="commit-and-publish-your-changes">Commit and publish your changes</h2>
 <p>As described above, the content will be published using the <code>master branch</code> and the source files will be version controlled using the <code>content branch</code>.</p>
 <h3 id="publish">Publish</h3>
 <p>First, generate the web content using Pelican:</p>
@@ -224,7 +224,7 @@ Cheers!
 
 
 <p>Congratulations, you have just published your changes to <a href="https://github.com/username/username.github.io.">https://github.com/username/username.github.io.</a> Check it out! 🚀</p>
-<h3 id="version-control">Version Control</h3>
+<h3 id="version-control">Version control</h3>
 <p>Although your changes are published, the source markdown files are not yet version-controlled! </p>
 <p>Therefore, version-control them using:</p>
 <div class="highlight"><pre><span></span><code>git add content
@@ -261,7 +261,7 @@ git push origin content
 </li>
 </ol>
 <p>Maybe you have to wait a bit, but then your blog should be reachable via your custom domain! 🙂</p>
-<h2 id="semi-automatic-deployment">(Semi-) Automatic Deployment</h2>
+<h2 id="semi-automatic-deployment">(Semi-) Automatic deployment</h2>
 <p>Great! Now you just have to write articles on <code>article branches</code>, publish them using the <code>master branch</code> and merge them into the <code>content branch</code> right?</p>
 <p>No, whenever you push to GitHub, it turns out that the custom domain gets reset so that you have to rewrite it manually in the <code>GitHub pages settings</code>. Or, do you? </p>
 <p>The reason why the custom domain is reset, is because when filling it in manually as shown above, a commit is created on remote, but overriden whenever you push to remote. Therefore, you need to pull and merge remote master into your local master, such that the <code>CNAME</code> file containing your custom branch persists. </p>

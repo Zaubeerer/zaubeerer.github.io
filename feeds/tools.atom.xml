@@ -24,7 +24,7 @@
 
 &lt;p&gt;Therewith, the source files (markdown, Pelican config, ...) in the &lt;code&gt;content branch&lt;/code&gt; can be separated from the web content, that needs to be pushed to the &lt;code&gt;master branch&lt;/code&gt; for GitHub Pages to automatically publish them. 👌&lt;/p&gt;
 &lt;p&gt;So let's set up Pelican!&lt;/p&gt;
-&lt;h2 id="install-and-configure-pelican"&gt;Install and Configure Pelican&lt;/h2&gt;
+&lt;h2 id="install-and-configure-pelican"&gt;Install and configure Pelican&lt;/h2&gt;
 &lt;p&gt;First of all, I suggest to create a virtual environment of your choice, for example using &lt;a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands"&gt;conda env&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;conda create -n blog &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -102,7 +102,7 @@ Cheers!
 &lt;p&gt;Basically, you can create your blog posts by simply adding markdown files in the content folder. If you want to cluster your articles in different categories, you can create the articles in the folders &lt;code&gt;content/category_1&lt;/code&gt;, &lt;code&gt;content/category_1&lt;/code&gt;, etc. and Pelican will automatically create these categories.&lt;/p&gt;
 &lt;p&gt;You normally want to add static pages such as &lt;code&gt;about.md&lt;/code&gt; in the pages directory.&lt;/p&gt;
 &lt;p&gt;Now, let's get this content online!&lt;/p&gt;
-&lt;h2 id="commit-and-publish-your-changes"&gt;Commit and Publish your Changes&lt;/h2&gt;
+&lt;h2 id="commit-and-publish-your-changes"&gt;Commit and publish your changes&lt;/h2&gt;
 &lt;p&gt;As described above, the content will be published using the &lt;code&gt;master branch&lt;/code&gt; and the source files will be version controlled using the &lt;code&gt;content branch&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="publish"&gt;Publish&lt;/h3&gt;
 &lt;p&gt;First, generate the web content using Pelican:&lt;/p&gt;
@@ -121,7 +121,7 @@ Cheers!
 
 
 &lt;p&gt;Congratulations, you have just published your changes to &lt;a href="https://github.com/username/username.github.io."&gt;https://github.com/username/username.github.io.&lt;/a&gt; Check it out! 🚀&lt;/p&gt;
-&lt;h3 id="version-control"&gt;Version Control&lt;/h3&gt;
+&lt;h3 id="version-control"&gt;Version control&lt;/h3&gt;
 &lt;p&gt;Although your changes are published, the source markdown files are not yet version-controlled! &lt;/p&gt;
 &lt;p&gt;Therefore, version-control them using:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add content
@@ -158,7 +158,7 @@ git push origin content
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Maybe you have to wait a bit, but then your blog should be reachable via your custom domain! 🙂&lt;/p&gt;
-&lt;h2 id="semi-automatic-deployment"&gt;(Semi-) Automatic Deployment&lt;/h2&gt;
+&lt;h2 id="semi-automatic-deployment"&gt;(Semi-) Automatic deployment&lt;/h2&gt;
 &lt;p&gt;Great! Now you just have to write articles on &lt;code&gt;article branches&lt;/code&gt;, publish them using the &lt;code&gt;master branch&lt;/code&gt; and merge them into the &lt;code&gt;content branch&lt;/code&gt; right?&lt;/p&gt;
 &lt;p&gt;No, whenever you push to GitHub, it turns out that the custom domain gets reset so that you have to rewrite it manually in the &lt;code&gt;GitHub pages settings&lt;/code&gt;. Or, do you? &lt;/p&gt;
 &lt;p&gt;The reason why the custom domain is reset, is because when filling it in manually as shown above, a commit is created on remote, but overriden whenever you push to remote. Therefore, you need to pull and merge remote master into your local master, such that the &lt;code&gt;CNAME&lt;/code&gt; file containing your custom branch persists. &lt;/p&gt;
@@ -167,7 +167,7 @@ git push origin content
 &lt;p&gt;I hope that I can cut your learning curve with this article to get you up and running faster! Of course, you can spend endless time on fine-tuning the blog in terms of style and functionality, which I partly describe in &lt;a href="https://www.robin-beer.de/drafts/improve-your-pelican-blog-from-style-over-commentary-function-to-your-domain-related-email-address.html"&gt;an upcoming article&lt;/a&gt;. However, that's totally optional and it's much better to have a minimalistic blog with good articles than no blog or a fancy blog without articles, right?&lt;/p&gt;
 &lt;p&gt;So, let me know whether it was doable in 42 minutes (excluding the time you take to think about a proper domain name ) and share your blog address in the comment section below.&lt;/p&gt;
 &lt;p&gt;Looking forward to reading from you! 💻&lt;/p&gt;
-&lt;p&gt;Robin&lt;/p&gt;</content><category term="Tools"></category><category term="HowTo"></category><category term="Python"></category><category term="GitHub"></category></entry><entry><title>Use Github to Manage Your Projects in an Agile Way</title><link href="https://www.robin-beer.de/github-projects.html" rel="alternate"></link><published>2020-04-19T20:50:00+02:00</published><updated>2020-04-19T20:50:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-19:/github-projects.html</id><summary type="html">&lt;p&gt;In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.&lt;/p&gt;
+&lt;p&gt;Robin&lt;/p&gt;</content><category term="Tools"></category><category term="HowTo"></category><category term="Python"></category><category term="GitHub"></category></entry><entry><title>Use GitHub to manage your projects in an agile way</title><link href="https://www.robin-beer.de/github-projects.html" rel="alternate"></link><published>2020-04-19T20:50:00+02:00</published><updated>2020-04-19T20:50:00+02:00</updated><author><name>Robin Beer</name></author><id>tag:www.robin-beer.de,2020-04-19:/github-projects.html</id><summary type="html">&lt;p&gt;In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.&lt;/p&gt;
 &lt;p&gt;We all have been there, long lists of issues overwhelming our brain.&lt;/p&gt;
 &lt;p&gt;Wouldn't it be great to organize these issues in a way that simplifies prioritization and illustrates progress without having to copy the same issues to Trello?&lt;/p&gt;
 &lt;p&gt;There is! With &lt;code&gt;GitHub projects&lt;/code&gt; you can set up boards and use agile methods such as KanBan or Scrum. Let's dive into it!&lt;/p&gt;
@@ -255,4 +255,4 @@ git push origin content
 &lt;p&gt;You like the idea of issue organization into boards, but are using GitLab?&lt;/p&gt;
 &lt;p&gt;Check out &lt;a href=""&gt;this article&lt;/a&gt;, with instructions for GitLab!&lt;/p&gt;
 &lt;p&gt;Cheers!&lt;/p&gt;
-&lt;p&gt;Robin&lt;/p&gt;</content><category term="Tools"></category><category term="Github"></category><category term="projects"></category><category term="agile"></category><category term="KanBan"></category><category term="productivity"></category><category term="automation"></category><category term="GitLab"></category></entry></feed>
+&lt;p&gt;Robin&lt;/p&gt;</content><category term="Tools"></category><category term="GitHub"></category><category term="projects"></category><category term="agile"></category><category term="KanBan"></category><category term="productivity"></category><category term="automation"></category><category term="GitLab"></category></entry></feed>
