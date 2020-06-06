@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://www.robin-beer.de/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://www.robin-beer.de/theme/pygments/vs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.robin-beer.de/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://www.robin-beer.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Robin Beer Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon_squared.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon_squared.ico" type="image/x-icon">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-160647513-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<meta name="author" content="Robin Beer" />
+<meta name="description" content="Use the data build tool (dbt) to write DRY SQL." />
+<meta name="keywords" content="HowTo, backend, dataops, GitLab">
+
+<meta property="og:site_name" content="Robin Beer"/>
+<meta property="og:title" content="How to setup dbt DataOps with GitLab CI/CD for a Snowflake cloud data warehouse"/>
+<meta property="og:description" content="Use the data build tool (dbt) to write DRY SQL."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://www.robin-beer.de/drafts/how-to-setup-dbt-dataops-with-gitlab-cicd-for-a-snowflake-cloud-data-warehouse.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-06-05 00:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://www.robin-beer.de/author/robin-beer.html">
+<meta property="article:section" content="Tools"/>
+<meta property="article:tag" content="HowTo"/>
+<meta property="article:tag" content="backend"/>
+<meta property="article:tag" content="dataops"/>
+<meta property="article:tag" content="GitLab"/>
+<meta property="og:image" content="/images/BEER_2018_2896_small.jpg">
+
+  <title>Robin Beer &ndash; How to setup dbt DataOps with GitLab CI/CD for a Snowflake cloud data warehouse</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://www.robin-beer.de">
+        <img src="/images/BEER_2018_2896_small.jpg" alt="Robin Beer" title="Robin Beer">
+      </a>
+      <h1><a href="https://www.robin-beer.de">Robin Beer</a></h1>
+
+<p>Energy Data Scientist</p>
+      <nav>
+        <ul class="list">
+          <li><a href="https://www.robin-beer.de/pages/about.html#about">About</a></li>
+
+          <li><a href="https://www.robin-beer.de">Home</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/R_E_Beer" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/robin-beer-7595b680/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/Zaubeerer" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-envelope-o" href="mailto:dev@robin-beer.de" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+    <div class="blog_max_width">
+        
+      <h1 id="how-to-setup-dbt-dataops-with-gitlab-cicd-for-a-snowflake-cloud-data-warehouse">How to setup dbt DataOps with GitLab CI/CD for a Snowflake cloud data warehouse</h1>
+      <p>
+            Posted on Fri 05 June 2020 in <a href="https://www.robin-beer.de/category/tools.html">Tools</a>
+
+
+          &#8226; 4 min read
+    </p>
+    </div>
+</header>
+
+
+  <div class="blog_max_width">
+    <p>If you are working with databases, you probably also work with SQL.
+Although SQL is simple to learn, you might already have asked yourself whether it wasn't possible to write object-oriented SQL... :thinking:</p>
+<p>There is: using dbt! :) </p>
+<p>The data build tool (dbt) is "the T in ELT" - hence the "transform" in Extract Load Transform. If you are new to cloud data warehouses, ELT etc. you might want to read the article <a href="https://community.snowflake.com/s/article/Using-DBT-to-Execute-ELT-Pipelines-in-Snowflake">USING DBT TO EXECUTE ELT PIPELINES IN SNOWFLAKE</a>.</p>
+<p>However, to get up and running within 15 min with a simple dbt example and GitLab CI configuration, I invite you to read this article.</p>
+<!-- https://www.youtube.com/watch?v=-XBIIY2pFpc&feature=youtu.be&t=1305 -->
+
+<h2 id="local-installation">Local installation</h2>
+<p>First of all, create a new virtual environment of your choice to install dbt, for example using conda:</p>
+<div class="highlight"><pre><span></span><code>conda create -n dbt_test <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
+</code></pre></div>
+
+
+<p>Then, install dbt using pip:</p>
+<div class="highlight"><pre><span></span><code>pip install dbt
+</code></pre></div>
+
+
+<p>When completed, you can create an example project:</p>
+<div class="highlight"><pre><span></span><code>dbt init dbt_test
+</code></pre></div>
+
+
+<h2 id="bigquery-or-snowflake-config">BigQuery or snowflake config</h2>
+<p>If you do not yet have a cloud data warehouse I invite you to follow the <a href="https://docs.getdbt.com/tutorial/setting-up">official dbt tutorial to get started</a> in which you will setup BigQuery. If you already have a cloud data warehouse, check out the <a href="https://docs.getdbt.com/docs/supported-databases">supported databases</a>.</p>
+<p>Check out dbt's documentation on <a href="https://docs.getdbt.com/docs/supported-databases/profile-snowflake/">how to configure dbt profiles for snowflake</a>.</p>
+<p>It basically comes down to creating a <code>~/.dbt/profiles.yml</code> with the following content:</p>
+<div class="highlight"><pre><span></span><code><span class="n">my</span><span class="o">-</span><span class="n">snowflake</span><span class="o">-</span><span class="nl">db</span><span class="p">:</span>
+  <span class="nl">target</span><span class="p">:</span> <span class="n">dev</span>
+  <span class="nl">outputs</span><span class="p">:</span>
+    <span class="nl">dev</span><span class="p">:</span>
+      <span class="nl">type</span><span class="p">:</span> <span class="n">snowflake</span>
+      <span class="nl">account</span><span class="p">:</span> <span class="p">[</span><span class="n">account</span> <span class="kt">id</span><span class="p">]</span>
+
+      <span class="cp"># User/password auth</span>
+      <span class="nl">user</span><span class="p">:</span> <span class="p">[</span><span class="n">username</span><span class="p">]</span>
+      <span class="nl">password</span><span class="p">:</span> <span class="p">[</span><span class="n">password</span><span class="p">]</span>
+
+      <span class="nl">role</span><span class="p">:</span> <span class="p">[</span><span class="n">user</span> <span class="n">role</span><span class="p">]</span>
+      <span class="nl">database</span><span class="p">:</span> <span class="p">[</span><span class="n">database</span> <span class="n">name</span><span class="p">]</span>
+      <span class="nl">warehouse</span><span class="p">:</span> <span class="p">[</span><span class="n">warehouse</span> <span class="n">name</span><span class="p">]</span>
+      <span class="nl">schema</span><span class="p">:</span> <span class="p">[</span><span class="n">dbt</span> <span class="n">schema</span><span class="p">]</span>
+      <span class="nl">threads</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="n">or</span> <span class="n">more</span><span class="p">]</span>
+      <span class="nl">client_session_keep_alive</span><span class="p">:</span> <span class="n">False</span>
+</code></pre></div>
+
+
+<p>This profile must be chosen in the <code>dbt_project.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="x"># Name your project! Project names should contain only lowercase characters</span>
+<span class="x"># and underscores. A good package name should reflect your organization&#39;s</span>
+<span class="x"># name or the intended use of these models</span>
+<span class="x">name: &#39;snowflake_dbt_test&#39;</span>
+<span class="x">version: &#39;1.0.0&#39;</span>
+
+<span class="x"># This setting configures which &quot;profile&quot; dbt uses for this project.</span>
+<span class="x">profile: &#39;my-snowflake-db&#39;</span>
+
+<span class="x"># These configurations specify where dbt should look for different types of files.</span>
+<span class="x"># The `source-paths` config, for example, states that models in this project can be</span>
+<span class="x"># found in the &quot;models/&quot; directory. You probably won&#39;t need to change these!</span>
+<span class="x">source-paths: [&quot;models&quot;]</span>
+<span class="x">analysis-paths: [&quot;analysis&quot;]</span>
+<span class="x">test-paths: [&quot;tests&quot;]</span>
+<span class="x">data-paths: [&quot;data&quot;]</span>
+<span class="x">macro-paths: [&quot;macros&quot;]</span>
+<span class="x">snapshot-paths: [&quot;snapshots&quot;]</span>
+
+<span class="x">target-path: &quot;target&quot;  # directory which will store compiled SQL files</span>
+<span class="x">clean-targets:         # directories to be removed by `dbt clean`</span>
+<span class="x">    - &quot;target&quot;</span>
+<span class="x">    - &quot;dbt_modules&quot;</span>
+
+
+<span class="x"># Configuring models</span>
+<span class="x"># Full documentation: https://docs.getdbt.com/docs/configuring-models</span>
+
+<span class="x"># In this example config, we tell dbt to build all models in the example/ directory</span>
+<span class="x"># as tables. These settings can be overridden in the individual model files</span>
+<span class="x"># using the `</span><span class="cp">{{</span> <span class="nv">config</span><span class="o">(</span><span class="err">...</span><span class="o">)</span> <span class="cp">}}</span><span class="x">` macro.</span>
+<span class="x">models:</span>
+<span class="x">  snowflake_dbt_test:</span>
+<span class="x">      # Applies to all files under models/example/</span>
+<span class="x">      example:</span>
+<span class="x">          materialized: view</span>
+</code></pre></div>
+
+
+<h2 id="write-your-first-dbt-models">Write your first dbt models</h2>
+<p>Now that dbt is installed and you have configured it to use your cloud data warehouse credentials, let's build our first model.</p>
+<p>Open the package <code>dbt_test</code> that you have previously created using <code>dbt init</code>. </p>
+<p>Under <code>models/example</code> delete the existing sql files and instead create a <code>simple.sql</code> with a content similar to the following:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">TABLE_IN_DATABASE</span>
+</code></pre></div>
+
+
+<p>This query would be executed on the database that you configured in <code>~/.dbt/profiles.yml</code>, thus creating a view called <code>snowflake_dbt_test</code> in the database.</p>
+<h2 id="execute-the-dbt-models-locally">Execute the dbt models locally</h2>
+<p>How to execute dbt and create this view in the database?</p>
+<p>Well, activate your virtual environment (e.g. using <code>conda activate dbt-test</code>) and run the following command in your dbt package folder (<code>.../dbt_test/</code>):</p>
+<div class="highlight"><pre><span></span><code>dbt run
+</code></pre></div>
+
+
+<p>The command should run through without errors and you can check the given schema of the database for the newly created view <code>snowflake_dbt_test</code>.</p>
+<h2 id="gitlab-cicd-pipeline">GitLab CI/CD pipeline</h2>
+<p>You might want your dbt code to be run automatically in a CI/CD pipeline as part of DataOps.</p>
+<p>First, create a repository on your GitLab instance and push your local code to it. Then, add your snowflake environment variables under <code>Settings -&gt; CI/CD -&gt; Variables (Expand)</code> by clicking on <code>Add Variable</code>:</p>
+<p><img alt="GitLab CI/CD Snowflake environment variables" src="2020-06-06-00-32-07.png"></p>
+<p>To load these environment variables into the pipeline, create the file <code>profile/profiles.yml</code> with the following content (inspired by <a href="https://gitlab.com/gitlab-data/analytics/-/blob/master/transform/snowflake-dbt/profile/profiles.yml">GitLab's profiles.yml</a>):</p>
+<div class="highlight"><pre><span></span><code><span class="x">my-snowflake-db:</span>
+<span class="x">  target: dev</span>
+<span class="x">  outputs:</span>
+<span class="x">    dev:</span>
+<span class="x">      type: snowflake</span>
+<span class="x">      threads: 1</span>
+<span class="x">      account: &quot;</span><span class="cp">{{</span> <span class="nv">env_var</span><span class="o">(</span><span class="s1">&#39;SNOWFLAKE_ACCOUNT&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">      user: &quot;</span><span class="cp">{{</span> <span class="nv">env_var</span><span class="o">(</span><span class="s1">&#39;SNOWFLAKE_USER&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">      password: &quot;</span><span class="cp">{{</span> <span class="nv">env_var</span><span class="o">(</span><span class="s1">&#39;SNOWFLAKE_PASSWORD&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">      database: &quot;</span><span class="cp">{{</span> <span class="nv">env_var</span><span class="o">(</span><span class="s1">&#39;SNOWFLAKE_TRANSFORM_DATABASE&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">      role: &quot;</span><span class="cp">{{</span> <span class="nv">env_var</span><span class="o">(</span><span class="s1">&#39;SNOWFLAKE_TRANSFORM_ROLE&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">      warehouse: &quot;</span><span class="cp">{{</span> <span class="nv">env_var</span><span class="o">(</span><span class="s1">&#39;SNOWFLAKE_TRANSFORM_WAREHOUSE&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">      schema: &quot;</span><span class="cp">{{</span> <span class="nv">env_var</span><span class="o">(</span><span class="s1">&#39;SNOWFLAKE_TRANSFORM_SCHEMA&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">      client_session_keep_alive: False</span>
+</code></pre></div>
+
+
+<p>Now, add the following <code>.gitlab-ci.yml</code> within your GitLab repository:</p>
+<div class="highlight"><pre><span></span><code>image: python:latest
+
+variables:
+  PIP_CACHE_DIR: <span class="s2">&quot;</span><span class="nv">$CI_PROJECT_DIR</span><span class="s2">/.cache/pip&quot;</span>
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python -V  <span class="c1"># Print out python version for debugging</span>
+  - pip install virtualenv
+  - virtualenv venv
+  - <span class="nb">source</span> venv/bin/activate
+  - pip install dbt
+  - <span class="nb">export</span> <span class="nv">CI_PROFILE_TARGET</span><span class="o">=</span><span class="s2">&quot;--profiles-dir profile --target dev&quot;</span>
+  - <span class="nb">echo</span> <span class="nv">$CI_PROFILE_TARGET</span>
+
+run:
+  script:
+     dbt run <span class="nv">$CI_PROFILE_TARGET</span> 
+</code></pre></div>
+
+
+<p>When committing this change, the CI/CD pipeline should be automatically triggered. If all environment variables are set correctly and the dbt models worked locally, the pipeline should also succeed. Congratulations!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p><a href="https://www.getdbt.com">dbt</a> stands for "data build tool" and can be described as "the T in ELT".
+It's a tool that is used by a growing community to write DRY SQL, create dbt packages and add DataOps to it.</p>
+<p>With this article, you have locally installed it, built your own simple dbt model and connected and tested it on snowflake (or BigQuery).</p>
+<p>Finally, you have set up a CI/CD pipeline on GitLab to complete the DataOps setup.</p>
+<p>Now, if dbt rose your interest, join the <a href="https://community.getdbt.com">dbt slack channel</a>, the <a href="https://discourse.getdbt.com">dbt discours</a> or check out the <a href="https://about.gitlab.com/handbook/business-ops/data-team/">information on how the GitLab Data Team leverages dbt</a> for more detailed insights in how dbt can be used.</p>
+<p>See you in the community!</p>
+<p>Robin</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://www.robin-beer.de/tag/howto.html">HowTo</a>
+      <a href="https://www.robin-beer.de/tag/backend.html">backend</a>
+      <a href="https://www.robin-beer.de/tag/dataops.html">dataops</a>
+      <a href="https://www.robin-beer.de/tag/gitlab.html">GitLab</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'robin-beer';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Robin Beer ",
+  "url" : "https://www.robin-beer.de",
+  "image": "/images/BEER_2018_2896_small.jpg",
+  "description": "Pythonic Energy Data Science Blog"
+}
+</script>
+
+<a href="https://github.com/Zaubeerer" target="_blank" class="github-corner" aria-label="View source on Github">
+    <svg width="80"
+         height="80"
+         viewBox="0 0 250 250"
+         style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
+         aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor"
+              style="transform-origin: 130px 106px;"
+              class="octo-arm">
+        </path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor"
+              class="octo-body">
+        </path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></body>
+</html>
