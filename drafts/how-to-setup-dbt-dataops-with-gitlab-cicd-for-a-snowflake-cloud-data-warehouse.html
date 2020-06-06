@@ -210,7 +210,7 @@ Although SQL is simple to learn, you might already have asked yourself whether i
 <h2 id="gitlab-cicd-pipeline">GitLab CI/CD pipeline</h2>
 <p>You might want your dbt code to be run automatically in a CI/CD pipeline as part of DataOps.</p>
 <p>First, create a repository on your GitLab instance and push your local code to it. Then, add your snowflake environment variables under <code>Settings -&gt; CI/CD -&gt; Variables (Expand)</code> by clicking on <code>Add Variable</code>:</p>
-<p><img alt="GitLab CI/CD Snowflake environment variables" src="2020-06-06-00-32-07.png"></p>
+<p><img alt="GitLab CI/CD Snowflake environment variables" src="https://www.robin-beer.de/Tools/images/dbt-gitlab-deploy/2020-06-06-00-32-07.png"></p>
 <p>To load these environment variables into the pipeline, create the file <code>profile/profiles.yml</code> with the following content (inspired by <a href="https://gitlab.com/gitlab-data/analytics/-/blob/master/transform/snowflake-dbt/profile/profiles.yml">GitLab's profiles.yml</a>):</p>
 <div class="highlight"><pre><span></span><code><span class="x">my-snowflake-db:</span>
 <span class="x">  target: dev</span>
