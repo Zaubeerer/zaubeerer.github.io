@@ -1,4 +1,4 @@
-title: 
+title: Towards pleasant Python autodocs using sphinx, typehints and NumPy style
 date: 31st May 2020
 author: Robin Beer
 summary: After this article you will know how to create your own package with automatic documentation.

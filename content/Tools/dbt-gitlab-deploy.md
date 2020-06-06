@@ -133,6 +133,7 @@ dbt run
 The command should run through without errors and you can check the given schema of the database for the newly created view `snowflake_dbt_test`.
 
 ## GitLab CI/CD pipeline
+
 You might want your dbt code to be run automatically in a CI/CD pipeline as part of DataOps.
 
 First, create a repository on your GitLab instance and push your local code to it. Then, add your snowflake environment variables under `Settings -> CI/CD -> Variables (Expand)` by clicking on `Add Variable`:

@@ -1,4 +1,4 @@
-title: 
+title: A brief review of AWS cloud computing and gitlab integration
 date: 2nd April 2020
 author: Robin Beer
 summary: Short description of the content
