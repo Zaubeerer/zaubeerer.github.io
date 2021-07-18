@@ -86,7 +86,7 @@ MENUITEMS = (
 
 # embed jupyter notebooks and post stats
 MARKUP = ("md", "ipynb")
-PLUGIN_PATHS = ["../pelican-plugins/"]
+PLUGIN_PATHS = ["./plugins/"]
 
 # Markdown Configuration:
 MARKDOWN = {
@@ -100,7 +100,11 @@ MARKDOWN = {
     "output_format": "html5",
 }
 
-PLUGINS = ["readtime", "pelican-ipynb.markup", "post_stats"]
+PLUGINS = [
+    "readtime",
+    "pelican-ipynb.markup",
+    "minchin.pelican.plugins.post_stats",
+]
 # IPYNB_USE_META_SUMMARY = True
 IPYNB_USE_METACELL = True
 IGNORE_FILES = [".ipynb_checkpoints"]
