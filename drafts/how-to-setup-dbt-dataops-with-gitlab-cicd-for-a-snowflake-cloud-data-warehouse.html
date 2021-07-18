@@ -144,7 +144,7 @@ Although SQL is simple to learn, you might already have asked yourself whether i
 <p>However, to get up and running within 15 min with a simple dbt example and GitLab CI configuration, I invite you to read this article.</p>
 <!-- https://www.youtube.com/watch?v=-XBIIY2pFpc&feature=youtu.be&t=1305 -->
 
-<h2 id="local-installation">Local installation</h2>
+<h2>Local installation</h2>
 <p>First of all, create a new virtual environment of your choice to install dbt, for example using conda:</p>
 <div class="highlight"><pre><span></span><code>conda create -n dbt_test <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
 </code></pre></div>
@@ -157,7 +157,7 @@ Although SQL is simple to learn, you might already have asked yourself whether i
 <div class="highlight"><pre><span></span><code>dbt init dbt_test
 </code></pre></div>
 
-<h2 id="bigquery-or-snowflake-config">BigQuery or snowflake config</h2>
+<h2>BigQuery or snowflake config</h2>
 <p>If you do not yet have a cloud data warehouse I invite you to follow the <a href="https://docs.getdbt.com/tutorial/setting-up">official dbt tutorial to get started</a> in which you will setup BigQuery. If you already have a cloud data warehouse, check out the <a href="https://docs.getdbt.com/docs/supported-databases">supported databases</a>.</p>
 <p>Check out dbt's documentation on <a href="https://docs.getdbt.com/docs/supported-databases/profile-snowflake/">how to configure dbt profiles for snowflake</a>.</p>
 <p>It basically comes down to creating a <code>~/.dbt/profiles.yml</code> with the following content:</p>
@@ -219,7 +219,7 @@ Although SQL is simple to learn, you might already have asked yourself whether i
 <span class="x">          materialized: view</span>
 </code></pre></div>
 
-<h2 id="write-your-first-dbt-models">Write your first dbt models</h2>
+<h2>Write your first dbt models</h2>
 <p>Now that dbt is installed and you have configured it to use your cloud data warehouse credentials, let's build our first model.</p>
 <p>Open the package <code>dbt_test</code> that you have previously created using <code>dbt init</code>. </p>
 <p>Under <code>models/example</code> delete the existing sql files and instead create a <code>simple.sql</code> with a content similar to the following:</p>
@@ -227,14 +227,14 @@ Although SQL is simple to learn, you might already have asked yourself whether i
 </code></pre></div>
 
 <p>This query would be executed on the database that you configured in <code>~/.dbt/profiles.yml</code>, thus creating a view called <code>snowflake_dbt_test</code> in the database.</p>
-<h2 id="execute-the-dbt-models-locally">Execute the dbt models locally</h2>
+<h2>Execute the dbt models locally</h2>
 <p>How to execute dbt and create this view in the database?</p>
 <p>Well, activate your virtual environment (e.g. using <code>conda activate dbt-test</code>) and run the following command in your dbt package folder (<code>.../dbt_test/</code>):</p>
 <div class="highlight"><pre><span></span><code>dbt run
 </code></pre></div>
 
 <p>The command should run through without errors and you can check the given schema of the database for the newly created view <code>snowflake_dbt_test</code>.</p>
-<h2 id="gitlab-cicd-pipeline">GitLab CI/CD pipeline</h2>
+<h2>GitLab CI/CD pipeline</h2>
 <p>You might want your dbt code to be run automatically in a CI/CD pipeline as part of DataOps.</p>
 <p>First, create a repository on your GitLab instance and push your local code to it. Then, add your snowflake environment variables under <code>Settings -&gt; CI/CD -&gt; Variables (Expand)</code> by clicking on <code>Add Variable</code>:</p>
 <p><img alt="GitLab CI/CD Snowflake environment variables" src="2020-06-06-00-32-07.png"></p>
@@ -281,7 +281,7 @@ run:
 </code></pre></div>
 
 <p>When committing this change, the CI/CD pipeline should be automatically triggered. If all environment variables are set correctly and the dbt models worked locally, the pipeline should also succeed. Congratulations!</p>
-<h2 id="conclusion">Conclusion</h2>
+<h2>Conclusion</h2>
 <p><a href="https://www.getdbt.com">dbt</a> stands for "data build tool" and can be described as "the T in ELT".
 It's a tool that is used by a growing community to write DRY SQL, create dbt packages and add DataOps to it.</p>
 <p>With this article, you have locally installed it, built your own simple dbt model and connected and tested it on snowflake (or BigQuery).</p>
