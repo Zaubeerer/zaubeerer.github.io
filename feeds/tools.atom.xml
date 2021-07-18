@@ -84,16 +84,13 @@ I suggest creating the labels &lt;code&gt;TO DO&lt;/code&gt; and &lt;code&gt;DOI
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;https://github.com/username/username.github.io
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Just leave it empty for now and clone it using:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/username/username.github.io blog
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Subsequently, create a content branch that will be used to track the markdown source files:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git checkout -b content
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Therewith, the source files (markdown, Pelican config, ...) in the &lt;code&gt;content branch&lt;/code&gt; can be separated from the web content, that needs to be pushed to the &lt;code&gt;master branch&lt;/code&gt; for GitHub Pages to automatically publish them. 👌&lt;/p&gt;
 &lt;p&gt;So let's set up Pelican!&lt;/p&gt;
@@ -102,17 +99,14 @@ I suggest creating the labels &lt;code&gt;TO DO&lt;/code&gt; and &lt;code&gt;DOI
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;conda create -n blog &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;and activate it using &lt;code&gt;conda activate blog&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Now, install the following Python packages:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pelican ghp-import Markdown
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;You can generate the Pelican files using &lt;code&gt;pelican-quickstart&lt;/code&gt;. You can take the default values, but probably want to set the &lt;code&gt;website title&lt;/code&gt;, your &lt;code&gt;author name&lt;/code&gt; and the &lt;code&gt;time zone&lt;/code&gt; appropriately. You definitely have to choose:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Afterwards, your folder should contain the following files (use &lt;code&gt;dir&lt;/code&gt; on Windows instead of &lt;code&gt;ls -l&lt;/code&gt;):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ ls -l
@@ -126,13 +120,11 @@ publishconf.py
 tasks.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Subsequently, initialize the &lt;code&gt;content branch&lt;/code&gt; to be able to revert to this state, just in case:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add .
 git commit -m &lt;span class="s1"&gt;&amp;#39;initial Pelican commit to content&amp;#39;&lt;/span&gt;
 git push origin content
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Great, you are all set up to ...&lt;/p&gt;
 &lt;h2 id="edit-your-blog"&gt;Edit your blog&lt;/h2&gt;
@@ -141,7 +133,6 @@ git push origin content
 touch first-post.md
 touch pages/about.md
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Edit the markdown files, for example as follows:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;first-post.md&lt;/code&gt;:&lt;/p&gt;
@@ -153,7 +144,6 @@ This is my first post on my new blog. While not super informative it
 should convey my sense of excitement and eagerness to engage with you,
 the reader!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;&lt;code&gt;pages/about.md&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;title: About
@@ -171,7 +161,6 @@ Cheers!
 &amp;lt;username&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Basically, you can create your blog posts by simply adding markdown files in the content folder. If you want to cluster your articles in different categories, you can create the articles in the folders &lt;code&gt;content/category_1&lt;/code&gt;, &lt;code&gt;content/category_1&lt;/code&gt;, etc. and Pelican will automatically create these categories.&lt;/p&gt;
 &lt;p&gt;You normally want to add static pages such as &lt;code&gt;about.md&lt;/code&gt; in the pages directory.&lt;/p&gt;
 &lt;p&gt;Now, let's get this content online!&lt;/p&gt;
@@ -182,16 +171,13 @@ Cheers!
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican content -o output -s publishconf.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Now, add the web content files that are generated in the &lt;code&gt;output&lt;/code&gt; directory to the &lt;code&gt;master branch&lt;/code&gt; using &lt;code&gt;ghp-import&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ghp-import -m &lt;span class="s2"&gt;&amp;quot;Generate Pelican site&amp;quot;&lt;/span&gt; --no-jekyll -b master output
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Finally, push the changes to the &lt;code&gt;master branch&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git push origin master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Congratulations, you have just published your changes to &lt;a href="https://github.com/username/username.github.io."&gt;https://github.com/username/username.github.io.&lt;/a&gt; Check it out! 🚀&lt;/p&gt;
 &lt;h3 id="version-control"&gt;Version control&lt;/h3&gt;
@@ -201,7 +187,6 @@ Cheers!
 git commit -m &lt;span class="s1"&gt;&amp;#39;added a first post and an about page&amp;#39;&lt;/span&gt;
 git push origin content
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Now, for each new blog article you want to write, you can create a new &lt;code&gt;article branch&lt;/code&gt; based on the &lt;code&gt;content branch&lt;/code&gt;, write the article and merge it into &lt;code&gt;content branch&lt;/code&gt;. &lt;/p&gt;
 &lt;h2 id="create-your-own-domain"&gt;Create your own domain&lt;/h2&gt;
