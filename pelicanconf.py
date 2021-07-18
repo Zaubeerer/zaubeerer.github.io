@@ -55,8 +55,7 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 
 # theme settings
-THEME = "/Users/robinbeer/Desktop/Pybites/pelican-themes/Flex"
-
+THEME = r"C:\Users\rbeer\code\personal\Flex"
 # Flex
 SITETITLE = "Robin Beer"
 SITESUBTITLE = "Energy Data Scientist"
