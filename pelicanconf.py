@@ -89,22 +89,29 @@ MARKUP = ("md", "ipynb")
 PLUGIN_PATHS = ["./plugins/"]
 
 # Markdown Configuration:
-MARKDOWN = {
-    "extensions": [EmojiExtension.create_from_json("./resources/emojis.json")],
-    "extension_configs": {
-        "markdown.extensions.codehilite": {"css_class": "highlight"},
-        "markdown.extensions.toc": {},
-        "markdown.extensions.extra": {},
-        "markdown.extensions.meta": {},
-    },
-    "output_format": "html5",
-}
+# MARKDOWN = {
+#     "extensions": [EmojiExtension.create_from_json("./resources/emojis.json")],
+#     "extension_configs": {
+#         "markdown.extensions.codehilite": {"css_class": "highlight"},
+#         "markdown.extensions.toc": {},
+#         "markdown.extensions.extra": {},
+#         "markdown.extensions.meta": {},
+#     },
+#     "output_format": "html5",
+# }
 
 PLUGINS = [
     "readtime",
     "pelican-ipynb.markup",
     "minchin.pelican.plugins.post_stats",
+    "seo",
 ]
 # IPYNB_USE_META_SUMMARY = True
 IPYNB_USE_METACELL = True
 IGNORE_FILES = [".ipynb_checkpoints"]
+
+SEO_REPORT = True  # To enable this feature
+SEO_ENHANCER = True  # To disable this feature
+SEO_ENHANCER_OPEN_GRAPH = True  # The default value for this feature
+SEO_ENHANCER_TWITTER_CARDS = True  # The default value for this feature
+
