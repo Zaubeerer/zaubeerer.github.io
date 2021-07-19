@@ -168,7 +168,7 @@ Cheers!
 &lt;p&gt;As described above, the content will be published using the &lt;code&gt;master branch&lt;/code&gt; and the source files will be version controlled using the &lt;code&gt;content branch&lt;/code&gt;.&lt;/p&gt;
 &lt;h3&gt;Publish&lt;/h3&gt;
 &lt;p&gt;First, generate the web content using Pelican:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican content -o output -s publishconf.py
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican content -o output -s publishconf.py -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now, add the web content files that are generated in the &lt;code&gt;output&lt;/code&gt; directory to the &lt;code&gt;master branch&lt;/code&gt; using &lt;code&gt;ghp-import&lt;/code&gt;:&lt;/p&gt;
