@@ -143,14 +143,16 @@ As described above, the content will be published using the `master branch` and 
 First, generate the web content using Pelican:
 
 ```bash
-pelican content -o output -s publishconf.py
+pelican content -o output -s publishconf.py -v
 ```
 
 Now, add the web content files that are generated in the `output` directory to the `master branch` using `ghp-import`:
 
 ```bash
-ghp-import -m "Generate Pelican site" --no-jekyll -b master output
+ghp-import -m "Generate Pelican site" --no-jekyll -b master output -c www.robin-beer.de
 ```
+
+
 
 Finally, push the changes to the `master branch`:
 
