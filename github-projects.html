@@ -1,39 +1,112 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
 <script data-blockingmode="auto" data-cbid="272e4128-6678-430d-aa67-2f4d13d1d783" id="Cookiebot" src="https://consent.cookiebot.com/uc.js" type="text/javascript"></script>
-<title>Robin Beer - Use GitHub to manage your projects in an agile way</title>
-<link href="https://www.robin-beer.de\github-projects.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Robin Beer", "item": "https://www.robin-beer.de"}, {"@type": "ListItem", "position": 2, "name": "Github projects", "item": "https://www.robin-beer.de\\github-projects.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Robin Beer"}, "publisher": {"@type": "Organization", "name": "Robin Beer"}, "headline": "Use GitHub to manage your projects in an agile way", "about": "Tools", "datePublished": "2020-04-19 20:50"}</script></head>
-<body>
-<div class="container">
-<section class="body" id="content">
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="True" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="" name="robots"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://www.robin-beer.de/theme/stylesheet/style.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.robin-beer.de/theme/pygments/vs.min.css" id="pygments-light-theme" rel="stylesheet" type="text/css"/>
+<link href="https://www.robin-beer.de/theme/font-awesome/css/fontawesome.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.robin-beer.de/theme/font-awesome/css/brands.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.robin-beer.de/theme/font-awesome/css/solid.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.robin-beer.de/feeds/all.atom.xml" rel="alternate" title="Robin Beer Atom" type="application/atom+xml"/>
+<link href="/images/favicon_squared.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="/images/favicon_squared.ico" rel="icon" type="image/x-icon"/>
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-160647513-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+<meta content="Robin Beer" name="author"/>
+<meta content="In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods." name="description"/>
+<meta content="GitHub, projects, agile, KanBan, productivity, automation, GitLab" name="keywords"/>
+<meta content="Robin Beer" property="og:site_name">
+<meta content="Use GitHub to manage your projects in an agile way" property="og:title"/>
+<meta content="In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods." property="og:description"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.robin-beer.de/github-projects.html" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="2020-04-19 20:50:00+02:00" property="article:published_time"/>
+<meta content="" property="article:modified_time"/>
+<meta content="https://www.robin-beer.de/author/robin-beer.html" property="article:author"/>
+<meta content="Tools" property="article:section">
+<meta content="GitHub" property="article:tag"/>
+<meta content="projects" property="article:tag"/>
+<meta content="agile" property="article:tag"/>
+<meta content="KanBan" property="article:tag"/>
+<meta content="productivity" property="article:tag"/>
+<meta content="automation" property="article:tag"/>
+<meta content="GitLab" property="article:tag"/>
+<meta content="/images/BEER_2018_2896_small.jpg" property="og:image"/>
+<title>Robin Beer – Use GitHub to manage your projects in an agile way</title>
+</meta></meta><link href="https://www.robin-beer.de\github-projects.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Robin Beer", "item": "https://www.robin-beer.de"}, {"@type": "ListItem", "position": 2, "name": "Github projects", "item": "https://www.robin-beer.de\\github-projects.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Robin Beer"}, "publisher": {"@type": "Organization", "name": "Robin Beer"}, "headline": "Use GitHub to manage your projects in an agile way", "about": "Tools", "datePublished": "2020-04-19 20:50"}</script></head>
+<body class="light-theme">
+<aside>
+<div>
+<a href="https://www.robin-beer.de/">
+<img alt="Robin Beer" src="/images/BEER_2018_2896_small.jpg" title="Robin Beer"/>
+</a>
+<h1>
+<a href="https://www.robin-beer.de/">Robin Beer</a>
+</h1>
+<p>Energy Data Scientist</p>
+<nav>
+<ul class="list">
+<li>
+<a href="https://www.robin-beer.de/pages/about.html#about" target="_self">
+              About
+            </a>
+</li>
+<li>
+<a href="https://www.robin-beer.de" target="_self">Home</a>
+</li>
+</ul>
+</nav>
+<ul class="social">
+<li>
+<a class="sc-twitter" href="https://twitter.com/R_E_Beer" target="_blank">
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a class="sc-linkedin" href="https://www.linkedin.com/in/robin-beer-7595b680/" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a class="sc-github" href="https://github.com/Zaubeerer" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a class="sc-envelope-o" href="mailto:dev@robin-beer.de" target="_blank">
+<i class="fab fa-envelope-o"></i>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<main>
+<article class="single">
 <header>
-<h2 class="entry-title">
-<a href="https://www.robin-beer.de/github-projects.html" rel="bookmark" title="Permalink to Use GitHub to manage your projects in an agile way">Use GitHub to manage your projects in an agile way</a></h2>
+<h1 id="github-projects">Use GitHub to manage your projects in an agile way</h1>
+<p>
+      Posted on Sun 19 April 2020 in <a href="https://www.robin-beer.de/category/tools.html">Tools</a>
+</p>
 </header>
-<footer class="post-info">
-<time class="published" datetime="2020-04-19T20:50:00+02:00">
-      Sun 19 April 2020
-    </time>
-<address class="vcard author">
-      By           <a class="url fn" href="https://www.robin-beer.de/author/robin-beer.html">Robin Beer</a>
-</address>
-<div class="category">
-        Category: <a href="https://www.robin-beer.de/category/tools.html">Tools</a>
-</div>
-<div class="tags">
-        Tags:
-            <a href="https://www.robin-beer.de/tag/github.html">GitHub</a>
-<a href="https://www.robin-beer.de/tag/projects.html">projects</a>
-<a href="https://www.robin-beer.de/tag/agile.html">agile</a>
-<a href="https://www.robin-beer.de/tag/kanban.html">KanBan</a>
-<a href="https://www.robin-beer.de/tag/productivity.html">productivity</a>
-<a href="https://www.robin-beer.de/tag/automation.html">automation</a>
-<a href="https://www.robin-beer.de/tag/gitlab.html">GitLab</a>
-</div>
-</footer><!-- /.post-info -->
-<div class="entry-content">
+<div>
 <p>In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.</p>
 <p>We all have been there, long lists of issues overwhelming our brain.</p>
 <p>Wouldn't it be great to organize these issues in a way that simplifies prioritization and illustrates progress without having to copy the same issues to Trello?</p>
@@ -123,8 +196,58 @@
 <p>Check out <a href="">this article</a>, with instructions for GitLab!</p>
 <p>Cheers!</p>
 <p>Robin</p>
-</div><!-- /.entry-content -->
-</section>
 </div>
+<div class="tag-cloud">
+<p>
+<a href="https://www.robin-beer.de/tag/github.html">GitHub</a>
+<a href="https://www.robin-beer.de/tag/projects.html">projects</a>
+<a href="https://www.robin-beer.de/tag/agile.html">agile</a>
+<a href="https://www.robin-beer.de/tag/kanban.html">KanBan</a>
+<a href="https://www.robin-beer.de/tag/productivity.html">productivity</a>
+<a href="https://www.robin-beer.de/tag/automation.html">automation</a>
+<a href="https://www.robin-beer.de/tag/gitlab.html">GitLab</a>
+</p>
+</div>
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'robin-beer';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+<footer>
+<p>©  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p> </footer>
+</main>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Robin Beer ",
+  "url" : "https://www.robin-beer.de",
+  "image": "/images/BEER_2018_2896_small.jpg",
+  "description": "Pythonic Energy Data Science Blog"
+}
+</script>
+<a aria-label="View source on Github" class="github-corner" href="https://github.com/Zaubeerer">
+<svg aria-hidden="true" height="80" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" viewbox="0 0 250 250" width="80">
+<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+<path class="octo-arm" d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;">
+</path>
+<path class="octo-body" d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor">
+</path>
+</svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 </body>
 </html>
