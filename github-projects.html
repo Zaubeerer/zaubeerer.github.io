@@ -3,10 +3,128 @@
 <html lang="en">
 <head>
 <script data-blockingmode="auto" data-cbid="272e4128-6678-430d-aa67-2f4d13d1d783" id="Cookiebot" src="https://consent.cookiebot.com/uc.js" type="text/javascript"></script>
-<title></title>
+<title>Robin Beer - Use GitHub to manage your projects in an agile way</title>
 <link href="https://www.robin-beer.de\github-projects.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Robin Beer", "item": "https://www.robin-beer.de"}, {"@type": "ListItem", "position": 2, "name": "Github projects", "item": "https://www.robin-beer.de\\github-projects.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Robin Beer"}, "publisher": {"@type": "Organization", "name": "Robin Beer"}, "headline": "Use GitHub to manage your projects in an agile way", "about": "Tools", "datePublished": "2020-04-19 20:50"}</script></head>
 <body>
 <div class="container">
+<section class="body" id="content">
+<header>
+<h2 class="entry-title">
+<a href="https://www.robin-beer.de/github-projects.html" rel="bookmark" title="Permalink to Use GitHub to manage your projects in an agile way">Use GitHub to manage your projects in an agile way</a></h2>
+</header>
+<footer class="post-info">
+<time class="published" datetime="2020-04-19T20:50:00+02:00">
+      Sun 19 April 2020
+    </time>
+<address class="vcard author">
+      By           <a class="url fn" href="https://www.robin-beer.de/author/robin-beer.html">Robin Beer</a>
+</address>
+<div class="category">
+        Category: <a href="https://www.robin-beer.de/category/tools.html">Tools</a>
+</div>
+<div class="tags">
+        Tags:
+            <a href="https://www.robin-beer.de/tag/github.html">GitHub</a>
+<a href="https://www.robin-beer.de/tag/projects.html">projects</a>
+<a href="https://www.robin-beer.de/tag/agile.html">agile</a>
+<a href="https://www.robin-beer.de/tag/kanban.html">KanBan</a>
+<a href="https://www.robin-beer.de/tag/productivity.html">productivity</a>
+<a href="https://www.robin-beer.de/tag/automation.html">automation</a>
+<a href="https://www.robin-beer.de/tag/gitlab.html">GitLab</a>
+</div>
+</footer><!-- /.post-info -->
+<div class="entry-content">
+<p>In this article you will learn how to setup a project in GitHub and to use boards to organize your issues using agile methods.</p>
+<p>We all have been there, long lists of issues overwhelming our brain.</p>
+<p>Wouldn't it be great to organize these issues in a way that simplifies prioritization and illustrates progress without having to copy the same issues to Trello?</p>
+<p>There is! With <code>GitHub projects</code> you can set up boards and use agile methods such as KanBan or Scrum. Let's dive into it!</p>
+<h2>Initialization of a GitHub project</h2>
+<p>First, we create a new GitHub repository to show the process from scratch. If you already have a repository, you can jump to the next paragraph.</p>
+<p>First, click on the "+" on the upper right next to your GitHub profile icon to create a new repository:</p>
+<p><img alt="new repo" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-05-07.png" style="width: 300px;"/></p>
+<p>Fill in the form, for example with the title and description that I used to create this article:</p>
+<p><img alt="Empty GitHub repository" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-02-41.png"/></p>
+<p>Subsequently, create some dummy issues that describe different tasks that you have to work on.</p>
+<p><img alt="Issue Creation on GitHub" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-07-58.png"/></p>
+<p>Your issue list might look like the following:</p>
+<p><img alt="GitHub issue list" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-16-40.png"/></p>
+<p>GitHub even suggests to try out <code>project boards</code>. But how?</p>
+<h2>Creation of new projects</h2>
+<p>In GitHub, one needs to first create a <code>project</code> to subsequently create a <code>project board</code>. Therefore, click on the <code>Try it now!</code> button or on <code>Projects</code> and subsequently on <code>New project</code>.</p>
+<p>The following window should open:</p>
+<p><img alt="GitHub New Project" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-21-59.png"/></p>
+<p>Fill in some creative names, or stay with these great suggestions.</p>
+<h2>Creation of project boards</h2>
+<p>Congratulations, by creating the first <code>project</code>, you automatically created a <code>project board</code>. It's empty though, so let's populate it.</p>
+<p>Therefore, you first have to <code>Add a column</code>. I suggest to use the following <code>columns</code>:</p>
+<ul>
+<li>
+<p><code>Backlog</code>: All new issues land here</p>
+</li>
+<li>
+<p><code>To Do</code>: Issues that are planned to be worked on soon</p>
+</li>
+<li>
+<p><code>In Progress</code>: Issues that are actively being worked on</p>
+</li>
+<li>
+<p><code>Waiting for Feedback</code>: Issues that require feedback, to decide whether they are completed</p>
+</li>
+<li>
+<p><code>Done</code>: completed issues</p>
+</li>
+</ul>
+<p>These <code>columns</code> intuitively visualize the progress of the issues. You can just create them for now and ignore the automation, which we will set up later.</p>
+<p>After having created the <code>columns</code>, your <code>project board</code> should look similar to the following image:</p>
+<p><img alt="Empty Project Board" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-33-18.png"/></p>
+<p>But there are still no issues... :(</p>
+<h2>Issue allocation to (several) projects</h2>
+<p>GitHub enables many-to-many relationships between issues and projects. That means, one issue can be attributed to several projects and of course, one project can have infinite (?) issues.</p>
+<p>To add issues to this <code>project</code>, you have two options:</p>
+<ol>
+<li>Click on <code>+ Add cards</code> and drag and drop the issues to the respective <code>columns</code>:</li>
+</ol>
+<p><img alt="Issue allocation to project columns from project board" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-40-33.png"/></p>
+<ol>
+<li>Open the issues view, open the issues that you want to add to the project in a new tab and click on the settings icon next to <code>Projects</code> to select the project you want this issue to be added to:</li>
+</ol>
+<p><img alt="Issue allocation to projects from issues board" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-38-22.png"/></p>
+<p>You might have noticed, that the second step did not add the issues to a <code>column</code> yet. You still have to drag and drop it as mentioned in step 1. Or, do you?</p>
+<h2>Further useful functionalities</h2>
+<p>GitHub allows you to <strong>automate</strong> some of the steps described above, to <strong>create labels</strong>, and to <strong>filter the issues</strong> in the <code>project board</code>. Let's check out these additional functionalities, that are really useful in everyday project management.</p>
+<h3>Manage automation of columns</h3>
+<p>First let's <code>manage automation</code> of the <code>Backlog</code> column:</p>
+<p><img alt="manage automation" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-44-25.png" style="width: 300px;"/></p>
+<p>Choose <code>To Do</code>, check the shown check boxes as visualized below, and <code>Update automation</code>:</p>
+<p><img alt="manage automation: backlog" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-22-45-46.png" style="width: 300px;"/></p>
+<p>Now, if you go back to the issues view and assign the issue to the project, the issue will be automatically added to the <code>Backlog</code> column.</p>
+<p>Similarly, <code>Update automation</code> for the <code>column "Done"</code>, such that merged PRs and closed issues are automatically added to the <code>column "Done"</code>. Additionally, you might want to add automation to the <code>column "In Progress"</code>, if issues or PRs are reopened.</p>
+<h3>Create issue labels</h3>
+<p>To visualize priority implicitly, the issues can be sorted according to their priority (high position = high priority) within their <code>columns</code>.</p>
+<p>Additionally, issue labels can be created to visualize priority explicitly. Therefore, click on one of the issue titles and in the sidebar that opens to the right, click on the settings icon in <code>Labels</code> and type in <code>high priority</code>.</p>
+<p>Now, you should be able to <code>Create new label "high priority"</code>. Alternatively, you can <code>Edit labels</code>.</p>
+<p><img alt="create new label" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-23-00-41.png" style="width: 300px;"/></p>
+<p>Now, your project board might already look more colorful - and more neat. 👌🏻</p>
+<p><img alt="Project view with labels" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-23-05-55.png"/></p>
+<h3>Filter project board view</h3>
+<p>Another useful functionality, once the project board gets busy, is to filter the issues.</p>
+<p>For example, you might want to see all issues assigned to you or to a specific milestone. Or all issues, that have high priority. Therefore, click on the search field <code>Filter cards</code> and type in exactly <code>label:"high priority"</code>, such that the project board should change as follows:</p>
+<p><img alt="Filtered project view" src="https://www.robin-beer.de/Tools/images/gh-projects/2020-04-14-23-08-26.png"/></p>
+<h2>Summary &amp; Conclusion</h2>
+<p>In this article, we have checked out how to use GitHub's <code>project boards</code> to organize your issues into <code>columns</code>.</p>
+<p>Therefore, we have created <code>projects</code> and assigned the issues to several projects. Using the columns <code>Backlog</code>, <code>To Do</code>, <code>In Progress</code>, <code>Waiting for Feedback</code> and <code>Done</code>, we can now intuitively visualize the progress of the issues.</p>
+<p>Additionally, we can visualize the priority of the issues implicitly using the position (highest = highest priority) as well as explicitly using labels <code>high priority</code> and <code>low priority</code>.</p>
+<p>Furthermore, we have <code>managed automation</code> to automatically move issues to <code>Backlog</code> when they are added to the project and <code>Done</code> when they are closed.</p>
+<p>What are you waiting for? Get back control over all the open issues and manage them using <code>GitHub projects</code>!</p>
+<p>Whether you use the <code>project board</code> with <a href="https://www.scrum.org/resources/what-is-scrum">Scrum</a> or <a href="https://www.atlassian.com/agile/kanban">KanBan</a>, it will simplify prioritization and visualization of progress.</p>
+<p>This can also be a game-changer in communicating workload and available resources with your colleagues, your mentors or your boss.</p>
+<hr/>
+<p>You like the idea of issue organization into boards, but are using GitLab?</p>
+<p>Check out <a href="">this article</a>, with instructions for GitLab!</p>
+<p>Cheers!</p>
+<p>Robin</p>
+</div><!-- /.entry-content -->
+</section>
 </div>
 </body>
 </html>
