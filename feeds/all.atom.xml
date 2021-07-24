@@ -172,7 +172,7 @@ Cheers!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now, add the web content files that are generated in the &lt;code&gt;output&lt;/code&gt; directory to the &lt;code&gt;master branch&lt;/code&gt; using &lt;code&gt;ghp-import&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ghp-import -m &lt;span class="s2"&gt;&amp;quot;Generate Pelican site&amp;quot;&lt;/span&gt; --no-jekyll -b master output
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ghp-import -m &lt;span class="s2"&gt;&amp;quot;Generate Pelican site&amp;quot;&lt;/span&gt; --no-jekyll -b master output -c www.robin-beer.de
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Finally, push the changes to the &lt;code&gt;master branch&lt;/code&gt;:&lt;/p&gt;

@@ -190,7 +190,7 @@ Cheers!
 <div class="highlight"><pre><span></span><code>pelican content -o output -s publishconf.py -v
 </code></pre></div>
 <p>Now, add the web content files that are generated in the <code>output</code> directory to the <code>master branch</code> using <code>ghp-import</code>:</p>
-<div class="highlight"><pre><span></span><code>ghp-import -m <span class="s2">"Generate Pelican site"</span> --no-jekyll -b master output
+<div class="highlight"><pre><span></span><code>ghp-import -m <span class="s2">"Generate Pelican site"</span> --no-jekyll -b master output -c www.robin-beer.de
 </code></pre></div>
 <p>Finally, push the changes to the <code>master branch</code>:</p>
 <div class="highlight"><pre><span></span><code>git push origin master
