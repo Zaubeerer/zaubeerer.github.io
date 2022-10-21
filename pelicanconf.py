@@ -3,8 +3,10 @@
 from __future__ import unicode_literals
 
 import sys
+from pelican_jupyter import markup as nb_markup
 
-from emojiextension import EmojiExtension
+
+# from emojiextension import EmojiExtension
 
 AUTHOR = "Robin Beer"
 SITENAME = "Robin Beer"
@@ -102,10 +104,14 @@ PLUGIN_PATHS = ["./plugins/"]
 
 PLUGINS = [
     "readtime",
-    "pelican-ipynb.markup",
+    # "pelican-ipynb.markup",
     "minchin.pelican.plugins.post_stats",
     "seo",
+    nb_markup,
 ]
+
+IPYNB_MARKUP_USE_FIRST_CELL = True
+
 # IPYNB_USE_META_SUMMARY = True
 IPYNB_USE_METACELL = True
 IGNORE_FILES = [".ipynb_checkpoints"]
